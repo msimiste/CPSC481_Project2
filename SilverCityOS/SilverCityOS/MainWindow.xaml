@@ -9,7 +9,7 @@
     <ContentControl Height="595" Width="219" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom">
         <StackPanel x:Name="MenuPanel" Height="560
                 " Width="219" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0">
-            <Button BorderBrush="Black" BorderThickness="5,5,5,5">
+            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
                 <Button.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -19,8 +19,8 @@
                     </ToolTip>
                 </Button.ToolTip>
                 <StackPanel>
-                    <Image Source="Pictures/bell.png" Margin="15,15,15,15"  />
-                    <TextBlock HorizontalAlignment="Center"><Run Text="Call Waiter" /></TextBlock>
+                    <Image Source="Pictures/bell.png" Margin="20,20,20,20"  />
+                    <TextBlock HorizontalAlignment="Center" FontSize="22"><Run Text="Call Waiter" /></TextBlock>
                 </StackPanel>
             </Button>
             <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>

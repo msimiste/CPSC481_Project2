@@ -20,6 +20,7 @@ namespace SilverCityOS
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool CallWaiterStatus = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +29,24 @@ namespace SilverCityOS
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnCallWaiterClick(object sender, RoutedEventArgs e)
+        {
+            if (CallWaiterStatus)
+            {
+                btnCallWaiter.Background = Brushes.Transparent;
+                btnCallWaiter.ToolTip = new ToolTip { Content = "Click to Call Waiter" };
+                btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Black);
+                CallWaiterStatus = false;
+            }
+            else if (!CallWaiterStatus)
+            {
+                btnCallWaiter.Background = new SolidColorBrush(Colors.Yellow);
+                btnCallWaiter.ToolTip = new ToolTip { Content = "Click Again To Cancel Call to Waiter" };
+                btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Yellow);
+                CallWaiterStatus = true;
+            }
         }
     }
 }
