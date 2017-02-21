@@ -1,0 +1,34 @@
+﻿<Window x:Name="MainWindow1" x:Class="SilverCityOS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SilverCityOS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="595" Width="1232.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <ContentControl Height="595" Width="219" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom">
+        <StackPanel x:Name="MenuPanel" Height="560
+                " Width="219" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0">
+            <Button BorderBrush="Black" BorderThickness="5,5,5,5">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
+                            <TextBlock>Lets the server know you require immediate assistance</TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+                <StackPanel>
+                    <Image Source="Pictures/bell.png" Margin="15,15,15,15"  />
+                    <TextBlock HorizontalAlignment="Center"><Run Text="Call Waiter" /></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
+            <Button x:Name="btnMainCourses" Content="Main Courses" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+            <Button x:Name="btnSetDinners" Content="Set Dinners" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+            <Button x:Name="btnDrinks" Content="Drinks" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+            <Button x:Name="btnDeserts" Content="Desserts" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5,10,7"/>
+        </StackPanel>
+    </ContentControl>
+
+</Window>

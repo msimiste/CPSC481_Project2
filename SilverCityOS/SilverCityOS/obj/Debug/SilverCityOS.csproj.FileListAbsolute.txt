@@ -1,0 +1,14 @@
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\bin\Debug\SilverCityOS.exe.config
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\bin\Debug\SilverCityOS.exe
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\bin\Debug\SilverCityOS.pdb
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.csprojResolveAssemblyReference.cache
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\MainWindow.g.cs
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\App.g.cs
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS_MarkupCompile.cache
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS_MarkupCompile.lref
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\MainWindow.baml
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.g.resources
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.Properties.Resources.resources
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.csproj.GenerateResource.Cache
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.exe
+C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.pdb
