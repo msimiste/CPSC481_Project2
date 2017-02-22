@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="595" Width="1232.5" HorizontalAlignment="Left" VerticalAlignment="Top">
-    <ContentControl Height="595" Width="219" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom">
-        <StackPanel x:Name="MenuPanel" Height="560
-                " Width="219" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0">
+        Title="MainWindow" Height="756" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition Width="380"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="702" Orientation ="Vertical" Width="219" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,23">
             <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
                 <Button.ToolTip>
                     <ToolTip>
@@ -23,12 +27,76 @@
                     <TextBlock HorizontalAlignment="Center" FontSize="22"><Run Text="Call Waiter" /></TextBlock>
                 </StackPanel>
             </Button>
+            <Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
             <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
             <Button x:Name="btnMainCourses" Content="Main Courses" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
             <Button x:Name="btnSetDinners" Content="Set Dinners" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
             <Button x:Name="btnDrinks" Content="Drinks" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
             <Button x:Name="btnDeserts" Content="Desserts" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5,10,7"/>
         </StackPanel>
-    </ContentControl>
+        <ScrollViewer x:Name="scrlViewer_MenuItems" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Width ="800" Height="725" Margin="0,8,0,-14">
+            <StackPanel>
+                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                    <Canvas Height="250">
+                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
+                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" Fill="Black" />
+                        </Button>
+                        <Border Name="imgBorder" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                        <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">                    
+                        </Image>
+                        </Border>
+                        <TextBox Name="txtBox_ItemName"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
+                        <TextBox Name="txtBox_ItemPrice" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
+                        <TextBox Name="txtBox_ItemDescription" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
+                    </Canvas>
+                </Border>
+                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                    <Canvas Height="250">
+                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
+                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
+                        </Button>
+                        <Border Name="imgBorder2" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
+                            </Image>
+                        </Border>
+                        <TextBox Name="txtBox_ItemName2"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
+                        <TextBox Name="txtBox_ItemPrice2" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
+                        <TextBox Name="txtBox_ItemDescription2" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
+                    </Canvas>
+                </Border>
+                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                    <Canvas Height="250">
+                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
+                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
+                        </Button>
+                        <Border Name="imgBorder3" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
+                            </Image>
+                        </Border>
+                        <TextBox Name="txtBox_ItemName3"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
+                        <TextBox Name="txtBox_ItemPrice3" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
+                        <TextBox Name="txtBox_ItemDescription3" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
+                    </Canvas>
+                </Border>
+                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                    <Canvas Height="250">
+                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75" Background="Black">
+                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
+                        </Button>
+                        <Border Name="imgBorder4" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
+                            </Image>
+                        </Border>
+                        <TextBox Name="txtBox_ItemName4"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
+                        <TextBox Name="txtBox_ItemPrice4" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
+                        <TextBox Name="txtBox_ItemDescription4" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
+                    </Canvas>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2"></StackPanel>
+
+    </Grid>
+    
 
 </Window>
