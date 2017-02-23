@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="756" Width="1400" HorizontalAlignment="Left" VerticalAlignment="Top">
+        Title="MainWindow" Height="756" Width="1350" HorizontalAlignment="Left" VerticalAlignment="Top">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
             <ColumnDefinition Width="800"/>
-            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="330"/>
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="702" Orientation ="Vertical" Width="219" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,23">
             <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
@@ -42,8 +42,8 @@
                             <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" Fill="Black" />
                         </Button>
                         <Border Name="imgBorder" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
-                        <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">                    
-                        </Image>
+                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
+                            </Image>
                         </Border>
                         <TextBox Name="txtBox_ItemName"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
                         <TextBox Name="txtBox_ItemPrice" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
@@ -94,9 +94,48 @@
                 </Border>
             </StackPanel>
         </ScrollViewer>
-        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2"></StackPanel>
-
+        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="1" Grid.ColumnSpan="2" Margin="794,0,6,0">
+            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 2" Height="60" Width="310" FontSize="40" FontWeight="DemiBold" Margin="0 0 0 0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
+            <ScrollViewer x:Name="scrlViewerOrderItems" Height="200"  Width="310"  Margin="2 0 0 0"></ScrollViewer>
+            <Label x:Name="lblTotal" Grid.Column="0" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="310" Margin="10 0 0 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" FontSize="22">Total: $1600.00</Label>
+            <TextBox x:Name="txtBoxSpecialNote" Height="200" Width="310" BorderBrush="Black" BorderThickness="2 0 2 2 "></TextBox>
+            <Button x:Name="btnSpecialNote" Height="40" Width="300" Margin="0 10 0 0" FontSize="28">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <TextBlock FontWeight="Bold">Click To Add a Special Note Or Comment</TextBlock>
+                    </ToolTip>
+                </Button.ToolTip>
+                Special Note</Button>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="155"/>
+                    <ColumnDefinition Width="155"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnDineIn" Height="90" Margin="15 10 0 0" Grid.Column="0">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Click To Make an Order for Dine In</TextBlock>
+                        </ToolTip>
+                    </Button.ToolTip>
+                    <Image Source="Pictures/DineIn.png" />
+                </Button>
+                <Button x:Name="btnTakeOut" Height="90"  Margin="15 10 0 0" Grid.Column="1">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>
+                        </ToolTip>
+                    </Button.ToolTip>
+                    <Image Source="Pictures/TakeOut2.png"/>
+                </Button>
+            </Grid>
+            <Button x:Name="btnPayBill" Height="60" Width="300" Margin="0 10 0 0">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <TextBlock FontWeight="Bold">Click To Request Bill </TextBlock>
+                    </ToolTip>
+                </Button.ToolTip>
+                    <Image Source="Pictures/PayBill.png" />
+            </Button>
+        </StackPanel>
     </Grid>
-    
-
 </Window>
