@@ -24,6 +24,7 @@ namespace SilverCityOS
         public MainWindow()
         {
             InitializeComponent();
+            setScrollComponents();
         }
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
@@ -47,6 +48,25 @@ namespace SilverCityOS
                 btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Yellow);
                 CallWaiterStatus = true;
             }
+        }
+
+        private void setScrollComponents()
+        {  
+            Appetizers appetizers = new Appetizers("Appetizers");
+            sViewer_Stackpanel.Children.Add(new TextBox { VerticalContentAlignment = VerticalAlignment.Center, TextAlignment=TextAlignment.Center,FontSize = 33, Text = appetizers.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width });
+
+            foreach (var item in appetizers.getItemList())
+            {
+                Border b = new Border { BorderThickness = new Thickness(0, 2, 0, 2), BorderBrush = Brushes.Black, };
+
+                b.Child = item;
+                sViewer_Stackpanel.Children.Add(b);
+            }
+        }
+
+        private void txtBoxSpecialNote_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

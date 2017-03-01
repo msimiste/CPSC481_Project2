@@ -55,6 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Appetizers.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="MenuSection.cs" />
+    <Compile Include="testUControl.xaml.cs">
+      <DependentUpon>testUControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenuItem.xaml.cs">
+      <DependentUpon>ucMenuItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenuItems.xaml.cs">
+      <DependentUpon>ucMenuItems.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +79,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="testUControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ucMenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ucMenuItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -109,6 +133,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PIctures\DineIn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\BeefAndMushrooms.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\testImage1.jpg" />
+    <Resource Include="PIctures\testImage2.jpg" />
+    <Resource Include="PIctures\testImage3.jpg" />
+    <Resource Include="PIctures\testImage4.jpg" />
+    <Resource Include="PIctures\testImage5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
