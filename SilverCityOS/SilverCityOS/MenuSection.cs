@@ -9,13 +9,13 @@ namespace SilverCityOS
    public class MenuSection
     {
         private string sectionName;
-        private List<MenuItem> items = new List<MenuItem>();
+        private List<ucMenuItem> items = new List<ucMenuItem>();
 
         public MenuSection(string name) {
             this.sectionName = name;
         }
 
-        public void addItem(MenuItem item) {
+        public void addItem(ucMenuItem item) {
             this.items.Add(item);
         }
     }

@@ -26,8 +26,6 @@ U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\MainWindow.baml
 U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.g.resources
 U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.Properties.Resources.resources
 U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.csproj.GenerateResource.Cache
-U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\testUControl.g.cs
-U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\testUControl.baml
 \\cs-fs01\Profiles\ug\msimiste\Desktop\Project2\SilverCityOS\SilverCityOS\bin\Debug\SilverCityOS.exe.config
 \\cs-fs01\Profiles\ug\msimiste\Desktop\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.exe
 \\cs-fs01\Profiles\ug\msimiste\Desktop\Project2\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.pdb
@@ -48,3 +46,5 @@ U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\testUControl.bam
 \\cs-fs01\Profiles\ug\msimiste\Desktop\Project2\SilverCityOS\SilverCityOS\obj\Debug\ucMenuItems.baml
 \\cs-fs01\Profiles\ug\msimiste\Desktop\Project2\SilverCityOS\SilverCityOS\obj\Debug\ucMenuItem.g.cs
 \\cs-fs01\Profiles\ug\msimiste\Desktop\Project2\SilverCityOS\SilverCityOS\obj\Debug\ucMenuItem.baml
+U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\ucMenuItem.g.cs
+U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\ucMenuItem.baml
