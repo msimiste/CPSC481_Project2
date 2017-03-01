@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="756" Width="1350" HorizontalAlignment="Left" VerticalAlignment="Top">
+        Title="MainWindow" Height="756" Width="1350" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
             <ColumnDefinition Width="800"/>
             <ColumnDefinition Width="330"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="702" Orientation ="Vertical" Width="219" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,23">
+        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="702" Orientation ="Vertical" Width="220" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
                 <Button.ToolTip>
                     <ToolTip>
@@ -34,71 +34,146 @@
             <Button x:Name="btnDrinks" Content="Drinks" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
             <Button x:Name="btnDeserts" Content="Desserts" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5,10,7"/>
         </StackPanel>
-        <ScrollViewer x:Name="scrlViewer_MenuItems" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Width ="800" Height="725" Margin="0,8,0,-14">
-            <StackPanel>
-                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
-                    <Canvas Height="250">
-                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
-                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" Fill="Black" />
-                        </Button>
-                        <Border Name="imgBorder" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
-                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
-                            </Image>
-                        </Border>
-                        <TextBox Name="txtBox_ItemName"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
-                        <TextBox Name="txtBox_ItemPrice" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
-                        <TextBox Name="txtBox_ItemDescription" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
-                    </Canvas>
-                </Border>
-                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
-                    <Canvas Height="250">
-                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
-                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
-                        </Button>
-                        <Border Name="imgBorder2" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
-                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
-                            </Image>
-                        </Border>
-                        <TextBox Name="txtBox_ItemName2"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
-                        <TextBox Name="txtBox_ItemPrice2" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
-                        <TextBox Name="txtBox_ItemDescription2" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
-                    </Canvas>
-                </Border>
-                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
-                    <Canvas Height="250">
-                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
-                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
-                        </Button>
-                        <Border Name="imgBorder3" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
-                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
-                            </Image>
-                        </Border>
-                        <TextBox Name="txtBox_ItemName3"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
-                        <TextBox Name="txtBox_ItemPrice3" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
-                        <TextBox Name="txtBox_ItemDescription3" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
-                    </Canvas>
-                </Border>
-                <Border BorderThickness="0 2 0 2" BorderBrush="Black">
-                    <Canvas Height="250">
-                        <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75" Background="Black">
-                            <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
-                        </Button>
-                        <Border Name="imgBorder4" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
-                            <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200">
-                            </Image>
-                        </Border>
-                        <TextBox Name="txtBox_ItemName4"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">ITEM NAME</TextBox>
-                        <TextBox Name="txtBox_ItemPrice4" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22">$15.00</TextBox>
-                        <TextBox Name="txtBox_ItemDescription4" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap">This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price.</TextBox>
-                    </Canvas>
-                </Border>
-            </StackPanel>
-        </ScrollViewer>
-        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="1" Grid.ColumnSpan="2" Margin="794,0,6,0">
-            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 2" Height="60" Width="310" FontSize="40" FontWeight="DemiBold" Margin="0 0 0 0"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="200"  Width="310"  Margin="2 0 0 0"></ScrollViewer>
-            <Label x:Name="lblTotal" Grid.Column="0" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="310" Margin="10 0 0 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" FontSize="22">Total: $1600.00</Label>
-            <TextBox x:Name="txtBoxSpecialNote" Height="200" Width="310" BorderBrush="Black" BorderThickness="2 0 2 2 "></TextBox>
+        <StackPanel Grid.Column="1">
+            <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="800" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">CATEGORIES</Label>
+            <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" HorizontalAlignment="Right" Width ="800" Height="725" >
+                <StackPanel>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                        <Canvas Height="250">
+                            <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
+                                <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" Fill="Black" />
+                            </Button>
+                            <Border x:Name="imgBorder" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                                <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200"/>
+                            </Border>
+                            <TextBox x:Name="txtBox_ItemName"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="ITEM NAME"/>
+                            <TextBox x:Name="txtBox_ItemPrice" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="$15.00"/>
+                            <TextBox x:Name="txtBox_ItemDescription" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap" Text="This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price."/>
+                        </Canvas>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                        <Canvas Height="250">
+                            <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
+                                <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
+                            </Button>
+                            <Border x:Name="imgBorder2" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                                <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200"/>
+                            </Border>
+                            <TextBox x:Name="txtBox_ItemName2"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="ITEM NAME"/>
+                            <TextBox x:Name="txtBox_ItemPrice2" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="$15.00"/>
+                            <TextBox x:Name="txtBox_ItemDescription2" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap" Text="This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price."/>
+                        </Canvas>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                        <Canvas Height="250">
+                            <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75">
+                                <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
+                            </Button>
+                            <Border x:Name="imgBorder3" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                                <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200"/>
+                            </Border>
+                            <TextBox x:Name="txtBox_ItemName3"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="ITEM NAME"/>
+                            <TextBox x:Name="txtBox_ItemPrice3" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="$15.00"/>
+                            <TextBox x:Name="txtBox_ItemDescription3" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap" Text="This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price."/>
+                        </Canvas>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black">
+                        <Canvas Height="250">
+                            <Button Canvas.Left="30" Height="100" Width="100" Canvas.Top="75" Background="Black">
+                                <Path Data="M0.5,0 L0.5,1 M0,0.5 L1,0.5" StrokeThickness="4" Stretch="Fill" Stroke="Green" />
+                            </Button>
+                            <Border x:Name="imgBorder4" BorderThickness="2" BorderBrush="Black" Canvas.Top="15" Canvas.Left="160">
+                                <Image Canvas.Left="160" Canvas.Top="15" Source="Pictures/bell.png" Height="200" Width="200"/>
+                            </Border>
+                            <TextBox x:Name="txtBox_ItemName4"  Canvas.Left="380" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="ITEM NAME"/>
+                            <TextBox x:Name="txtBox_ItemPrice4" Canvas.Left="615" Canvas.Top="50" Height="30" Width ="150" TextAlignment="Center" FontWeight="Bold" FontSize="22" Text="$15.00"/>
+                            <TextBox x:Name="txtBox_ItemDescription4" Canvas.Left="380" Canvas.Top="80" Height="135" Width="385" FontSize="16" TextWrapping="Wrap" Text="This is just some filler content, what would go here is the menu Item and a description of what it contains as well as the price."/>
+                        </Canvas>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
+            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="330" FontSize="40" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
+            <ScrollViewer x:Name="scrlViewerOrderItems" Height="340"  Width="330"  Margin="0 0 2 0" HorizontalAlignment="Left">
+                <StackPanel>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+                        <Grid Height="70" Background="#DDD">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="False" />
+                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
+                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
+                        </Grid>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+                        <Grid Height="70" Background="#DDD">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="False" />
+                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
+                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
+                        </Grid>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+                        <Grid Height="70" Background="#FFF">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
+                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
+                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
+                        </Grid>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+                        <Grid Height="70" Background="#FFF">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
+                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
+                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
+                        </Grid>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+                        <Grid Height="70" Background="#FFF">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
+                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
+                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
+                        </Grid>
+                    </Border>
+                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+                        <Grid Height="70" Background="#FFF">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
+                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
+                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+            <Label x:Name="lblSTotal" Height="30" Width="320" Margin="10 0 0 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" FontSize="18">Sub Total: $100.00</Label>
+            <Label x:Name="lblTax" Height="30" Width="320" Margin="10 0 0 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" FontSize="18">Tax: $100.00</Label>
+            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="320" Margin="10 0 0 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" FontSize="22">Total: $1600.00</Label>
             <Button x:Name="btnSpecialNote" Height="40" Width="300" Margin="0 10 0 0" FontSize="28">
                 <Button.ToolTip>
                     <ToolTip>
