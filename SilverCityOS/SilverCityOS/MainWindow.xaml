@@ -25,11 +25,12 @@
                 </Button.ToolTip>
                 <StackPanel>
                     <Image Source="Pictures/bell.png" Margin="20,20,20,20"  />
-                    <TextBlock HorizontalAlignment="Center" FontSize="22"><Run Text="Call Waiter" /></TextBlock>
+                    <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" FontSize="22">Call Waiter</TextBlock>
                 </StackPanel>
             </Button>
             <Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
             <ScrollViewer Height="400">
+                <!--VerticalScrollBarVisibility="Hidden"-->
                 <StackPanel>
                     <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
                     <Button x:Name="btnSoup" Content="Soups" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
@@ -132,10 +133,10 @@
             <Button x:Name="btnSpecialNote" Height="40" Width="300" Margin="0 10 0 0" FontSize="28" Click="btnSpecialNote_Click">
                 <Button.ToolTip>
                     <ToolTip>
-                        <TextBlock FontWeight="Bold">Click To Add a Special Note Or Comment</TextBlock>
+                        <TextBlock FontWeight="Bold">Click if need for special help</TextBlock>
                     </ToolTip>
                 </Button.ToolTip>
-                Special Note
+                Dietary Concerns
             </Button>
             <Grid>
                 <Grid.ColumnDefinitions>

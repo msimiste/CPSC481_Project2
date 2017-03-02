@@ -37,6 +37,7 @@ namespace SilverCityOS
             if (CallWaiterStatus)
             {
                 btnCallWaiter.Background = Brushes.Transparent;
+                waiterTextbox.Text = "Call Waiter";
                 btnCallWaiter.ToolTip = new ToolTip { Content = "Click to Call Waiter" };
                 btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Black);
                 CallWaiterStatus = false;
@@ -44,6 +45,7 @@ namespace SilverCityOS
             else if (!CallWaiterStatus)
             {
                 btnCallWaiter.Background = new SolidColorBrush(Colors.Yellow);
+                waiterTextbox.Text = "Cancel Call Waiter";
                 btnCallWaiter.ToolTip = new ToolTip { Content = "Click Again To Cancel Call to Waiter" };
                 btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Yellow);
                 CallWaiterStatus = true;

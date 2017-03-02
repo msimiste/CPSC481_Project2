@@ -31,8 +31,8 @@
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock FontSize="30" FontWeight="DemiBold" FontStyle="Italic" HorizontalAlignment="Center">Welcome To Silver City Restaurant</TextBlock>
             <TextBlock FontSize="20" HorizontalAlignment="Center">Start Browsing our Menu</TextBlock>
-            <TextBlock FontSize="20" HorizontalAlignment="Center">By Selecting or ScrollingOn</TextBlock>
-            <TextBlock FontSize="20" HorizontalAlignment="Center">One of the categories to the Left</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">By Selecting or Scrolling On</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">One of the Categories to the Left</TextBlock>
         </StackPanel>
         <Image Grid.Row="1" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20"/>
     </Grid>
