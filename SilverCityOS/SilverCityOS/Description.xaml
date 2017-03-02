@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="SilverCityOS.Description"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SilverCityOS"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1100">
+    <Border BorderBrush="Black" BorderThickness="1 1 1 1">
+        <Grid Background="#FFF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Padding="20 20">
+                <Image Source="Pictures/testImage1.JPG"/>
+            </Border>
+            <Button Grid.Row="1" BorderBrush="Black" Margin="10 10" FontSize="20">CLOSE</Button>
+        </Grid>
+    </Border>
+</UserControl>

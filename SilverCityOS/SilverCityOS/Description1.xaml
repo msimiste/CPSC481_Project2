@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="SilverCityOS.Description1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SilverCityOS"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1100">
+    <Border BorderBrush="Black" BorderThickness="1 1 1 1">
+        <Grid Background="#FFF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Row="0" Padding="20 20">
+                <Image Source="Pictures/testImage2.jpg"/>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1" Padding="20 20">
+                <StackPanel>
+                    <Label FontWeight="Bold" FontSize="30" BorderBrush="Black" BorderThickness="0 0 0 2">Item Name</Label>
+                    <Label FontStyle="Italic" FontSize="20">Price $$$$$</Label>
+                    <TextBlock>Item Description</TextBlock>
+                </StackPanel>
+            </Border>
+            <Button Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="Black" Margin="10 10" FontSize="20">CLOSE</Button>
+        </Grid>
+    </Border>
+</UserControl>

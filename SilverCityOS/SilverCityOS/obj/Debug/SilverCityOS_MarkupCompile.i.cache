@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Debug\
 SilverCityOS
 none
 false
 DEBUG;TRACE
-U:\Desktop\CPSC481\Project2\SilverCityOS\SilverCityOS\App.xaml
-2-1648117095
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\App.xaml
+61193906467
 
-13-637740082
+171488971038
 13738642453
-MainWindow.xaml;ucMenuItem.xaml;
+Description.xaml;Description1.xaml;MainWindow.xaml;Prompt.xaml;ucMenuItem.xaml;Welcome.xaml;
 
-False
+True
 

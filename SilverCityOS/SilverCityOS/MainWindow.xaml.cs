@@ -24,12 +24,12 @@ namespace SilverCityOS
         public MainWindow()
         {
             InitializeComponent();
-            setScrollComponents();
+            sViewer_Stackpanel.Children.Add(new Welcome());
         }
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
         {
-
+            setScrollComponents();
         }
 
         private void btnCallWaiterClick(object sender, RoutedEventArgs e)
@@ -53,8 +53,9 @@ namespace SilverCityOS
         private void setScrollComponents()
         {  
             Appetizers appetizers = new Appetizers("Appetizers");
-            sViewer_Stackpanel.Children.Add(new TextBox { VerticalContentAlignment = VerticalAlignment.Center, TextAlignment=TextAlignment.Center,FontSize = 33, Text = appetizers.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width });
-
+            //sViewer_Stackpanel.Children.Add(new TextBox { VerticalContentAlignment = VerticalAlignment.Center, TextAlignment=TextAlignment.Center,FontSize = 33, Text = appetizers.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width });
+            lblCategories.Content = appetizers.getName();
+            sViewer_Stackpanel.Children.Clear();
             foreach (var item in appetizers.getItemList())
             {
                 Border b = new Border { BorderThickness = new Thickness(0, 2, 0, 2), BorderBrush = Brushes.Black, };
@@ -67,6 +68,52 @@ namespace SilverCityOS
         private void txtBoxSpecialNote_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
+        {
+            Prompt ucPrompt = new Prompt();
+            Window prompt = new Window
+            {
+                Title = "wassup",
+                Height = 300,
+                Width = 500,
+                WindowStyle = WindowStyle.None,
+                WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                AllowsTransparency = true,
+                Content = ucPrompt
+            };
+            prompt.ShowDialog();
+        }
+
+        private void btnDineIn_Click(object sender, RoutedEventArgs e)
+        {
+            Window desc = new Window
+            {
+                Title = "wassup",
+                Height = 600,
+                Width = 1100,
+                WindowStyle = WindowStyle.None,
+                WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                AllowsTransparency = true,
+                Content = new Description()
+            };
+            desc.ShowDialog();
+        }
+
+        private void btnTakeOut_Click(object sender, RoutedEventArgs e)
+        {
+            Window desc1 = new Window
+            {
+                Title = "wassup",
+                Height = 600,
+                Width = 1100,
+                WindowStyle = WindowStyle.None,
+                WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                AllowsTransparency = true,
+                Content = new Description1()
+            };
+            desc1.ShowDialog();
         }
     }
 }
