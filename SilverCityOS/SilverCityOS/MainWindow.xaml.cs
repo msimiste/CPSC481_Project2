@@ -86,6 +86,7 @@ namespace SilverCityOS
                 Content = ucPrompt
             };
             prompt.ShowDialog();
+            prompt.Close();
         }
 
         private void btnDineIn_Click(object sender, RoutedEventArgs e)

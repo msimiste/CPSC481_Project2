@@ -14,7 +14,7 @@
             <ColumnDefinition Width="330"/>
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="756" Orientation ="Vertical" Width="220" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
+            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}" Height="200">
                 <Button.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -24,12 +24,13 @@
                     </ToolTip>
                 </Button.ToolTip>
                 <StackPanel>
-                    <Image Source="Pictures/bell.png" Margin="20,20,20,20"  />
+                    <Image Source="Pictures/bell.png" Height="150"/>
                     <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" FontSize="22">Call Waiter</TextBlock>
                 </StackPanel>
             </Button>
+            <Button x:Name="btnHelp" Height="60" BorderBrush="Black" BorderThickness="10 0" FontSize="40">HELP</Button>
             <Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
-            <ScrollViewer Height="400">
+            <ScrollViewer Height="380">
                 <!--VerticalScrollBarVisibility="Hidden"-->
                 <StackPanel>
                     <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
@@ -52,7 +53,7 @@
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="330" FontSize="40" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
             <ScrollViewer x:Name="scrlViewerOrderItems" Height="300" Width="330" Margin="0 0 0 0" HorizontalAlignment="Left">
-                <StackPanel>
+               <StackPanel>
                     <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
                         <Grid Height="70" Background="#DDD">
                             <Grid.ColumnDefinitions>

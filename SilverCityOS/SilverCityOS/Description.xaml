@@ -13,7 +13,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Border Grid.Row="0" Padding="20 20">
-                <Image Source="Pictures/testImage1.JPG"/>
+                <Image Source="Pictures/interface.JPG"/>
             </Border>
             <Button Grid.Row="1" BorderBrush="Black" Margin="10 10" FontSize="20">CLOSE</Button>
         </Grid>
