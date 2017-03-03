@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1370" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="750" Width="1360" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen">
     <!-- WindowState="Maximized" WindowStyle="None"-->
     <Grid>
         <Grid.ColumnDefinitions>
@@ -14,7 +14,8 @@
             <ColumnDefinition Width="330"/>
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="756" Orientation ="Vertical" Width="220" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}" Height="200">
+            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
+                <!--Height="200">-->
                 <Button.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -24,13 +25,12 @@
                     </ToolTip>
                 </Button.ToolTip>
                 <StackPanel>
-                    <Image Source="Pictures/bell.png" Height="150"/>
+                    <Image Source="Pictures/bell.png" /> <!--Height="150"/>-->
                     <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" FontSize="22">Call Waiter</TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="btnHelp" Height="60" BorderBrush="Black" BorderThickness="10 0" FontSize="40">HELP</Button>
-            <Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
-            <ScrollViewer Height="380">
+            <!--<Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
+            --><ScrollViewer Height="395">
                 <!--VerticalScrollBarVisibility="Hidden"-->
                 <StackPanel>
                     <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
@@ -42,6 +42,7 @@
                     <Button x:Name="btnAboutUs" Content="About Us" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5,10,7"/>
                 </StackPanel>
             </ScrollViewer>
+            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30">HELP INFO</Button>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="800" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
@@ -53,7 +54,8 @@
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="330" FontSize="40" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
             <ScrollViewer x:Name="scrlViewerOrderItems" Height="300" Width="330" Margin="0 0 0 0" HorizontalAlignment="Left">
-               <StackPanel>
+                <StackPanel>
+                    <!--
                     <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
                         <Grid Height="70" Background="#DDD">
                             <Grid.ColumnDefinitions>
@@ -78,7 +80,9 @@
                             <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
                         </Grid>
                     </Border>
-                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+               
+
+                <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
                         <Grid Height="70" Background="#FFF">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.3*" />
@@ -126,18 +130,19 @@
                             <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
                         </Grid>
                     </Border>
+                     -->
                 </StackPanel>
             </ScrollViewer>
-            <Label x:Name="lblSTotal" Height="30" Width="320" Margin="10 0 0 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" FontSize="18">Sub Total: $100.00</Label>
-            <Label x:Name="lblTax" Height="30" Width="320" Margin="10 0 0 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" FontSize="18">Tax: $100.00</Label>
-            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="320" Margin="10 0 0 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" FontSize="22">Total: $1600.00</Label>
-            <Button x:Name="btnSpecialNote" Height="40" Width="300" Margin="0 10 0 0" FontSize="28" Click="btnSpecialNote_Click">
+            <Label x:Name="lblSTotal" Height="30" Width="320" Margin="10 0 0 0"  Padding="0 0 10 0"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
+            <Label x:Name="lblTax" Height="30" Width="320" Margin="10 0 0 0" Padding="0 0 10 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
+            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="320" Margin="10 0 0 0" Padding="0 0 10 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
+            <Button x:Name="btnSpecialNote" Height="40" Width="300" Margin="0 10 0 0" FontSize="22" Click="btnSpecialNote_Click">
                 <Button.ToolTip>
                     <ToolTip>
                         <TextBlock FontWeight="Bold">Click if need for special help</TextBlock>
                     </ToolTip>
                 </Button.ToolTip>
-                Dietary Concerns
+                Dietary/Allergy Concerns
             </Button>
             <Grid>
                 <Grid.ColumnDefinitions>

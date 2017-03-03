@@ -28,12 +28,11 @@
             <TextBlock Margin="20 0 0 0" FontSize="20">Sat: ____ -____</TextBlock>
             <TextBlock Margin="20 0 0 0" FontSize="20">Sun: ____ -____</TextBlock>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center">
             <TextBlock FontSize="30" FontWeight="DemiBold" FontStyle="Italic" HorizontalAlignment="Center">Welcome To Silver City Restaurant</TextBlock>
-            <TextBlock FontSize="20" HorizontalAlignment="Center">Start Browsing our Menu</TextBlock>
-            <TextBlock FontSize="20" HorizontalAlignment="Center">By Selecting or Scrolling On</TextBlock>
-            <TextBlock FontSize="20" HorizontalAlignment="Center">One of the Categories to the Left</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">Start browsing our menu by selecting</TextBlock>
+            <TextBlock FontSize="20" HorizontalAlignment="Center">one of the categories to the left</TextBlock>
         </StackPanel>
-        <Image Grid.Row="1" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20"/>
+        <Image Grid.Row="1" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 0 0 110"/>
     </Grid>
 </UserControl>

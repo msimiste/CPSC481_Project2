@@ -47,7 +47,7 @@ namespace SilverCityOS
                 btnCallWaiter.Background = new SolidColorBrush(Colors.Yellow);
                 waiterTextbox.Text = "Cancel Call Waiter";
                 btnCallWaiter.ToolTip = new ToolTip { Content = "Click Again To Cancel Call to Waiter" };
-                btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Yellow);
+                //btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Yellow);
                 CallWaiterStatus = true;
             }
         }
