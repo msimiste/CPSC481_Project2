@@ -34,7 +34,7 @@
                 <!--VerticalScrollBarVisibility="Hidden"-->
                 <StackPanel>
                     <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
-                    <Button x:Name="btnSoup" Content="Soups" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
+                    <Button x:Name="btnSoup" Content="Soups" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnSoup_Click"/>
                     <Button x:Name="btnMainCourses" Content="Main Courses" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
                     <Button x:Name="btnSetDinners" Content="Set Dinners" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
                     <Button x:Name="btnDrinks" Content="Drinks" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
@@ -42,7 +42,7 @@
                     <Button x:Name="btnAboutUs" Content="About Us" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5,10,7"/>
                 </StackPanel>
             </ScrollViewer>
-            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30">HELP INFO</Button>
+            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="800" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
@@ -54,7 +54,7 @@
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="330" FontSize="40" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
             <ScrollViewer x:Name="scrlViewerOrderItems" Height="300" Width="330" Margin="0 0 0 0" HorizontalAlignment="Left">
-                <StackPanel>
+                <StackPanel x:Name="orderItems">
                     <!--
                     <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
                         <Grid Height="70" Background="#DDD">
@@ -180,7 +180,7 @@
                     </Grid>
                 </Button>
             </Grid>
-            <Button x:Name="btnPayBill" Height="70" Margin="15 10 15 0">
+            <Button x:Name="btnPayBill" Height="70" Margin="15 10 15 0" Click="btnPayBill_Click">
                 <Button.ToolTip>
                     <ToolTip>
                         <TextBlock FontWeight="Bold">Click To Request Bill</TextBlock>

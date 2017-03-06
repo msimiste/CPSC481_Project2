@@ -118,5 +118,20 @@ namespace SilverCityOS
             };
             desc1.ShowDialog();
         }
+
+        private void btnHelp_Click(object sender, RoutedEventArgs e)
+        {
+            orderItems.Children.Add(new OrderedItem(false));
+        }
+
+        private void btnPayBill_Click(object sender, RoutedEventArgs e)
+        {
+            orderItems.Children.Add(new OrderedItem(true));
+        }
+
+        private void btnSoup_Click(object sender, RoutedEventArgs e)
+        {
+            orderItems.Children.RemoveAt(0);
+        }
     }
 }

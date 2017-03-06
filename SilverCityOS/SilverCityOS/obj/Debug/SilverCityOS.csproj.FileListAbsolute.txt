@@ -72,3 +72,5 @@ C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\o
 C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Debug\Prompt.baml
 C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Debug\Welcome.g.cs
 C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Debug\Welcome.baml
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Debug\OrderedItem.g.cs
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Debug\OrderedItem.baml
