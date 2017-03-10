@@ -28,6 +28,7 @@ namespace SilverCityOS
             InitializeComponent();
             mainGrid.Children.Remove(cover);
             sViewer_Stackpanel.Children.Add(new Welcome());
+            calculatePrice();
         }
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
@@ -126,8 +127,10 @@ namespace SilverCityOS
             if (hi == true)
             {
                 sViewer_Stackpanel.Children.Clear();
+                lblCategories.Content = "SILVER CITY RESTAURANT";
                 sViewer_Stackpanel.Children.Add(new Welcome());
                 orderItems.Children.Clear();
+                calculatePrice();
             }
         }
 
@@ -147,12 +150,14 @@ namespace SilverCityOS
                 }
             }
             orderNumber--;
+            calculatePrice();
         }
 
         public void addToOrder(MenuItem item)
         {
             orderItems.Children.Add(new OrderedItem(item, this, orderNumber));
             orderNumber++;
+            calculatePrice();
         }
 
         public void viewItem(MenuItem item)
@@ -164,6 +169,21 @@ namespace SilverCityOS
         public Rectangle getCover()
         {
             return cover;
+        }
+
+        private void calculatePrice()
+        {
+            decimal subtotal = 0;
+            foreach (OrderedItem item in orderItems.Children)
+            {
+                subtotal += item.getItem().getPrice();
+            }
+            decimal tax = subtotal * (decimal)0.05;
+            decimal total = subtotal + tax;
+            lblSTotal.Content = "Subtotal: $" + subtotal.ToString("0.00");
+            lblTax.Content = "Tax: $" + tax.ToString("0.00");
+            lblTotal.Content = "Total: $" + total.ToString("0.00");
+
         }
     }
 }

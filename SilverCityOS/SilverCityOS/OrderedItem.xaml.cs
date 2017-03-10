@@ -52,6 +52,11 @@ namespace SilverCityOS
             button.IsEnabled = false;
         }
 
+        public MenuItem getItem()
+        {
+            return item;
+        }
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
             window.deleteFromOrder(code);
