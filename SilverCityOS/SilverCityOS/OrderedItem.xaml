@@ -18,10 +18,10 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="button" Grid.RowSpan="2" BorderBrush="Red" BorderThickness="3" Width="26" Height="8"></Button>
-                <TextBox Grid.RowSpan="2" Grid.Column="1" BorderThickness="0" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" Background="Transparent">ITEM NAME</TextBox>
-                <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
-                <TextBox Grid.Column="2" BorderThickness="0" Grid.Row="1" FontSize="18" Background="Transparent" TextAlignment="Right">x1</TextBox>
+                <Button x:Name="button" Grid.RowSpan="2" BorderBrush="Red" BorderThickness="3" Width="26" Height="8" Click="button_Click"></Button>
+                <TextBox x:Name="itemName" Grid.RowSpan="2" Grid.Column="1" BorderThickness="0" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" Background="Transparent">ITEM NAME</TextBox>
+                <TextBox x:Name="itemPrice" Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
+                <TextBox x:Name="qty" Grid.Column="2" BorderThickness="0" Grid.Row="1" FontSize="18" Background="Transparent" TextAlignment="Right">x1</TextBox>
             </Grid>
         </Border>
     </Grid>

@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SilverCityOS
@@ -18,29 +17,17 @@ namespace SilverCityOS
     /// <summary>
     /// Interaction logic for Prompt.xaml
     /// </summary>
-    public partial class Prompt : UserControl
+    public partial class Prompt : Window
     {
-        private int code;
-
-        public Prompt()
+        public Prompt(String message)
         {
             InitializeComponent();
-            code = 0; 
+            this.message.Content = message;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_Okay(object sender, RoutedEventArgs e)
         {
-            code = 1;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            code = 2;
-        }
-
-        public int getCode()
-        {
-            return code;
+            DialogResult = true;
         }
     }
 }

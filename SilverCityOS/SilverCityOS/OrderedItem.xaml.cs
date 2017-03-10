@@ -20,15 +20,41 @@ namespace SilverCityOS
     /// </summary>
     public partial class OrderedItem : UserControl
     {
-        public OrderedItem(Boolean sent)
+        int code;
+        MainWindow window;
+        MenuItem item;
+
+        public OrderedItem(MenuItem item, MainWindow window, int code)
         {
+            this.code = code;
+            this.window = window;
+            this.item = item;
             InitializeComponent();
-            if (sent)
-            {
-                main.Background = Brushes.LightGray;
-                button.IsEnabled = false;
-            }
+           // qty.Text = code.ToString();
+            itemName.Text = item.getName();
+            itemPrice.Text = item.getPrice().ToString();
+            qty.Text = item.getNumber().ToString();
         }
 
+        public int getCode()
+        {
+            return code;
+        }
+
+        public void decCode()
+        {
+            code--;
+        }
+
+        public void sent()
+        {
+            main.Background = Brushes.LightGray;
+            button.IsEnabled = false;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            window.deleteFromOrder(code);
+        }
     }
 }

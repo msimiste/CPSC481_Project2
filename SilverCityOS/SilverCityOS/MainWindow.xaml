@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="1360" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen">
     <!-- WindowState="Maximized" WindowStyle="None"-->
-    <Grid>
+    <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
             <ColumnDefinition Width="800"/>
@@ -196,5 +196,6 @@
                 </Grid>
             </Button>
         </StackPanel>
+        <Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/>
     </Grid>
 </Window>

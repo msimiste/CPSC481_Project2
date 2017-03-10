@@ -8,15 +8,14 @@ namespace SilverCityOS
 {
    public class MenuSection
     {
-        private string sectionName;
-        private List<ucMenuItem> items = new List<ucMenuItem>();
+        private Appetizers appetizers;
 
-        public MenuSection(string name) {
-            this.sectionName = name;
+        public MenuSection(MainWindow window) {
+            appetizers = new Appetizers(window, "Appetizers");
         }
 
-        public void addItem(ucMenuItem item) {
-            this.items.Add(item);
+        public Appetizers getAppetizers() {
+            return appetizers;
         }
     }
 }

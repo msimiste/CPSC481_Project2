@@ -20,10 +20,13 @@ namespace SilverCityOS
     /// </summary>
     public partial class MainWindow : Window
     {
+        int orderNumber = 0;
         private bool CallWaiterStatus = false;
+
         public MainWindow()
         {
             InitializeComponent();
+            mainGrid.Children.Remove(cover);
             sViewer_Stackpanel.Children.Add(new Welcome());
         }
 
@@ -54,7 +57,7 @@ namespace SilverCityOS
 
         private void setScrollComponents()
         {  
-            Appetizers appetizers = new Appetizers("Appetizers");
+            Appetizers appetizers = new Appetizers(this, "Appetizers");
             //sViewer_Stackpanel.Children.Add(new TextBox { VerticalContentAlignment = VerticalAlignment.Center, TextAlignment=TextAlignment.Center,FontSize = 33, Text = appetizers.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width });
             lblCategories.Content = appetizers.getName();
             sViewer_Stackpanel.Children.Clear();
@@ -67,71 +70,100 @@ namespace SilverCityOS
             }
         }
 
-        private void txtBoxSpecialNote_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
         {
-            Prompt ucPrompt = new Prompt();
-            Window prompt = new Window
-            {
-                Title = "wassup",
-                Height = 300,
-                Width = 500,
-                WindowStyle = WindowStyle.None,
-                WindowStartupLocation = WindowStartupLocation.CenterScreen,
-                AllowsTransparency = true,
-                Content = ucPrompt
-            };
-            prompt.ShowDialog();
-            prompt.Close();
+            Prompt prompt = new Prompt("Waiter will be here shortly to address your concern");
+            mainGrid.Children.Add(cover);
+            bool? hi = prompt.ShowDialog();
+            System.Console.WriteLine(hi);
+            mainGrid.Children.Remove(cover);
+
         }
 
         private void btnDineIn_Click(object sender, RoutedEventArgs e)
         {
-            Window desc = new Window
+            Prompt prompt = new Prompt("Order as DINE-IN?");
+            mainGrid.Children.Add(cover);
+            bool? hi = prompt.ShowDialog();
+            mainGrid.Children.Remove(cover);
+            if(hi == true)
             {
-                Title = "wassup",
-                Height = 600,
-                Width = 1100,
-                WindowStyle = WindowStyle.None,
-                WindowStartupLocation = WindowStartupLocation.CenterScreen,
-                AllowsTransparency = true,
-                Content = new Description()
-            };
-            desc.ShowDialog();
+                foreach(OrderedItem item in orderItems.Children)
+                {
+                    item.sent();
+                }
+            }
         }
 
         private void btnTakeOut_Click(object sender, RoutedEventArgs e)
         {
-            Window desc1 = new Window
+            Prompt prompt = new Prompt("Order as Takeout?");
+            mainGrid.Children.Add(cover);
+            bool? hi = prompt.ShowDialog();
+            mainGrid.Children.Remove(cover);
+            if (hi == true)
             {
-                Title = "wassup",
-                Height = 600,
-                Width = 1100,
-                WindowStyle = WindowStyle.None,
-                WindowStartupLocation = WindowStartupLocation.CenterScreen,
-                AllowsTransparency = true,
-                Content = new Description1()
-            };
-            desc1.ShowDialog();
+                foreach (OrderedItem item in orderItems.Children)
+                {
+                    item.sent();
+                }
+            }
         }
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
-            orderItems.Children.Add(new OrderedItem(false));
+            mainGrid.Children.Add(cover);
+            new HelpInfo().ShowDialog();
+            mainGrid.Children.Remove(cover);
         }
 
         private void btnPayBill_Click(object sender, RoutedEventArgs e)
         {
-            orderItems.Children.Add(new OrderedItem(true));
+            Prompt prompt = new Prompt("Call Bill and Reset?");
+            mainGrid.Children.Add(cover);
+            bool? hi = prompt.ShowDialog();
+            mainGrid.Children.Remove(cover);
+            if (hi == true)
+            {
+                sViewer_Stackpanel.Children.Clear();
+                sViewer_Stackpanel.Children.Add(new Welcome());
+                orderItems.Children.Clear();
+            }
         }
 
         private void btnSoup_Click(object sender, RoutedEventArgs e)
         {
-            orderItems.Children.RemoveAt(0);
+            
+        }
+
+        public void deleteFromOrder(int code)
+        {
+            orderItems.Children.RemoveAt(code);
+            foreach(OrderedItem item in orderItems.Children)
+            {
+                if(item.getCode() >= code)
+                {
+                    item.decCode();
+                }
+            }
+            orderNumber--;
+        }
+
+        public void addToOrder(MenuItem item)
+        {
+            orderItems.Children.Add(new OrderedItem(item, this, orderNumber));
+            orderNumber++;
+        }
+
+        public void viewItem(MenuItem item)
+        {
+            ItemInfo view = new ItemInfo(item);
+            view.ShowDialog();
+        }
+
+        public Rectangle getCover()
+        {
+            return cover;
         }
     }
 }

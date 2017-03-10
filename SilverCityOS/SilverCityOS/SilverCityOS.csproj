@@ -56,11 +56,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Appetizers.cs" />
-    <Compile Include="Description.xaml.cs">
-      <DependentUpon>Description.xaml</DependentUpon>
+    <Compile Include="DescriptionOld.xaml.cs">
+      <DependentUpon>DescriptionOld.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Description1.xaml.cs">
-      <DependentUpon>Description1.xaml</DependentUpon>
+    <Compile Include="Description1Old.xaml.cs">
+      <DependentUpon>Description1Old.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelpInfo.xaml.cs">
+      <DependentUpon>HelpInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemInfo.xaml.cs">
+      <DependentUpon>ItemInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuItem.cs" />
     <Compile Include="MenuSection.cs" />
@@ -70,19 +76,30 @@
     <Compile Include="Prompt.xaml.cs">
       <DependentUpon>Prompt.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PromptOld.xaml.cs">
+      <DependentUpon>PromptOld.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ucMenuItem.xaml.cs">
       <DependentUpon>ucMenuItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
-    <Page Include="Description.xaml">
+    <Page Include="DescriptionOld.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Description1.xaml">
+    <Page Include="Description1Old.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HelpInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -101,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Prompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PromptOld.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -173,6 +194,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PIctures\interface.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

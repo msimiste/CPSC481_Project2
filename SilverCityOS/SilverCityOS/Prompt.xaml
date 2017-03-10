@@ -1,24 +1,26 @@
-﻿<UserControl x:Class="SilverCityOS.Prompt"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:SilverCityOS"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="500">
-    <Border BorderBrush="Black" BorderThickness="1 1 1 1">
-        <Grid Background="#FFF">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20">Waiter Has Been Notified</Label>
-            <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 20 20 0" Padding="10 10" Height="35" Width="150" Click="Button_Click">OKAY</Button>
-            <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20 20 0 0" Padding="10 10" Height="35" Width="150" Click="Button_Click_1">CANCEL</Button>
-        </Grid>
-    </Border>
-</UserControl>
+﻿<Window x:Class="SilverCityOS.Prompt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SilverCityOS"
+        mc:Ignorable="d"
+        Title="Prompt" Height="300" Width="500" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1 1 1 1">
+            <Grid Background="#FFF">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="message" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20">Waiter Has Been Notified</Label>
+                <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 20 20 0" Padding="10 10" Height="35" Width="150" Click="Button_Click_Okay">OKAY</Button>
+                <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20 20 0 0" Padding="10 10" Height="35" Width="150" IsCancel="True">CANCEL</Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
