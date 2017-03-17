@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 
 namespace SilverCityOS
 {
-    public class Appetizers {
+    public class Appetizers : MenuSection {
 
         private string name;
         private List<ucMenuItem> items;
         public Appetizers(MainWindow window, string name)
         {
             this.name = name;
+            //generate(window);
             generate(window);
         }
 
-        private void generate(MainWindow window)
+
+        public void generate(MainWindow window)
         {
             items = new List<ucMenuItem>()
             {
@@ -31,6 +33,7 @@ namespace SilverCityOS
                 new  ucMenuItem (window, new MenuItem((decimal)10.95, "Grilled Pork with Vegetable Dumplings(10)", "Pictures/testImage3.jpg", "Dumplings", 8))
             };
         }
+       
 
         public List<ucMenuItem> getItemList(){
             

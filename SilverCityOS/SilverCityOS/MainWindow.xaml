@@ -5,132 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1360" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="1200" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen">
     <!-- WindowState="Maximized" WindowStyle="None"-->
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220"/>
-            <ColumnDefinition Width="800"/>
-            <ColumnDefinition Width="330"/>
+            <ColumnDefinition Width="1.25*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="756" Orientation ="Vertical" Width="220" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
-                <!--Height="200">-->
-                <Button.ToolTip>
-                    <ToolTip>
-                        <StackPanel>
-                            <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
-                            <TextBlock>Lets the server know you require immediate assistance</TextBlock>
-                        </StackPanel>
-                    </ToolTip>
-                </Button.ToolTip>
-                <StackPanel>
-                    <Image Source="Pictures/bell.png" /> <!--Height="150"/>-->
-                    <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" FontSize="22">Call Waiter</TextBlock>
-                </StackPanel>
-            </Button>
+        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="1200" Orientation ="Vertical" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+           <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
+                    <!--Height="200">-->
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <StackPanel>
+                                <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
+                                <TextBlock>Lets the server know you require immediate assistance</TextBlock>
+                            </StackPanel>
+                        </ToolTip>
+                    </Button.ToolTip>
+                    <StackPanel Height="auto">
+                        <Image Source="Pictures/bell.png" /> <!--Height="150"/>-->
+                        <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" FontSize="22">Call Waiter</TextBlock>
+                    </StackPanel>
+                </Button>
             <!--<Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
-            --><ScrollViewer Height="395">
+            -->
                 <!--VerticalScrollBarVisibility="Hidden"-->
                 <StackPanel>
-                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,7,10,3.5"/>
-                    <Button x:Name="btnSoup" Content="Soups" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnSoup_Click"/>
-                    <Button x:Name="btnMainCourses" Content="Main Courses" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnSetDinners" Content="Set Dinners" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnDrinks" Content="Drinks" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnDeserts" Content="Desserts" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5,10,7"/>
-                    <Button x:Name="btnAboutUs" Content="About Us" Height="75" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5,10,7"/>
-                </StackPanel>
-            </ScrollViewer>
-            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
+                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="90" Width="Auto" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnSoup" Content="Soups" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
+                    <Button x:Name="btnMainCourses" Content="Main Courses" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnSetDinners" Content="Set Dinners" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnDrinks" Content="Drinks" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnDeserts" Content="Desserts" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnAboutUs" Content="About Us" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnHelp" Height="90" BorderBrush="Black" BorderThickness="10,3.5" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
+            </StackPanel>           
         </StackPanel>
-        <StackPanel Grid.Column="1">
+        <StackPanel x:Name="testSp" Grid.Column="1" Width="Auto">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="800" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
-            <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" HorizontalAlignment="Right" Width ="800" Height="660" Margin="0,8,0,-14">
-                <StackPanel x:Name="sViewer_Stackpanel">
-                </StackPanel>
-            </ScrollViewer>
+                <StackPanel x:Name="sViewer_Stackpanel" Width="Auto">
+                </StackPanel>           
         </StackPanel>
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="330" FontSize="40" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
             <ScrollViewer x:Name="scrlViewerOrderItems" Height="300" Width="330" Margin="0 0 0 0" HorizontalAlignment="Left">
-                <StackPanel x:Name="orderItems">
-                    <!--
-                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
-                        <Grid Height="70" Background="#DDD">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="False" />
-                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
-                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
-                        </Grid>
-                    </Border>
-                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
-                        <Grid Height="70" Background="#DDD">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="False" />
-                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
-                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
-                        </Grid>
-                    </Border>
-               
-
-                <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
-                        <Grid Height="70" Background="#FFF">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
-                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
-                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
-                        </Grid>
-                    </Border>
-                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
-                        <Grid Height="70" Background="#FFF">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
-                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
-                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
-                        </Grid>
-                    </Border>
-                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
-                        <Grid Height="70" Background="#FFF">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
-                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
-                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
-                        </Grid>
-                    </Border>
-                    <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
-                        <Grid Height="70" Background="#FFF">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <CheckBox VerticalContentAlignment="Center" HorizontalAlignment="Center" IsEnabled="True" />
-                            <TextBox Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Left" FontSize="22" BorderThickness="0" Background="Transparent">ITEM NAME</TextBox>
-                            <TextBox Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Right" FontSize="22" BorderThickness="0" Background="Transparent">$15.00</TextBox>
-                        </Grid>
-                    </Border>
-                     -->
+                <StackPanel x:Name="stkPanel_OrderItems">                   
                 </StackPanel>
             </ScrollViewer>
             <Label x:Name="lblSTotal" Height="30" Width="320" Margin="10 0 0 0"  Padding="0 0 10 0"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>

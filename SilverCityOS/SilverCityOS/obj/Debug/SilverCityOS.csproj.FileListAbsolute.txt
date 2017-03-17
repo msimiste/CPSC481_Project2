@@ -112,3 +112,5 @@ C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\o
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.csproj.GenerateResource.Cache
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.exe
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.pdb
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\ucMenuSection.g.cs
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\ucMenuSection.baml

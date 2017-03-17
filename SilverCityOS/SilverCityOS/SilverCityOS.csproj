@@ -82,6 +82,9 @@
     <Compile Include="ucMenuItem.xaml.cs">
       <DependentUpon>ucMenuItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ucMenuSection.xaml.cs">
+      <DependentUpon>ucMenuSection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ucMenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ucMenuSection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

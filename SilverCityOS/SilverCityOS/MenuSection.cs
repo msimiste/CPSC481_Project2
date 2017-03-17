@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace SilverCityOS
 {
-   public class MenuSection
+  public interface MenuSection
     {
-        private Appetizers appetizers;
-
-        public MenuSection(MainWindow window) {
-            appetizers = new Appetizers(window, "Appetizers");
-        }
-
-        public Appetizers getAppetizers() {
-            return appetizers;
-        }
+        void generate(MainWindow window);
+        List<ucMenuItem> getItemList();
+        string getName();
     }
 }

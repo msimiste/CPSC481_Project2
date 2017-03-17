@@ -22,13 +22,20 @@ namespace SilverCityOS
     {
         int orderNumber = 0;
         private bool CallWaiterStatus = false;
-
+        List<ucMenuSection> menuSections = new List<ucMenuSection>();
+        ucMenuSection test;
         public MainWindow()
         {
+            var screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            var screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
             InitializeComponent();
             mainGrid.Children.Remove(cover);
             sViewer_Stackpanel.Children.Add(new Welcome());
             calculatePrice();
+            Appetizers apps = new Appetizers(this,"Appetizers");
+            ucMenuSection appetizers = new ucMenuSection(apps);
+            test = appetizers;
+            menuSections.Add(appetizers);        
         }
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
@@ -57,18 +64,10 @@ namespace SilverCityOS
         }
 
         private void setScrollComponents()
-        {  
-            Appetizers appetizers = new Appetizers(this, "Appetizers");
-            //sViewer_Stackpanel.Children.Add(new TextBox { VerticalContentAlignment = VerticalAlignment.Center, TextAlignment=TextAlignment.Center,FontSize = 33, Text = appetizers.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width });
-            lblCategories.Content = appetizers.getName();
+        {
             sViewer_Stackpanel.Children.Clear();
-            foreach (var item in appetizers.getItemList())
-            {
-                Border b = new Border { BorderThickness = new Thickness(0, 2, 0, 2), BorderBrush = Brushes.Black, };
-
-                b.Child = item;
-                sViewer_Stackpanel.Children.Add(b);
-            }
+            sViewer_Stackpanel.Children.Add(test);
+           
         }
 
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
@@ -89,7 +88,7 @@ namespace SilverCityOS
             mainGrid.Children.Remove(cover);
             if(hi == true)
             {
-                foreach(OrderedItem item in orderItems.Children)
+                foreach(OrderedItem item in stkPanel_OrderItems.Children)
                 {
                     item.sent();
                 }
@@ -104,7 +103,7 @@ namespace SilverCityOS
             mainGrid.Children.Remove(cover);
             if (hi == true)
             {
-                foreach (OrderedItem item in orderItems.Children)
+                foreach (OrderedItem item in stkPanel_OrderItems.Children)
                 {
                     item.sent();
                 }
@@ -126,10 +125,10 @@ namespace SilverCityOS
             mainGrid.Children.Remove(cover);
             if (hi == true)
             {
-                sViewer_Stackpanel.Children.Clear();
+                //sViewer_Stackpanel.Children.Clear();
                 lblCategories.Content = "SILVER CITY RESTAURANT";
-                sViewer_Stackpanel.Children.Add(new Welcome());
-                orderItems.Children.Clear();
+               // sViewer_Stackpanel.Children.Add(new Welcome());
+                stkPanel_OrderItems.Children.Clear();
                 calculatePrice();
             }
         }
@@ -141,8 +140,8 @@ namespace SilverCityOS
 
         public void deleteFromOrder(int code)
         {
-            orderItems.Children.RemoveAt(code);
-            foreach(OrderedItem item in orderItems.Children)
+            stkPanel_OrderItems.Children.RemoveAt(code);
+            foreach(OrderedItem item in stkPanel_OrderItems.Children)
             {
                 if(item.getCode() >= code)
                 {
@@ -155,7 +154,7 @@ namespace SilverCityOS
 
         public void addToOrder(MenuItem item)
         {
-            orderItems.Children.Add(new OrderedItem(item, this, orderNumber));
+            stkPanel_OrderItems.Children.Add(new OrderedItem(item, this, orderNumber));
             orderNumber++;
             calculatePrice();
         }
@@ -174,7 +173,7 @@ namespace SilverCityOS
         private void calculatePrice()
         {
             decimal subtotal = 0;
-            foreach (OrderedItem item in orderItems.Children)
+            foreach (OrderedItem item in stkPanel_OrderItems.Children)
             {
                 subtotal += item.getItem().getPrice();
             }
