@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,7 @@ namespace SilverCityOS
             var screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
             InitializeComponent();
             mainGrid.Children.Remove(cover);
+            scrlViewerOrderItems.Background = Brushes.LightGray;
             sViewer_Stackpanel.Children.Add(new Welcome());
             calculatePrice();
             Appetizers apps = new Appetizers(this,"Appetizers");
@@ -113,7 +115,9 @@ namespace SilverCityOS
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
             mainGrid.Children.Add(cover);
-            new HelpInfo().ShowDialog();
+            //new HelpInfo().ShowDialog();
+            sViewer_Stackpanel.Children.Clear();
+            sViewer_Stackpanel.Children.Add(new Welcome());
             mainGrid.Children.Remove(cover);
         }
 
@@ -179,9 +183,9 @@ namespace SilverCityOS
             }
             decimal tax = subtotal * (decimal)0.05;
             decimal total = subtotal + tax;
-            lblSTotal.Content = "Subtotal: $" + subtotal.ToString("0.00");
-            lblTax.Content = "Tax: $" + tax.ToString("0.00");
-            lblTotal.Content = "Total: $" + total.ToString("0.00");
+            lblSTotal.Content = "Subtotal: " + subtotal.ToString("C",CultureInfo.CurrentCulture);
+            lblTax.Content = "Tax: " + tax.ToString("C", CultureInfo.CurrentCulture);
+            lblTotal.Content = "Total: " + total.ToString("C", CultureInfo.CurrentCulture);
 
         }
     }

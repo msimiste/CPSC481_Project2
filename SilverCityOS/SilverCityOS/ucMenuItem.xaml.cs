@@ -37,7 +37,7 @@ namespace SilverCityOS
         {
             itemImg.Source = item.getSmallImg(); 
             itemNumber.Content = "ITEM NUMBER: #" + item.getNumber().ToString();
-            itemPrice.Content = "PRICE: $"+item.getPrice().ToString();
+            itemPrice.Content = "PRICE: "+item.getPrice().ToString("C",CultureInfo.CurrentCulture);
             itemName.Content = item.getName();
         }
 

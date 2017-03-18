@@ -29,7 +29,7 @@ namespace SilverCityOS
         }
 
         private void addMenuItems() {
-            TextBox box = new TextBox {VerticalAlignment = VerticalAlignment.Top, VerticalContentAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center, FontSize = 33, Text = section.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width };
+            TextBox box = new TextBox {VerticalAlignment = VerticalAlignment.Top, VerticalContentAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center, FontSize = 33, Text = section.getName(), Height = 50.0, Width = sViewer_Stackpanel.Width };
             ucMainGrid.Children.Add(box);
             Grid.SetRow(box, 0);               
             foreach (ucMenuItem mi in section.getItemList()) {

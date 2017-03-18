@@ -11,7 +11,7 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="700"/>
         </Grid.RowDefinitions>        
-        <ScrollViewer x:Name="scrlViewer_MenuItems" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width ="675" Height="600">
+        <ScrollViewer x:Name="scrlViewer_MenuItems" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width ="675" Height="650">
             <StackPanel x:Name="sViewer_Stackpanel">
             </StackPanel>
         </ScrollViewer>
