@@ -23,6 +23,7 @@ namespace SilverCityOS
     {
         MenuItem item;
         MainWindow window;
+        
 
         public ucMenuItem(MainWindow window, MenuItem item)
         {
@@ -34,7 +35,7 @@ namespace SilverCityOS
 
         private void setUp()
         {
-            itemImg.Source = new BitmapImage(new Uri(item.getImgPath(), UriKind.Relative));
+            itemImg.Source = item.getSmallImg(); 
             itemNumber.Content = "ITEM NUMBER: #" + item.getNumber().ToString();
             itemPrice.Content = "PRICE: $"+item.getPrice().ToString();
             itemName.Content = item.getName();
@@ -45,8 +46,7 @@ namespace SilverCityOS
             window.addToOrder(item);
         }
 
-        private void img_click(object sender, RoutedEventArgs e)
-        {
+        private void img_click(object sender, RoutedEventArgs e)        {      
             ItemInfo desc = new ItemInfo(item);
             window.mainGrid.Children.Add(window.getCover());
             desc.ShowDialog();

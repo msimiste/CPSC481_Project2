@@ -22,7 +22,7 @@ namespace SilverCityOS
         public ItemInfo(MenuItem item)
         {
             InitializeComponent();
-            itemImg.Source = new BitmapImage(new Uri(item.getImgPath(), UriKind.Relative));
+            itemImg.Source = item.getBigImg();           
             itemName.Content = "Item #"+ item.getNumber();
             itemPrice.Content = "$" + item.getPrice();
             itemDesc.Text = item.getName() +"\n"+ item.getDescription();

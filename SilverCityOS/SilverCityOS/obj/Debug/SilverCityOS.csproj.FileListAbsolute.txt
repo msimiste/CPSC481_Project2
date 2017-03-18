@@ -83,7 +83,6 @@ C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\o
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\bin\Debug\SilverCityOS.exe.config
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\bin\Debug\SilverCityOS.exe
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\bin\Debug\SilverCityOS.pdb
-\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\SilverCityOS.csprojResolveAssemblyReference.cache
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\DescriptionOld.g.cs
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\Description1Old.g.cs
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\HelpInfo.g.cs

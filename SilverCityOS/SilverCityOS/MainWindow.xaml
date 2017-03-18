@@ -5,15 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1200" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen">
+         d:DesignHeight="800" d:DesignWidth="1698.16"
+        Title="MainWindow" Height="800" Width="1300" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <!-- WindowState="Maximized" WindowStyle="None"-->
+    <Page>
+    <Page.Resources>
+        <!-- A brush for flat 3D panel borders -->
+        <LinearGradientBrush x:Key="Flat3DBorderBrush"
+                         StartPoint="0.499,0" EndPoint="0.501,1">
+            <GradientStop Color="#FFF" Offset="0" />
+            <GradientStop Color="#DDD" Offset="0.01" />
+            <GradientStop Color="#AAA" Offset="0.99" />
+            <GradientStop Color="#888" Offset="1" />
+        </LinearGradientBrush>
+    </Page.Resources>
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.25*"/>
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="1200" Orientation ="Vertical" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="800" Orientation ="Vertical" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top">
            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
                     <!--Height="200">-->
                     <Button.ToolTip>
@@ -33,22 +45,27 @@
             -->
                 <!--VerticalScrollBarVisibility="Hidden"-->
                 <StackPanel>
-                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="90" Width="Auto" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnSoup" Content="Soups" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
-                    <Button x:Name="btnMainCourses" Content="Main Courses" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnSetDinners" Content="Set Dinners" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnDrinks" Content="Drinks" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnDeserts" Content="Desserts" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnAboutUs" Content="About Us" Height="90" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnHelp" Height="90" BorderBrush="Black" BorderThickness="10,3.5" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
+                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="60" Width="Auto" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click"  BorderBrush="Black" BorderThickness="10,3.5" />
+                    <Button x:Name="btnSoup" Content="Soups" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
+                    <Button x:Name="btnSizzlingRice" Content="Sizzling Rice" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnBeef" Content="Beef" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnChickenDuck" Content="Chicken/Duck" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnSeafood" Content="Seafood" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnVegetables" Content="Vegetables" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnHotPlate" Content="Hot Plate/Pot" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnFriedRice" Content="Fried Rice" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnFriedNoodles" Content="Fried Noodles" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnEggFooYung" Content="Egg Foo Yung" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnChopSuey" Content="Chop Suey" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnHelp" Height="60" BorderBrush="Black" BorderThickness="10,3.5" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
             </StackPanel>           
         </StackPanel>
         <StackPanel x:Name="testSp" Grid.Column="1" Width="Auto">
-            <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="800" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
+            <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="750" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
                 <StackPanel x:Name="sViewer_Stackpanel" Width="Auto">
                 </StackPanel>           
         </StackPanel>
-        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
+        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Width="Auto">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="330" FontSize="40" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
             <ScrollViewer x:Name="scrlViewerOrderItems" Height="300" Width="330" Margin="0 0 0 0" HorizontalAlignment="Left">
                 <StackPanel x:Name="stkPanel_OrderItems">                   
@@ -119,4 +136,5 @@
         </StackPanel>
         <Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/>
     </Grid>
+    </Page>
 </Window>
