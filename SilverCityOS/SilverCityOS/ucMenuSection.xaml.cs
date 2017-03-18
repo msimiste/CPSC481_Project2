@@ -31,9 +31,7 @@ namespace SilverCityOS
         private void addMenuItems() {
             TextBox box = new TextBox {VerticalAlignment = VerticalAlignment.Top, VerticalContentAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center, FontSize = 33, Text = section.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width };
             ucMainGrid.Children.Add(box);
-            Grid.SetRow(box, 0);
-                //sViewer_Stackpanel.Children.Add(new TextBox { VerticalContentAlignment = VerticalAlignment.Center, TextAlignment = TextAlignment.Center, FontSize = 33, Text = section.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width });
-            // lblCategories.Content = section.getName();
+            Grid.SetRow(box, 0);               
             foreach (ucMenuItem mi in section.getItemList()) {
                 sViewer_Stackpanel.Children.Add(mi);
             }

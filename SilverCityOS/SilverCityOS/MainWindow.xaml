@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-         d:DesignHeight="800" d:DesignWidth="1698.16"
+         d:DesignHeight="800" d:DesignWidth="1300"
         Title="MainWindow" Height="800" Width="1300" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <!-- WindowState="Maximized" WindowStyle="None"-->
     <Page>
@@ -21,11 +21,11 @@
     </Page.Resources>
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.25*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="275"/>
+            <ColumnDefinition Width="675"/>
+            <ColumnDefinition Width="350"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="800" Orientation ="Vertical" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="800" Orientation ="Vertical" Width="275" HorizontalAlignment="Left" VerticalAlignment="Top">
            <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
                     <!--Height="200">-->
                     <Button.ToolTip>
@@ -36,45 +36,45 @@
                             </StackPanel>
                         </ToolTip>
                     </Button.ToolTip>
-                    <StackPanel Height="auto">
-                        <Image Source="Pictures/bell.png" /> <!--Height="150"/>-->
-                        <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" FontSize="22">Call Waiter</TextBlock>
+                    <StackPanel Height="225">
+                        <Image Source="Pictures/bell.png" Height="175"/>
+                        <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" Height="auto" FontSize="22">Call Waiter</TextBlock>
                     </StackPanel>
                 </Button>
             <!--<Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
             -->
                 <!--VerticalScrollBarVisibility="Hidden"-->
                 <StackPanel>
-                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="60" Width="Auto" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click"  BorderBrush="Black" BorderThickness="10,3.5" />
-                    <Button x:Name="btnSoup" Content="Soups" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
-                    <Button x:Name="btnSizzlingRice" Content="Sizzling Rice" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnBeef" Content="Beef" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnChickenDuck" Content="Chicken/Duck" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnSeafood" Content="Seafood" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnVegetables" Content="Vegetables" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnHotPlate" Content="Hot Plate/Pot" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnFriedRice" Content="Fried Rice" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnFriedNoodles" Content="Fried Noodles" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnEggFooYung" Content="Egg Foo Yung" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnChopSuey" Content="Chop Suey" Height="60" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnHelp" Height="60" BorderBrush="Black" BorderThickness="10,3.5" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
+                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="40" Width="Auto" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click"  BorderBrush="Black" BorderThickness="10,3.5" />
+                    <Button x:Name="btnSoup" Content="Soups" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
+                    <Button x:Name="btnSizzlingRice" Content="Sizzling Rice" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnBeef" Content="Beef" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnChickenDuck" Content="Chicken/Duck" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnSeafood" Content="Seafood" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnVegetables" Content="Vegetables" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnHotPlate" Content="Hot Plate/Pot" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnFriedRice" Content="Fried Rice" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnFriedNoodles" Content="Fried Noodles" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnEggFooYung" Content="Egg Foo Yung" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnChopSuey" Content="Chop Suey" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
+                    <Button x:Name="btnHelp" Height="40" BorderBrush="Black" BorderThickness="10,3.5" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
             </StackPanel>           
         </StackPanel>
         <StackPanel x:Name="testSp" Grid.Column="1" Width="Auto">
-            <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="750" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
+            <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="675" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
                 <StackPanel x:Name="sViewer_Stackpanel" Width="Auto">
                 </StackPanel>           
         </StackPanel>
-        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Width="Auto">
-            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="330" FontSize="40" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="300" Width="330" Margin="0 0 0 0" HorizontalAlignment="Left">
+        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Width="350">
+            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="2 2" Height="60" Width="350" VerticalAlignment="Center" FontSize="36" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
+            <ScrollViewer x:Name="scrlViewerOrderItems" Height="350" Width="325" Margin="0 0 0 0" HorizontalAlignment="Left">
                 <StackPanel x:Name="stkPanel_OrderItems">                   
                 </StackPanel>
             </ScrollViewer>
-            <Label x:Name="lblSTotal" Height="30" Width="320" Margin="10 0 0 0"  Padding="0 0 10 0"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
-            <Label x:Name="lblTax" Height="30" Width="320" Margin="10 0 0 0" Padding="0 0 10 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
-            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="320" Margin="10 0 0 0" Padding="0 0 10 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
-            <Button x:Name="btnSpecialNote" Height="40" Width="300" Margin="0 10 0 0" FontSize="22" Click="btnSpecialNote_Click">
+            <Label x:Name="lblSTotal" Height="30" Width="325" Margin="0 0 0 0"  Padding="0 0 0 0"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
+            <Label x:Name="lblTax" Height="30" Width="325" Margin="0 0 0 0" Padding="0 0 0 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
+            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="325" Margin="0 0 0 0" Padding="0 0 0 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
+            <Button x:Name="btnSpecialNote" HorizontalAlignment="Center" Height="40" Width="315" Margin="0 10 10 0" FontSize="22" Click="btnSpecialNote_Click">
                 <Button.ToolTip>
                     <ToolTip>
                         <TextBlock FontWeight="Bold">Click if need for special help</TextBlock>
@@ -102,7 +102,7 @@
                         <Label Grid.Row="1" HorizontalAlignment="Center">DINE-IN</Label>
                     </Grid>
                 </Button>
-                <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 15 0"  Padding="0 0 0 0" Grid.Column="1" VerticalContentAlignment="Top" Click="btnTakeOut_Click">
+                <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 25 0"  Padding="0 0 0 0" Grid.Column="1" VerticalContentAlignment="Top" Click="btnTakeOut_Click">
                     <Button.ToolTip>
                         <ToolTip>
                             <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>
@@ -118,7 +118,7 @@
                     </Grid>
                 </Button>
             </Grid>
-            <Button x:Name="btnPayBill" Height="70" Margin="15 10 15 0" Click="btnPayBill_Click">
+            <Button x:Name="btnPayBill" Height="70" Margin="15 10 25 0" Click="btnPayBill_Click">
                 <Button.ToolTip>
                     <ToolTip>
                         <TextBlock FontWeight="Bold">Click To Request Bill</TextBlock>
