@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SilverCityOS"
+        xmlns:testControl="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
          d:DesignHeight="800" d:DesignWidth="1300"
         Title="MainWindow" Height="800" Width="1300" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
@@ -42,7 +42,7 @@
                     </StackPanel>
                 </Button>           
                 <StackPanel>
-                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="40" Width="Auto" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" Click="btnAppetizers_Click"  BorderBrush="Black" BorderThickness="10,3.5" />
+                    <testControl:Button x:Name="btnAppetizers" >Test</testControl:Button>
                     <Button x:Name="btnSoup" Content="Soups" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
                     <Button x:Name="btnSizzlingRice" Content="Sizzling Rice" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
                     <Button x:Name="btnBeef" Content="Beef" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
