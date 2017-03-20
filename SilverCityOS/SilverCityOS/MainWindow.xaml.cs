@@ -21,11 +21,14 @@ namespace SilverCityOS
     public partial class MainWindow : Window
     {
         int orderNumber = 0;
+        int orderedNumber = 0;
         private bool CallWaiterStatus = false;
+        Rectangle cover;
 
         public MainWindow()
         {
             InitializeComponent();
+            setupCover();
             mainGrid.Children.Remove(cover);
             sViewer_Stackpanel.Children.Add(new Welcome());
             calculatePrice();
@@ -91,8 +94,12 @@ namespace SilverCityOS
             {
                 foreach(OrderedItem item in orderItems.Children)
                 {
-                    item.sent();
+                    if(item.getCode() >= orderedNumber)
+                    {
+                        item.sent(true);
+                    }
                 }
+                orderedNumber = orderNumber;
             }
         }
 
@@ -106,8 +113,12 @@ namespace SilverCityOS
             {
                 foreach (OrderedItem item in orderItems.Children)
                 {
-                    item.sent();
+                    if (item.getCode() >= orderedNumber)
+                    {
+                        item.sent(false);
+                    }
                 }
+                orderedNumber = orderNumber;
             }
         }
 
@@ -184,6 +195,16 @@ namespace SilverCityOS
             lblTax.Content = "Tax: $" + tax.ToString("0.00");
             lblTotal.Content = "Total: $" + total.ToString("0.00");
 
+        }
+
+        private void setupCover()
+        {
+            cover = new Rectangle()
+             {
+                 Opacity = 0.7,
+                 Fill = Brushes.Black
+             };
+            Grid.SetColumnSpan(cover, 3);
         }
     }
 }

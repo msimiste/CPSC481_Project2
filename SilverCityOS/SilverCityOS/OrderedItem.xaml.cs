@@ -32,8 +32,8 @@ namespace SilverCityOS
             InitializeComponent();
            // qty.Text = code.ToString();
             itemName.Text = item.getName();
-            itemPrice.Text = item.getPrice().ToString();
-            qty.Text = item.getNumber().ToString();
+            itemPrice.Text = "$"+item.getPrice().ToString("0.00");
+            itemNum.Text = "#"+item.getNumber().ToString();
         }
 
         public int getCode()
@@ -46,10 +46,21 @@ namespace SilverCityOS
             code--;
         }
 
-        public void sent()
+        public void sent(bool dineIn)
         {
             main.Background = Brushes.LightGray;
             button.IsEnabled = false;
+            Image mode;
+            if (dineIn)
+            {
+                mode = new Image() { Source = new BitmapImage(new Uri("Pictures/DineIn.png", UriKind.Relative)) };
+            }
+            else
+            {
+                mode = new Image() { Source = new BitmapImage(new Uri("Pictures/TakeOut2.png", UriKind.Relative)) };
+            }
+            Grid.SetColumn(mode, 2);
+            underPrice.Children.Add(mode);
         }
 
         public MenuItem getItem()

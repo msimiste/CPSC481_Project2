@@ -196,6 +196,6 @@
                 </Grid>
             </Button>
         </StackPanel>
-        <Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/>
+        <!--Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/-->
     </Grid>
 </Window>
