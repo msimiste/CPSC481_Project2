@@ -9,129 +9,226 @@
         Title="MainWindow" Height="800" Width="1300" HorizontalAlignment="Left" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <!-- WindowState="Maximized" WindowStyle="None"-->
     <Page>
-    <Page.Resources>
-        <!-- A brush for flat 3D panel borders -->
-        <LinearGradientBrush x:Key="Flat3DBorderBrush"
+        <Page.Resources>
+            <Style x:Key="MyFocusVisual">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Control}">
+                            <Grid Margin="3 2">
+                                <Rectangle Name="r1" StrokeThickness="1" Stroke="Black" StrokeDashArray="2 2"/>
+                                <Border Name="border" Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}"  CornerRadius="2" BorderThickness="1" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="ShadowStyle">
+                <Setter Property="Control.Foreground" Value="LightGray" />
+            </Style>
+
+            <Style x:Key="MenuButton" TargetType="Button">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="FontFamily" Value="Verdana"/>
+                <Setter Property="FontSize" Value="11px"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <!--<Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />-->
+                <Setter Property="Background" >
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                            <GradientStop Color="#ffffff" Offset="0.2"/>
+                            <GradientStop Color="#03D693" Offset="0.85"/>
+                            <GradientStop Color="#ffffff" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Name="border" 
+        				BorderThickness="1"
+        				Padding="4,2" 
+        				BorderBrush="DarkGray" 
+        				CornerRadius="3" 
+        				Background="{TemplateBinding Background}">
+                                <Grid >
+                                    <ContentPresenter HorizontalAlignment="Center" 
+        	                           VerticalAlignment="Center" Name="contentShadow" 
+        					Style="{StaticResource ShadowStyle}">
+                                        <ContentPresenter.RenderTransform>
+                                            <TranslateTransform X="1.0" Y="1.0" />
+                                        </ContentPresenter.RenderTransform>
+                                    </ContentPresenter>
+                                    <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" Name="content"/>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                                    <Setter Property="Foreground" Value="#FF4788c8" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" >
+                                        <Setter.Value>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                                <GradientStop Color="#f4f442" Offset="0.35"/>
+                                                <GradientStop Color="#03D693" Offset="0.95"/>
+                                                <GradientStop Color="#f4f442" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter TargetName="content" Property="RenderTransform" >
+                                        <Setter.Value>
+                                            <TranslateTransform Y="1.0" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                                <Trigger Property="IsDefaulted" Value="True">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                    <Setter Property="Foreground" Value="Gray" />
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!-- A brush for flat 3D panel borders -->
+            <LinearGradientBrush x:Key="Flat3DBorderBrush"
                          StartPoint="0.499,0" EndPoint="0.501,1">
-            <GradientStop Color="#FFF" Offset="0" />
-            <GradientStop Color="#DDD" Offset="0.01" />
-            <GradientStop Color="#AAA" Offset="0.99" />
-            <GradientStop Color="#888" Offset="1" />
-        </LinearGradientBrush>
-    </Page.Resources>
-    <Grid x:Name="mainGrid">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="275"/>
-            <ColumnDefinition Width="675"/>
-            <ColumnDefinition Width="350"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="800" Orientation ="Vertical" Width="275" HorizontalAlignment="Left" VerticalAlignment="Top">
-           <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
-                    <!--Height="200">-->
-                    <Button.ToolTip>
-                        <ToolTip>
-                            <StackPanel>
-                                <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
-                                <TextBlock>Lets the server know you require immediate assistance</TextBlock>
-                            </StackPanel>
-                        </ToolTip>
-                    </Button.ToolTip>
-                    <StackPanel Height="225">
-                        <Image Source="Pictures/bell.png" Height="175"/>
-                        <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" Height="auto" FontSize="22">Call Waiter</TextBlock>
+                <GradientStop Color="#FFF" Offset="0" />
+                <GradientStop Color="#DDD" Offset="0.01" />
+                <GradientStop Color="#AAA" Offset="0.99" />
+                <GradientStop Color="#888" Offset="1" />
+            </LinearGradientBrush>
+        </Page.Resources>
+        <Grid x:Name="mainGrid" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="675"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            
+                <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="800" Orientation ="Vertical" Width="275" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Border BorderBrush="Black" BorderThickness="3,3,3,3" >
+                    <Button Style="{StaticResource MenuButton}" x:Name="btnCallWaiter" Click="btnCallWaiterClick" Background="{x:Null}">
+                        <!--Height="200">-->
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
+                                    <TextBlock>Lets the server know you require immediate assistance</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                        <StackPanel Height="225">
+                            <Image Source="Pictures/bell.png" Height="175"/>
+                            <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" Height="auto" FontSize="22">Call Waiter</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="3,3,3,3" Background="LightGray">
+                    <StackPanel>
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnAppetizers" Content="Appetizers" Height="35" Width="Auto" FontSize="24"  Click="btnAppetizers_Click" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnSoup" Content="Soups" Height="35" FontSize="24"  Click="btnSoup_Click"/>
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnSizzlingRice" Content="Sizzling Rice" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnBeef" Content="Beef" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnChickenDuck" Content="Chicken/Duck" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnSeafood" Content="Seafood" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnVegetables" Content="Vegetables" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnHotPlate" Content="Hot Plate/Pot" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnFriedRice" Content="Fried Rice" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnFriedNoodles" Content="Fried Noodles" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnEggFooYung" Content="Egg Foo Yung" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnChopSuey" Content="Chop Suey" Height="35" FontSize="24" />
+                        <Button Style="{StaticResource MenuButton}" x:Name="btnHelp" Height="40"  FontSize="24" Click="btnHelp_Click">HELP INFO</Button>
                     </StackPanel>
-                </Button>           
-                <StackPanel>
-                    <testControl:Button x:Name="btnAppetizers" >Test</testControl:Button>
-                    <Button x:Name="btnSoup" Content="Soups" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
-                    <Button x:Name="btnSizzlingRice" Content="Sizzling Rice" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnBeef" Content="Beef" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnChickenDuck" Content="Chicken/Duck" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnSeafood" Content="Seafood" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnVegetables" Content="Vegetables" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnHotPlate" Content="Hot Plate/Pot" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnFriedRice" Content="Fried Rice" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnFriedNoodles" Content="Fried Noodles" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnEggFooYung" Content="Egg Foo Yung" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnChopSuey" Content="Chop Suey" Height="40" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5"/>
-                    <Button x:Name="btnHelp" Height="40" BorderBrush="Black" BorderThickness="10,3.5" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
-            </StackPanel>           
-        </StackPanel>
-        <StackPanel x:Name="testSp" Grid.Column="1" Width="Auto">
-            <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="0 2 2 2" Height="60" Width="675" Margin="0 0 0 0" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
+            </Border>
+            </StackPanel>
+            
+            <StackPanel x:Name="testSp" Grid.Column="1" Width="Auto">
+                <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="0 2 2 2" Height="60" Width="675" Margin="0 0 0 0" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
                 <StackPanel x:Name="sViewer_Stackpanel" Width="Auto">
-                </StackPanel>           
-        </StackPanel>
-        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Width="350">
-            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness=" 0 2 0 2" Margin="0 0 0 0" Height="60" Width="350" VerticalAlignment="Center" FontSize="36" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="350" Width="325" Margin="0 0 0 0" HorizontalAlignment="Left">
-                <StackPanel x:Name="stkPanel_OrderItems">                   
                 </StackPanel>
-            </ScrollViewer>
-            <Label x:Name="lblSTotal" Height="30" Width="325" Margin="0 0 0 0"  Padding="0 0 0 0"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
-            <Label x:Name="lblTax" Height="30" Width="325" Margin="0 0 0 0" Padding="0 0 0 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
-            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="325" Margin="0 0 0 0" Padding="0 0 15 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
-            <Button x:Name="btnSpecialNote" HorizontalAlignment="Center" Height="40" Width="320" Margin="0 10 20 0" FontSize="22" Click="btnSpecialNote_Click">
-                <Button.ToolTip>
-                    <ToolTip>
-                        <TextBlock FontWeight="Bold">Click if need for special help</TextBlock>
-                    </ToolTip>
-                </Button.ToolTip>
-                Dietary/Allergy Concerns
-            </Button>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button x:Name="btnDineIn" Height="100" Margin="5 10 5 0" Grid.Column="0" VerticalContentAlignment="Top" Click="btnDineIn_Click">
+            </StackPanel>
+            <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Width="350">
+                <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness=" 0 2 0 2" Margin="0 0 0 0" Height="60" Width="350" VerticalAlignment="Center" FontSize="36" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
+                <ScrollViewer x:Name="scrlViewerOrderItems" Height="350" Width="325" Margin="0 0 0 0" HorizontalAlignment="Left">
+                    <StackPanel x:Name="stkPanel_OrderItems">
+                    </StackPanel>
+                </ScrollViewer>
+                <Label x:Name="lblSTotal" Height="30" Width="325" Margin="0 0 0 0"  Padding="0 0 0 0"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
+                <Label x:Name="lblTax" Height="30" Width="325" Margin="0 0 0 0" Padding="0 0 0 0" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
+                <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2"  Width="325" Margin="0 0 0 0" Padding="0 0 15 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
+                <Button x:Name="btnSpecialNote" HorizontalAlignment="Center" Height="40" Width="320" Margin="0 10 20 0" FontSize="22" Click="btnSpecialNote_Click">
                     <Button.ToolTip>
                         <ToolTip>
-                            <TextBlock FontWeight="Bold">Click To Make an Order for Dine In</TextBlock>
+                            <TextBlock FontWeight="Bold">Click if need for special help</TextBlock>
                         </ToolTip>
                     </Button.ToolTip>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="3*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Image Grid.Row="0" Source="Pictures/DineIn.png" />
-                        <Label Grid.Row="1" HorizontalAlignment="Center">DINE-IN</Label>
-                    </Grid>
+                    Dietary/Allergy Concerns
                 </Button>
-                <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 25 0"  Padding="0 0 0 0" Grid.Column="1" VerticalContentAlignment="Top" Click="btnTakeOut_Click">
-                    <Button.ToolTip>
-                        <ToolTip>
-                            <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>
-                        </ToolTip>
-                    </Button.ToolTip>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="3*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Image Grid.Row="0" Source="Pictures/TakeOut2.png"/>
-                        <Label Grid.Row="1" HorizontalAlignment="Center" >TAKEOUT</Label>
-                    </Grid>
-                </Button>
-            </Grid>
-            <Button x:Name="btnPayBill" Height="70" Margin="5 10 25 0" Click="btnPayBill_Click">
-                <Button.ToolTip>
-                    <ToolTip>
-                        <TextBlock FontWeight="Bold">Click To Request Bill</TextBlock>
-                    </ToolTip>
-                </Button.ToolTip>
-                <Grid Width="300">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" HorizontalAlignment="Right" Margin="0 0 5 0" Source="Pictures/PayBill.png" />
-                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="5 0 0 0" FontSize="20">PayBill</Label>
+                    <Button x:Name="btnDineIn" Height="100" Margin="5 10 5 0" Grid.Column="0" VerticalContentAlignment="Top" Click="btnDineIn_Click">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <TextBlock FontWeight="Bold">Click To Make an Order for Dine In</TextBlock>
+                            </ToolTip>
+                        </Button.ToolTip>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="Pictures/DineIn.png" />
+                            <Label Grid.Row="1" HorizontalAlignment="Center">DINE-IN</Label>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 25 0"  Padding="0 0 0 0" Grid.Column="1" VerticalContentAlignment="Top" Click="btnTakeOut_Click">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>
+                            </ToolTip>
+                        </Button.ToolTip>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="Pictures/TakeOut2.png"/>
+                            <Label Grid.Row="1" HorizontalAlignment="Center" >TAKEOUT</Label>
+                        </Grid>
+                    </Button>
                 </Grid>
-            </Button>
-        </StackPanel>
-        <Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/>
-    </Grid>
+                <Button x:Name="btnPayBill" Height="70" Margin="5 10 25 0" Click="btnPayBill_Click">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Click To Request Bill</TextBlock>
+                        </ToolTip>
+                    </Button.ToolTip>
+                    <Grid Width="300">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" HorizontalAlignment="Right" Margin="0 0 5 0" Source="Pictures/PayBill.png" />
+                        <Label Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="5 0 0 0" FontSize="20">PayBill</Label>
+                    </Grid>
+                </Button>
+            </StackPanel>
+            <Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/>
+        </Grid>
     </Page>
 </Window>

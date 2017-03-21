@@ -138,3 +138,4 @@ C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debu
 C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\Button.g.cs
 C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\Button.baml
 C:\Users\Shim\Desktop\School\CPSC481\Project2\SilverCityOS\SilverCityOS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\Themes\Generic.baml
