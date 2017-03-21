@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SilverCityOS
+{
+  public interface MenuSection
+    {
+<<<<<<< HEAD
+        private Menu appetizers;
+
+        public MenuSection(MainWindow window) {
+            appetizers = new Menu(window);
+        }
+
+        public Menu getAppetizers() {
+            return appetizers;
+        }
+=======
+        void generate(MainWindow window);
+        List<ucMenuItem> getItemList();
+        string getName();
+>>>>>>> master
+    }
+}

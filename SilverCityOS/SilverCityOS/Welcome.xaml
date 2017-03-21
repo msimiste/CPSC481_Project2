@@ -5,34 +5,29 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SilverCityOS"
              mc:Ignorable="d" 
-             d:DesignHeight="660" d:DesignWidth="800">
-    <Grid Background="#FFF" Height="660" Width="800">
+             d:DesignHeight="700" d:DesignWidth="675">
+    <Grid Background="#FFF" Height="700" Width="675">
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Border Padding="30 0 0 0">
-            <Image Source="Pictures/sc.jpg" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>      
+        <Border Padding="50 0 0 0">
+            <Image Source="Pictures/sc.jpg" HorizontalAlignment="Stretch" Margin="-20,0,7,0" Width="658" />
         </Border>
-        <StackPanel Grid.Column="1"  VerticalAlignment="Center">
-            <TextBlock Margin="20 0 0 0" FontStyle="Italic"  FontWeight="Bold" FontSize="25">Hours of Operation</TextBlock>
-            <TextBlock Margin="20 0 0 0" FontSize="20">Mon: ____ -____</TextBlock>
-            <TextBlock Margin="20 0 0 0" FontSize="20">Tues: ____ -____</TextBlock>
-            <TextBlock Margin="20 0 0 0" FontSize="20">Wed: ____ -____</TextBlock>
-            <TextBlock Margin="20 0 0 0" FontSize="20">Thur: ____ -____</TextBlock>
-            <TextBlock Margin="20 0 0 0" FontSize="20">Fri: ____ -____</TextBlock>
-            <TextBlock Margin="20 0 0 0" FontSize="20">Sat: ____ -____</TextBlock>
-            <TextBlock Margin="20 0 0 0" FontSize="20">Sun: ____ -____</TextBlock>
+        <StackPanel Grid.Column="0"  Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Margin="20 0 0 0" FontStyle="Italic"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="25">Hours of Operation</TextBlock>
+            <TextBlock xml:space="preserve" Margin="20 0 0 0" FontSize="20">Fri - Sat: 4:00PM - 11:00PM                         Sun - Mon: 4:00PM - 10:00PM</TextBlock>
+
+            <TextBlock xml:space="preserve" Margin="20 0 0 0" FontSize="20">Tue:             Closed                                      Wed - Thu: 4:00PM - 10:00PM</TextBlock>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <TextBlock FontSize="30" FontWeight="DemiBold" FontStyle="Italic" HorizontalAlignment="Center">Welcome To Silver City Restaurant</TextBlock>
-            <TextBlock FontSize="20" HorizontalAlignment="Center">Start browsing our menu by selecting</TextBlock>
-            <TextBlock FontSize="20" HorizontalAlignment="Center">one of the categories to the left</TextBlock>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center">            
+            <TextBlock FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center">Start browsing our menu</TextBlock>
+            <TextBlock FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center">by selecting</TextBlock>
+            <TextBlock FontSize="30" HorizontalAlignment="Center">one of the categories to the left</TextBlock>
         </StackPanel>
-        <Image Grid.Row="1" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 0 0 110"/>
+        <Image Grid.Row="2" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 100 0 0"/>
+        <Image Grid.Row="2" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 0 0 100"/>
+        <Image Grid.Row="2" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 50 0 50"/>
     </Grid>
 </UserControl>
