@@ -34,7 +34,7 @@ namespace SilverCityOS
 
         private void setUp()
         {
-            itemImg.Source = new BitmapImage(new Uri(item.getImgPath(), UriKind.Relative));
+            itemImg.Source = new BitmapImage(new Uri(item.getSImgPath(), UriKind.Relative));
             itemNumber.Content = "ITEM NUMBER: #" + item.getNumber().ToString();
             itemPrice.Content = "PRICE: $"+item.getPrice().ToString();
             itemName.Content = item.getName();
@@ -43,6 +43,7 @@ namespace SilverCityOS
         private void button_add(object sender, RoutedEventArgs e)
         {
             window.addToOrder(item);
+            window.sendCheck();
         }
 
         private void img_click(object sender, RoutedEventArgs e)

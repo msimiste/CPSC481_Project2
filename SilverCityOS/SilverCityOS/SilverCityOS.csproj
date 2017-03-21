@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Appetizers.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="HelpInfo.xaml.cs">
       <DependentUpon>HelpInfo.xaml</DependentUpon>
     </Compile>
@@ -141,18 +141,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PIctures\bell.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PIctures\DineIn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PIctures\TakeOut2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PIctures\PayBill.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PIctures\DineIn2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +163,28 @@
     <Resource Include="PIctures\interface.JPG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PIctures\add.png" />
+    <Resource Include="PIctures\Menu\1.jpg" />
+    <Resource Include="PIctures\Menu\1s.jpg" />
+    <Resource Include="PIctures\Menu\2.jpg" />
+    <Resource Include="PIctures\Menu\2s.jpg" />
+    <Resource Include="PIctures\Menu\3.jpg" />
+    <Resource Include="PIctures\Menu\3s.jpg" />
+    <Resource Include="PIctures\Menu\4.jpg" />
+    <Resource Include="PIctures\Menu\4s.jpg" />
+    <Resource Include="PIctures\Menu\5.jpg" />
+    <Resource Include="PIctures\Menu\5s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\Menu\6.JPG" />
+    <Resource Include="PIctures\Menu\6s.JPG" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\add.png" />
+    <Resource Include="PIctures\ScreenElement\bell.png" />
+    <Resource Include="PIctures\ScreenElement\DineIn.png" />
+    <Resource Include="PIctures\ScreenElement\PayBill.png" />
+    <Resource Include="PIctures\ScreenElement\TakeOut2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

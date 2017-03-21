@@ -19,10 +19,10 @@
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <Button Background="#FFF" Grid.RowSpan="2" Height="100" Width="100" BorderThickness="0" Click="button_add" >
-                <Image Source="Pictures/add.png" />
+                <Image Source="Pictures/ScreenElement/add.png" />
             </Button>
             <Button Grid.Column="1" Grid.RowSpan="2" Height="200" Width="200" BorderThickness="2" BorderBrush="Black" Click="img_click">
-                <Image x:Name="itemImg" Source="Pictures/add.png" />
+                <Image x:Name="itemImg" Source="Pictures/ScreenElement/add.png" />
             </Button>
             <Label x:Name="itemNumber" Grid.Column="2" VerticalAlignment="Bottom" Margin="10 0 0 0" FontWeight="ExtraBold" FontSize="20" FontStyle="Oblique">
                 Item Number

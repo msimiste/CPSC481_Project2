@@ -53,11 +53,11 @@ namespace SilverCityOS
             Image mode;
             if (dineIn)
             {
-                mode = new Image() { Source = new BitmapImage(new Uri("Pictures/DineIn.png", UriKind.Relative)) };
+                mode = new Image() { Source = new BitmapImage(new Uri("Pictures/ScreenElement/DineIn.png", UriKind.Relative)) };
             }
             else
             {
-                mode = new Image() { Source = new BitmapImage(new Uri("Pictures/TakeOut2.png", UriKind.Relative)) };
+                mode = new Image() { Source = new BitmapImage(new Uri("Pictures/ScreenElement/TakeOut2.png", UriKind.Relative)) };
             }
             Grid.SetColumn(mode, 2);
             underPrice.Children.Add(mode);
@@ -71,6 +71,7 @@ namespace SilverCityOS
         private void button_Click(object sender, RoutedEventArgs e)
         {
             window.deleteFromOrder(code);
+            window.sendCheck();
         }
     }
 }

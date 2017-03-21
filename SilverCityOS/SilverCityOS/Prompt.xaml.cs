@@ -19,10 +19,38 @@ namespace SilverCityOS
     /// </summary>
     public partial class Prompt : Window
     {
-        public Prompt(String message)
+        enum type { normal, placeOrder, payBill};
+
+        public Prompt(MainWindow window, String message, int mode)
         {
             InitializeComponent();
-            this.message.Content = message;
+            this.message.Text = message;
+            if (mode == (int)type.normal)
+            {
+                mainStack.Children.Remove(itemBorder);
+            }
+            else if(mode == (int)type.placeOrder){
+                foreach(OrderedItem item in window.orderItems.Children)
+                {
+                    if (item.getCode() >= window.orderedNumber)
+                    {
+                        /*Label entry = new Label()
+                        {
+                            Content = item.getItem().getName(),
+                            Padding = new Thickness(20, 2, 20, 2),
+                            BorderBrush = Brushes.Black,
+                            BorderThickness = new Thickness(0, 0, 0, 1)
+                        };*/
+                        OrderedItem entry = new OrderedItem(item.getItem(), window, window.orderNumber);
+                        entry.main.Children.RemoveAt(0);
+                        Viewbox view = new Viewbox();
+                        view.Child = new Label() { Content = item.getItem().getNumber() };
+                        Grid.SetRowSpan(view, 2);
+                        entry.main.Children.Insert(0, view);
+                        itemList.Children.Add(entry);
+                    }
+                }
+            }
         }
 
         private void Button_Click_Okay(object sender, RoutedEventArgs e)

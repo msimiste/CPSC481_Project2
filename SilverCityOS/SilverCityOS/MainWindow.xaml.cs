@@ -20,23 +20,22 @@ namespace SilverCityOS
     /// </summary>
     public partial class MainWindow : Window
     {
-        int orderNumber = 0;
-        int orderedNumber = 0;
+        public int orderNumber = 0;
+        public int orderedNumber = 0;
         private bool CallWaiterStatus = false;
         Rectangle cover;
+        enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey };
+        enum type { normal, placeOrder, payBill};
+        Menu menu;
+
 
         public MainWindow()
         {
             InitializeComponent();
+            menu = new Menu(this);
             setupCover();
-            mainGrid.Children.Remove(cover);
             sViewer_Stackpanel.Children.Add(new Welcome());
             calculatePrice();
-        }
-
-        private void btnAppetizers_Click(object sender, RoutedEventArgs e)
-        {
-            setScrollComponents();
         }
 
         private void btnCallWaiterClick(object sender, RoutedEventArgs e)
@@ -54,29 +53,22 @@ namespace SilverCityOS
                 btnCallWaiter.Background = new SolidColorBrush(Colors.Yellow);
                 waiterTextbox.Text = "Cancel Call Waiter";
                 btnCallWaiter.ToolTip = new ToolTip { Content = "Click Again To Cancel Call to Waiter" };
-                //btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Yellow);
                 CallWaiterStatus = true;
             }
         }
 
-        private void setScrollComponents()
+        private void setScrollComponents(Menu menu, int category)
         {  
-            Appetizers appetizers = new Appetizers(this, "Appetizers");
-            //sViewer_Stackpanel.Children.Add(new TextBox { VerticalContentAlignment = VerticalAlignment.Center, TextAlignment=TextAlignment.Center,FontSize = 33, Text = appetizers.getName(), Height = 100.0, Width = sViewer_Stackpanel.Width });
-            lblCategories.Content = appetizers.getName();
             sViewer_Stackpanel.Children.Clear();
-            foreach (var item in appetizers.getItemList())
+            foreach (var item in menu.getCategory(category))
             {
-                Border b = new Border { BorderThickness = new Thickness(0, 2, 0, 2), BorderBrush = Brushes.Black, };
-
-                b.Child = item;
-                sViewer_Stackpanel.Children.Add(b);
+                sViewer_Stackpanel.Children.Add(item);
             }
         }
 
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt("Waiter will be here shortly to address your concern");
+            Prompt prompt = new Prompt(this, "Waiter will be here shortly to address your concern", (int)type.normal);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             System.Console.WriteLine(hi);
@@ -86,7 +78,7 @@ namespace SilverCityOS
 
         private void btnDineIn_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt("Order as DINE-IN?");
+            Prompt prompt = new Prompt(this, "Order as DINE-IN?", (int)type.placeOrder);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);
@@ -101,11 +93,12 @@ namespace SilverCityOS
                 }
                 orderedNumber = orderNumber;
             }
+            sendCheck();
         }
 
         private void btnTakeOut_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt("Order as Takeout?");
+            Prompt prompt = new Prompt(this, "Order as Takeout?", (int)type.placeOrder);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);
@@ -120,6 +113,7 @@ namespace SilverCityOS
                 }
                 orderedNumber = orderNumber;
             }
+            sendCheck();
         }
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
@@ -131,7 +125,7 @@ namespace SilverCityOS
 
         private void btnPayBill_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt("Call Bill and Reset?");
+            Prompt prompt = new Prompt(this, "Call Bill and Reset?", (int)type.payBill);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);
@@ -143,11 +137,6 @@ namespace SilverCityOS
                 orderItems.Children.Clear();
                 calculatePrice();
             }
-        }
-
-        private void btnSoup_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         public void deleteFromOrder(int code)
@@ -182,6 +171,29 @@ namespace SilverCityOS
             return cover;
         }
 
+        public void sendCheck()
+        {
+            if (orderedNumber < orderNumber)
+            {
+                btnDineIn.IsEnabled = true;
+                btnTakeOut.IsEnabled = true;
+            }
+            else
+            {
+                btnDineIn.IsEnabled = false;
+                btnTakeOut.IsEnabled = false;
+            }
+        }
+
+        private void sectionCheck(Button toDisable)
+        {
+            foreach (Button section in controlSections.Children)
+            {
+                section.IsEnabled = true;
+            }
+            toDisable.IsEnabled = false;
+        }
+
         private void calculatePrice()
         {
             decimal subtotal = 0;
@@ -205,6 +217,91 @@ namespace SilverCityOS
                  Fill = Brushes.Black
              };
             Grid.SetColumnSpan(cover, 3);
+        }
+
+
+        private void btnAppetizers_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Appetizers";
+            setScrollComponents(menu, (int)section.Appetizers);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnSoup_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Soups & Sizzling Rice";
+            setScrollComponents(menu, (int)section.Soup);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnBeef_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Beef";
+            setScrollComponents(menu, (int)section.Beef);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnChicken_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Chicken & Duck";
+            setScrollComponents(menu, (int)section.Chicken);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnSeafood_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Seafood";
+            setScrollComponents(menu, (int)section.Seafood);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnVegie_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Vegetables";
+            setScrollComponents(menu, (int)section.Vegetable);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnHot_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Hot Plates & Hot Pots";
+            setScrollComponents(menu, (int)section.Hotplate);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnRice_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Fried Rice";
+            setScrollComponents(menu, (int)section.Rice);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnNoodle_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Fried Noodle";
+            setScrollComponents(menu, (int)section.Noodle);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnEgg_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Egg Foo Young";
+            setScrollComponents(menu, (int)section.Egg);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnChopSuey_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Chop Suey";
+            setScrollComponents(menu, (int)section.Chopsuey);
+            sectionCheck((Button)sender);
+        }
+
+        private void btnAboutUs_Click(object sender, RoutedEventArgs e)
+        {
+            lblCategories.Content = "Appetizers";
+            setScrollComponents(menu, (int)section.Appetizers);
+            sectionCheck((Button)sender);
         }
     }
 }

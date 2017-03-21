@@ -18,24 +18,27 @@ namespace SilverCityOS
    public partial class MenuItem
     {
         private decimal price;
-        private string description;
-        private string imgPath;
-        private string name;
         private int number;
-
-        public MenuItem(decimal price, string description, string imgPath, string name, int number)
+        private string imgPath;
+        private string sImgPath;
+        private string name;
+        private string description;
+        
+        public MenuItem(decimal price, int number, string imgPath, string sImgPath, string name, string description)
         {
             this.price = price;
-            this.description = description;
-            this.imgPath = imgPath;
-            this.name = name;
             this.number = number;
+            this.imgPath = imgPath;
+            this.sImgPath = sImgPath;
+            this.name = name;
+            this.description = description;
         }
 
         public decimal getPrice() { return this.price; }
-        public string getDescription() { return this.description; }
-        public string getImgPath() { return this.imgPath; }
-        public string getName() { return this.name; }
         public int getNumber() { return this.number; }
+        public string getImgPath() { return this.imgPath; }
+        public string getSImgPath() { return this.sImgPath; }
+        public string getName() { return this.name; }
+        public string getDescription() { return this.description; }
     }
 }

@@ -8,13 +8,13 @@ namespace SilverCityOS
 {
    public class MenuSection
     {
-        private Appetizers appetizers;
+        private Menu appetizers;
 
         public MenuSection(MainWindow window) {
-            appetizers = new Appetizers(window, "Appetizers");
+            appetizers = new Menu(window);
         }
 
-        public Appetizers getAppetizers() {
+        public Menu getAppetizers() {
             return appetizers;
         }
     }
