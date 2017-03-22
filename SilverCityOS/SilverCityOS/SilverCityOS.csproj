@@ -73,6 +73,7 @@
     <Compile Include="ucMenuItem.xaml.cs">
       <DependentUpon>ucMenuItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utilities.cs" />
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>

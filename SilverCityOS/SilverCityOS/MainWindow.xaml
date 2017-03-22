@@ -50,11 +50,16 @@
             </Border>
                       
             <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
+            <Popup x:Name="popHelp"  HorizontalOffset="100" VerticalOffset="-100" >
+                <Border  >
+                    <TextBlock Opacity="0.5" Background="LightYellow" Height="100" Width="150" TextWrapping="Wrap">This is the help menu button. Click this button for help using the system. Click again to toggle help items</TextBlock>
+                </Border>
+            </Popup>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="70" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
-            <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980">
-                <StackPanel x:Name="sViewer_Stackpanel">
+            <ScrollViewer Panel.ZIndex="2" x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980">
+                <StackPanel x:Name="sViewer_Stackpanel" >
                 </StackPanel>
             </ScrollViewer>
         </StackPanel>

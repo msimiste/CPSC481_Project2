@@ -27,7 +27,5 @@
             <TextBlock FontSize="30" HorizontalAlignment="Center">one of the categories to the left</TextBlock>
         </StackPanel>
         <Image Grid.Row="2" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 100 0 0"/>
-        <Image Grid.Row="2" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 0 0 100"/>
-        <Image Grid.Row="2" Source="Pictures/gArrow.png" Width="120" HorizontalAlignment="Left" Margin="20 50 0 50"/>
     </Grid>
 </UserControl>

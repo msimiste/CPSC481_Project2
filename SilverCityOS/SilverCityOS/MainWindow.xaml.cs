@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -27,6 +29,7 @@ namespace SilverCityOS
         enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey };
         enum type { normal, placeOrder, payBill};
         Menu menu;
+        bool helpMode = false;
 
 
         public MainWindow()
@@ -118,8 +121,9 @@ namespace SilverCityOS
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
-            mainGrid.Children.Add(cover);
-            new HelpInfo().ShowDialog();
+            mainGrid.Children.Add(cover);          
+            // new HelpInfo().ShowDialog();
+            setHelpBoxes();
             mainGrid.Children.Remove(cover);
         }
 
@@ -203,9 +207,9 @@ namespace SilverCityOS
             }
             decimal tax = subtotal * (decimal)0.05;
             decimal total = subtotal + tax;
-            lblSTotal.Content = "Subtotal: $" + subtotal.ToString("0.00");
-            lblTax.Content = "Tax: $" + tax.ToString("0.00");
-            lblTotal.Content = "Total: $" + total.ToString("0.00");
+            lblSTotal.Content = "Subtotal: $" + subtotal.ToString("C", CultureInfo.CurrentCulture);
+            lblTax.Content = "Tax: $" + tax.ToString("C", CultureInfo.CurrentCulture);
+            lblTotal.Content = "Total: $" + total.ToString("C", CultureInfo.CurrentCulture);
 
         }
 
@@ -303,5 +307,15 @@ namespace SilverCityOS
             setScrollComponents(menu, (int)section.Appetizers);
             sectionCheck((Button)sender);
         }
+
+        private void setHelpBoxes() {
+            if (helpMode == false) { helpMode = true; }
+            else { helpMode = false; }
+
+            var t = Utilities.FindVisualChildren<Popup>(this);
+            foreach (Popup pu in t) {
+                pu.IsOpen = helpMode;
+            }                     
+        }    
     }
 }
