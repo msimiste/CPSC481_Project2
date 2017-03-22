@@ -6,6 +6,55 @@
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920" VerticalAlignment="Top" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+
+    <Window.Resources>
+        <Style x:Key="menubutton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Margin" Value="5,6,5,3" />
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="Black" Background="Red" CornerRadius="5" BorderThickness="2" Padding="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <!--<Setter Property="Background" TargetName="border" Value="White"/>
+                                <Setter Property="Foreground" Value="Black"/>-->
+                                <Setter Property="Button.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <!--<Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>-->
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="#FFB8B3B3"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="2"/>
+                                <Setter Property="Button.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" Direction="230" ShadowDepth="4" BlurRadius="4" Opacity="0.9" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -45,18 +94,18 @@
             -->
             <Border BorderThickness="0">
                 <StackPanel x:Name="controlSections">
-                    <Button x:Name="btnAppetizers" Content="Appetizers" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnAppetizers_Click"/>
-                    <Button x:Name="btnSoup" Content="Soups/Sizzling Rice" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSoup_Click"/>
-                    <Button x:Name="btnBeef" Content="Beef" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnBeef_Click"/>
-                    <Button x:Name="btnChicken" Content="Chicken/Duck" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnChicken_Click"/>
-                    <Button x:Name="btnSeafood" Content="Seafood" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnSeafood_Click"/>
-                    <Button x:Name="btnVegie" Content="Vegetables" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnVegie_Click"/>
-                    <Button x:Name="btnHot" Content="Hot Plate/Pot" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnHot_Click"/>
-                    <Button x:Name="btnRice" Content="Fried Rice" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnRice_Click"/>
-                    <Button x:Name="btnNoodle" Content="Fried Noodles" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnNoodle_Click"/>
-                    <Button x:Name="btnEgg" Content="Egg Foo Young" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnEgg_Click"/>
-                    <Button x:Name="btnChopSuey" Content="Chop Suey" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnChopSuey_Click"/>
-                    <Button x:Name="btnAboutUs" Content="About Us" Height="65" FontSize="24" FontWeight="Bold" Background="#03D693" Foreground="AntiqueWhite" BorderBrush="Black" BorderThickness="10,3.5" Click="btnAboutUs_Click"/>
+                    <Button x:Name="btnAppetizers" Content="Appetizers" Click="btnAppetizers_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnSoup" Content="Soups/Sizzling Rice" Click="btnSoup_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnBeef" Content="Beef" Click="btnBeef_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnChicken" Content="Chicken/Duck" Click="btnChicken_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnSeafood" Content="Seafood" Click="btnSeafood_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnVegie" Content="Vegetables" Click="btnVegie_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnHot" Content="Hot Plate/Pot" Click="btnHot_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnRice" Content="Fried Rice" Click="btnRice_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnNoodle" Content="Fried Noodles" Click="btnNoodle_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnEgg" Content="Egg Foo Young" Click="btnEgg_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnChopSuey" Content="Chop Suey" Click="btnChopSuey_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnAboutUs" Content="About Us" Click="btnAboutUs_Click" Style="{DynamicResource menubutton}"/>
                 </StackPanel>
             </Border>
                       
