@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ namespace SilverCityOS
             InitializeComponent();
             //itemImg.Source = item.getBigImg();           
             itemName.Content = "Item #"+ item.getNumber();
-            itemPrice.Content = "$" + item.getPrice();
+            itemPrice.Content = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
             itemDesc.Text = item.getName() +"\n"+ item.getDescription();
         }
     }
