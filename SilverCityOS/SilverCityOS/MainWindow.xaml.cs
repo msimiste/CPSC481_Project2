@@ -312,8 +312,8 @@ namespace SilverCityOS
             if (helpMode == false) { helpMode = true; }
             else { helpMode = false; }
 
-            var t = Utilities.FindVisualChildren<Popup>(this);
-            foreach (Popup pu in t) {
+            var popups = Utilities.FindVisualChildren<Popup>(this);
+            foreach (Popup pu in popups) {
                 pu.IsOpen = helpMode;
             }                     
         }    
