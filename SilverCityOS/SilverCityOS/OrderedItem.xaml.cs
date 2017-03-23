@@ -34,7 +34,6 @@ namespace SilverCityOS
            // qty.Text = code.ToString();
             itemName.Text = item.getName();
             itemPrice.Text = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
-            itemNum.Text = "#"+item.getNumber().ToString();
         }
 
         public int getCode()

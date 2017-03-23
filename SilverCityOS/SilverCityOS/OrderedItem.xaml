@@ -26,8 +26,6 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="itemNum" Grid.Column="0" BorderThickness="0" FontSize="18" Background="Transparent" TextAlignment="Center">#1</TextBox>
-                    
                 </Grid>
             </Grid>
         </Border>

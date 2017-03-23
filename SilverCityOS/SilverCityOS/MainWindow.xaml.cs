@@ -37,7 +37,19 @@ namespace SilverCityOS
             InitializeComponent();
             menu = new Menu(this);
             setupCover();
+            setupStart();
+        }
+
+        private void setupStart()
+        {
+            orderNumber = 0;
+            orderedNumber = 0;
+            sViewer_Stackpanel.Children.Clear();
+            orderItems.Children.Clear();
+            lblCategories.Content = "SILVER CITY RESTAURANT";
+            stkPanel_OrderPanel.Opacity = 0;
             sViewer_Stackpanel.Children.Add(new Welcome());
+            Grid.SetColumnSpan(middleSec, 2);
             calculatePrice();
         }
 
@@ -61,7 +73,9 @@ namespace SilverCityOS
         }
 
         private void setScrollComponents(Menu menu, int category)
-        {  
+        {
+            Grid.SetColumnSpan(middleSec, 1);
+            stkPanel_OrderPanel.Opacity = 1;
             sViewer_Stackpanel.Children.Clear();
             foreach (var item in menu.getCategory(category))
             {
@@ -135,11 +149,7 @@ namespace SilverCityOS
             mainGrid.Children.Remove(cover);
             if (hi == true)
             {
-                sViewer_Stackpanel.Children.Clear();
-                lblCategories.Content = "SILVER CITY RESTAURANT";
-                sViewer_Stackpanel.Children.Add(new Welcome());
-                orderItems.Children.Clear();
-                calculatePrice();
+                setupStart();
             }
         }
 
@@ -207,9 +217,9 @@ namespace SilverCityOS
             }
             decimal tax = subtotal * (decimal)0.05;
             decimal total = subtotal + tax;
-            lblSTotal.Content = "Subtotal: $" + subtotal.ToString("C", CultureInfo.CurrentCulture);
-            lblTax.Content = "Tax: $" + tax.ToString("C", CultureInfo.CurrentCulture);
-            lblTotal.Content = "Total: $" + total.ToString("C", CultureInfo.CurrentCulture);
+            lblSTotal.Content = "Subtotal: " + subtotal.ToString("C", CultureInfo.CurrentCulture);
+            lblTax.Content = "Tax: " + tax.ToString("C", CultureInfo.CurrentCulture);
+            lblTotal.Content = "Total: " + total.ToString("C", CultureInfo.CurrentCulture);
 
         }
 
