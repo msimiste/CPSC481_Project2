@@ -65,8 +65,7 @@
         <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="1080" Orientation ="Vertical" VerticalAlignment="Top">
             <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
                 <!--Height="200">-->
-                <Button.ToolTip>
-                   
+                <Button.ToolTip>                   
                     <ToolTip>
                         <StackPanel>
                             <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
@@ -80,12 +79,11 @@
                         <Image Source="Pictures/ScreenElement/bell.png" Height="150"/>
                         <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Margin="0 0 10 0">Call Waiter</TextBlock>
                         <Popup  x:Name="popCallWaiter"  HorizontalOffset="100" VerticalOffset="-50" >
-                            <Border CornerRadius="3" BorderThickness="1"  >
+                            <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black" >
                                 <TextBlock  Background="LightYellow" Height="100" Width="150"  TextWrapping="Wrap">Click This button if you require assistance from your server</TextBlock>
                             </Border>
                         </Popup>
-                    </StackPanel>
-                    
+                    </StackPanel>                    
                 </Viewbox>
                
             </Button>
@@ -109,10 +107,10 @@
                 </StackPanel>
             </Border>
                       
-            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Click="btnHelp_Click">HELP INFO</Button>
-            <Popup  x:Name="popHelp"  HorizontalOffset="100" VerticalOffset="-100" >
-                <Border CornerRadius="3" BorderThickness="1"  >
-                    <TextBlock  Background="LightYellow" Height="100" Width="150"  TextWrapping="Wrap">This is the help menu button. Click this button for help using the system. Click again to toggle help items</TextBlock>
+            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Style="{DynamicResource menubutton}" Click="btnHelp_Click">HELP INFO</Button>
+            <Popup  x:Name="popHelp"  HorizontalOffset="100" VerticalOffset="-100" AllowsTransparency="True" >
+                <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black" >
+                    <TextBlock  Background="LightYellow" Height="100" Width="150" Opacity="0.5" TextWrapping="Wrap">This is the help menu button. Click this button for help using the system. Click again to toggle help items</TextBlock>
                 </Border>
             </Popup>
         </StackPanel>
@@ -123,9 +121,9 @@
                 </StackPanel>
             </ScrollViewer>
         </StackPanel>
-        <Popup  x:Name="popMenu"  Placement="Center" PlacementTarget="{Binding ElementName=lblCategories}" >
+        <Popup  x:Name="popMenu"  Placement="Center" PlacementTarget="{Binding ElementName=lblCategories}" AllowsTransparency="True" >
             <Border CornerRadius="3" BorderThickness="1"  >
-                <TextBlock  Background="LightYellow" Height="100" Width="150"  TextWrapping="Wrap">This Is the Menu section. Click the Image to see a more detailed view and description of a Menu Item</TextBlock>
+                <TextBlock  Background="LightYellow" Height="100" Width="150" Opacity="0.5"  TextWrapping="Wrap">This Is the Menu section. Click the Image to see a more detailed view and description of a Menu Item</TextBlock>
             </Border>
         </Popup>
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
@@ -134,9 +132,9 @@
                 <StackPanel x:Name="orderItems">                 
                 </StackPanel>
             </ScrollViewer>
-            <Popup  x:Name="popOrderPanel"  Placement="Center" PlacementTarget="{Binding ElementName=scrlViewerOrderItems}" >
-                <Border CornerRadius="3" BorderThickness="1"  >
-                    <TextBlock  Background="LightYellow" Height="150" Width="150"  TextWrapping="Wrap">This Is the ordered Items section. You can scroll to see all items orderd. You can remove an item from the list by pressing the "X" button. The subtotal, tax and total price are automatically calculated.</TextBlock>
+            <Popup  x:Name="popOrderPanel"  Placement="Center" PlacementTarget="{Binding ElementName=scrlViewerOrderItems}" AllowsTransparency="True" >
+                <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black" >
+                    <TextBlock  Background="LightYellow" Height="150" Width="150" Opacity="0.5" TextWrapping="Wrap">This Is the ordered Items section. You can scroll to see all items orderd. You can remove an item from the list by pressing the "X" button. The subtotal, tax and total price are automatically calculated.</TextBlock>
                 </Border>
             </Popup>
             <Label x:Name="lblSTotal" Height="30" Margin="10 0 0 0"  Padding="0 0 20 0"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
@@ -152,9 +150,9 @@
                     Dietary/Allergy Concerns
                 </Button>
             </Viewbox>
-            <Popup  x:Name="popAllergy"  Placement="Center" PlacementTarget="{Binding ElementName=btnSpecialNote}" >
+            <Popup  x:Name="popAllergy"  Placement="Center" PlacementTarget="{Binding ElementName=btnSpecialNote}" AllowsTransparency="True" >
                 <Border CornerRadius="3" BorderThickness="1"  >
-                    <TextBlock  Background="LightYellow"  Height="50" Width="100"  TextWrapping="Wrap">Click this button for help with Alergies or help with dietary concerns</TextBlock>
+                    <TextBlock  Background="LightYellow"  Height="50" Width="100"  TextWrapping="Wrap" Opacity="0.5">Click this button for help with Alergies or help with dietary concerns</TextBlock>
                 </Border>
             </Popup>
 
@@ -176,9 +174,9 @@
                         </StackPanel>
                     </Viewbox>                    
                 </Button>
-                <Popup  x:Name="popDineIn"  Placement="Center" PlacementTarget="{Binding ElementName=btnDineIn}" >
+                <Popup  x:Name="popDineIn"  Placement="Center" PlacementTarget="{Binding ElementName=btnDineIn}" AllowsTransparency="True">
                     <Border CornerRadius="3" BorderThickness="1"  >
-                        <TextBlock  Background="LightYellow" Height="50" Width="100"  TextWrapping="Wrap">Click Here to have your order Placed for Dine In</TextBlock>
+                        <TextBlock  Background="LightYellow" Height="50" Width="100"  TextWrapping="Wrap" Opacity="0.5">Click Here to have your order Placed for Dine In</TextBlock>
                     </Border>
                 </Popup>
                 <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 15 0"  Padding="0 0 0 0" Grid.Column="1" VerticalContentAlignment="Top" IsEnabled="False" Click="btnTakeOut_Click">
@@ -196,9 +194,9 @@
                         <Label Grid.Row="1" HorizontalAlignment="Center" >TAKEOUT</Label>
                     </Grid>
                 </Button>
-                <Popup  x:Name="popTakeOut"  Placement="Center" PlacementTarget="{Binding ElementName=btnTakeOut}" >
-                    <Border CornerRadius="3" BorderThickness="1"  >
-                        <TextBlock  Background="LightYellow" Height="50" Width="100"  TextWrapping="Wrap">Click Here to have your order Placed for Take out</TextBlock>
+                <Popup  x:Name="popTakeOut"  HorizontalOffset="-75" VerticalOffset="-100" PlacementTarget="{Binding ElementName=btnTakeOut}" AllowsTransparency="True">
+                    <Border CornerRadius="3" BorderThickness="1"  BorderBrush="Black">
+                        <TextBlock  Background="LightYellow" Height="50" Width="100" Opacity="0.5"  TextWrapping="Wrap">Click Here to have your order Placed for Take out</TextBlock>
                     </Border>
                 </Popup>
             </Grid>
@@ -212,9 +210,9 @@
                     <Label Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="5 0 0 0" FontSize="20">PayBill</Label>
                 </Grid>
             </Button>
-            <Popup  x:Name="popBill" Placement="Center" PlacementTarget="{Binding ElementName=btnPayBill}" >
-                <Border CornerRadius="3" BorderThickness="1"  >
-                    <TextBlock  Background="LightYellow" Height="50" Width="150"  TextWrapping="Wrap">Click this button to request your Bill</TextBlock>
+            <Popup  x:Name="popBill" Placement="RelativePoint" PlacementTarget="{Binding ElementName=btnPayBill}" AllowsTransparency="True" >
+                <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black"  >
+                    <TextBlock  Background="Transparent" Height="50" Width="150"  Opacity="0.75" FontWeight="Bold" TextWrapping="Wrap">Click this button to request your Bill</TextBlock>
                 </Border>
             </Popup>
         </StackPanel>
