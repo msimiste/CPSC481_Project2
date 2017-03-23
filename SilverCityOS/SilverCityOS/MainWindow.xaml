@@ -53,6 +53,51 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="helpbutton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Margin" Value="5,6,5,3" />
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="Black" Background="Green" CornerRadius="5" BorderThickness="2" Padding="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <!--<Setter Property="Background" TargetName="border" Value="White"/>
+                                <Setter Property="Foreground" Value="Black"/>-->
+                                <Setter Property="Button.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <!--<Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>-->
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="#FFB8B3B3"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="2"/>
+                                <Setter Property="Button.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" Direction="230" ShadowDepth="4" BlurRadius="4" Opacity="0.9" />
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
     <Grid x:Name="mainGrid">
@@ -107,7 +152,7 @@
                 </StackPanel>
             </Border>
                       
-            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Style="{DynamicResource menubutton}" Click="btnHelp_Click">HELP INFO</Button>
+            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Style="{DynamicResource helpbutton}" Background="Blue" Click="btnHelp_Click">HELP INFO</Button>
             <Popup  x:Name="popHelp"  HorizontalOffset="100" VerticalOffset="-100" AllowsTransparency="True" >
                 <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black" >
                     <TextBlock  Background="LightYellow" Height="100" Width="150" Opacity="0.5" TextWrapping="Wrap">This is the help menu button. Click this button for help using the system. Click again to toggle help items</TextBlock>
