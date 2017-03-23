@@ -159,7 +159,7 @@
                 </Border>
             </Popup>
         </StackPanel>
-        <StackPanel x:Name="middleSec" Grid.Column="1"  Panel.ZIndex="10">
+        <StackPanel x:Name="middleSec" Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="70" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
             <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980">
                 <StackPanel x:Name="sViewer_Stackpanel" >

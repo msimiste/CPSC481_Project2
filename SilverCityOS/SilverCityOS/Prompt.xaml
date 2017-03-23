@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="Prompt" Height="500" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
+        Title="Prompt" Height="600" Width="950" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1 1 1 1">
             <Grid Background="#FFF">
@@ -19,12 +19,20 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel x:Name="mainStack" Grid.ColumnSpan="2" VerticalAlignment="Center">
                     <TextBlock x:Name="message" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="80 50 80 0" TextAlignment="Center" FontSize="40" Padding="30 0" TextWrapping="Wrap">Waiter Has Been Notified</TextBlock>
-                    <Border x:Name="itemBorder" BorderBrush="Black" BorderThickness="2" Margin="80 10 80 0">
-                        <ScrollViewer Height="200" BorderBrush="Black" BorderThickness="2">
-                            <StackPanel x:Name="itemList">
-                            </StackPanel>
-                        </ScrollViewer>
-                    </Border>
+                    <Grid x:Name="middleSec" Height="275" Margin="80 10 80 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="modePic" Source="Pictures/ScreenElement/Takeout2.png"/>
+                        <StackPanel x:Name="rightStack" Grid.Column="2">
+                            <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontSize="35" Click="Button_Click">Show Bill</Button>
+                            <ScrollViewer x:Name="itemListScroll" Height="275" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="itemList">
+                                </StackPanel>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Grid>
                 </StackPanel>
                 <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="90 30 30 60" Padding="10 10" Click="Button_Click_Okay">
                     <Viewbox>

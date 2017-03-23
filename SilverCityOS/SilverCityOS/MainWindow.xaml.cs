@@ -27,7 +27,7 @@ namespace SilverCityOS
         private bool CallWaiterStatus = false;
         Rectangle cover;
         enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey };
-        enum type { normal, placeOrder, payBill};
+        public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
         bool helpMode = false;
 
@@ -48,6 +48,7 @@ namespace SilverCityOS
             orderItems.Children.Clear();
             lblCategories.Content = "SILVER CITY RESTAURANT";
             stkPanel_OrderPanel.Opacity = 0;
+            stkPanel_OrderPanel.IsHitTestVisible = false;
             sViewer_Stackpanel.Children.Add(new Welcome());
             Grid.SetColumnSpan(middleSec, 2);
             calculatePrice();
@@ -76,6 +77,7 @@ namespace SilverCityOS
         {
             Grid.SetColumnSpan(middleSec, 1);
             stkPanel_OrderPanel.Opacity = 1;
+            stkPanel_OrderPanel.IsHitTestVisible = true;
             sViewer_Stackpanel.Children.Clear();
             foreach (var item in menu.getCategory(category))
             {
@@ -95,7 +97,7 @@ namespace SilverCityOS
 
         private void btnDineIn_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt(this, "Order as DINE-IN?", (int)type.placeOrder);
+            Prompt prompt = new Prompt(this, "Order as DINE-IN?", (int)type.dineIn);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);
@@ -115,7 +117,7 @@ namespace SilverCityOS
 
         private void btnTakeOut_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt(this, "Order as Takeout?", (int)type.placeOrder);
+            Prompt prompt = new Prompt(this, "Order as Takeout?", (int)type.takeOut);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);

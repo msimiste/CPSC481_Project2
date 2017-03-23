@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="70" d:DesignWidth="300">
     <Grid>
-        <Border BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
+        <Border x:Name="border" BorderThickness="0 2 0 2" BorderBrush="Black" Height="70">
             <Grid x:Name="main" Height="70" Background="#FFF">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.7*" />

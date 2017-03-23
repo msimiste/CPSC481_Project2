@@ -5,26 +5,50 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SilverCityOS"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="675">
-    <Grid Background="#FFF" Height="700" Width="675">
+             d:DesignHeight="980" d:DesignWidth="1536">
+    <Grid Background="#FFF" Height="980" Width="1536">
         <Grid.RowDefinitions>
             <RowDefinition Height="3*" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>      
-        <Border Padding="50 0 0 0">
-            <Image Source="Pictures/sc.jpg" HorizontalAlignment="Stretch" Margin="-20,0,7,0" Width="658" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Border Padding="50">
+            <Image Source="Pictures/sc.jpg"/>
         </Border>
-        <StackPanel Grid.Column="0"  Grid.Row="1" VerticalAlignment="Center">
-            <TextBlock Margin="20 0 0 0" FontStyle="Italic"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="25">Hours of Operation</TextBlock>
-            <TextBlock xml:space="preserve" Margin="20 0 0 0" FontSize="20">Fri - Sat: 4:00PM - 11:00PM                         Sun - Mon: 4:00PM - 10:00PM</TextBlock>
-
-            <TextBlock xml:space="preserve" Margin="20 0 0 0" FontSize="20">Tue:             Closed                                      Wed - Thu: 4:00PM - 10:00PM</TextBlock>
+        <StackPanel Grid.Column="1"  Grid.RowSpan="2" VerticalAlignment="Center">
+            <TextBlock FontStyle="Italic"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="35">Hours of Operation</TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <Label FontSize="25" >Monday:</Label>
+                    <Label FontSize="25" >Tuesday:</Label>
+                    <Label FontSize="25" >Wednesday:</Label>
+                    <Label FontSize="25" >Thursday:</Label>
+                    <Label FontSize="25" >Friday:</Label>
+                    <Label FontSize="25" >Saturday:</Label>
+                    <Label FontSize="25" >Sunday:</Label>
+                </StackPanel>
+                <StackPanel  Grid.Column="2" HorizontalAlignment="Left">
+                    <Label FontSize="25">4:00pm - 10:00 pm</Label>
+                    <Label FontSize="25">CLOSED</Label>
+                    <Label FontSize="25">4:00pm - 10:00 pm</Label>
+                    <Label FontSize="25">4:00pm - 10:00 pm</Label>
+                    <Label FontSize="25">4:00pm - 11:00 pm</Label>
+                    <Label FontSize="25">4:00pm - 11:00 pm</Label>
+                    <Label FontSize="25">4:00pm - 10:00 pm</Label>
+                </StackPanel>
+            </Grid>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center">            
-            <TextBlock FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center">Start browsing our menu</TextBlock>
-            <TextBlock FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center">by selecting</TextBlock>
-            <TextBlock FontSize="30" HorizontalAlignment="Center">one of the categories to the left</TextBlock>
+        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">            
+            <TextBlock FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center">Start browsing our menu</TextBlock>
+            <TextBlock FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center">by selecting</TextBlock>
+            <TextBlock FontSize="35" HorizontalAlignment="Center">one of the categories to the left</TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>
