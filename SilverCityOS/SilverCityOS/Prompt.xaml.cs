@@ -88,7 +88,7 @@ namespace SilverCityOS
                     //entry.main.Children.Insert(0, view);
                     Grid.SetColumn(entry.itemName, 0);
                     Grid.SetColumnSpan(entry.itemName, 2);
-                    entry.main.Background = Brushes.Transparent;
+                    entry.border.Background = Brushes.Transparent;
                     itemList.Children.Add(entry);
                 }
             }

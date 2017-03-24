@@ -35,14 +35,16 @@ namespace SilverCityOS
         private void setUp()
         {
             itemImg.Source = new BitmapImage(new Uri(item.getSImgPath(), UriKind.Relative));
-            itemNumber.Content = "ITEM NUMBER: #" + item.getNumber().ToString();
-            itemPrice.Content = "PRICE: "+item.getPrice().ToString("C",CultureInfo.CurrentCulture);
-            itemName.Content = item.getName();
+            itemName.Content = item.getNumber().ToString()+". "+item.getName();
+            string[] price = item.getPrice().ToString("C", CultureInfo.CurrentCulture).Split('.');
+            itemPriceFront.Content = price[0];
+            itemPriceBack.Content = price[1];
         }
 
         private void button_add(object sender, RoutedEventArgs e)
         {
             window.addToOrder(item);
+            window.scrlViewerOrderItems.ScrollToBottom();
             window.sendCheck();
         }
 

@@ -26,6 +26,8 @@ namespace SilverCityOS
         public int orderedNumber = 0;
         private bool CallWaiterStatus = false;
         Rectangle cover;
+        TextBox sendCover;
+        TextBox payCover;
         enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey };
         public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
@@ -39,7 +41,8 @@ namespace SilverCityOS
             setupCover();
             setupStart();
         }
-
+        
+        //To setup on start and reset
         private void setupStart()
         {
             orderNumber = 0;
@@ -51,6 +54,8 @@ namespace SilverCityOS
             stkPanel_OrderPanel.IsHitTestVisible = false;
             sViewer_Stackpanel.Children.Add(new Welcome());
             Grid.SetColumnSpan(middleSec, 2);
+            sectionCheck(new Button());
+            sendCheck();
             calculatePrice();
         }
 
@@ -83,6 +88,7 @@ namespace SilverCityOS
             {
                 sViewer_Stackpanel.Children.Add(item);
             }
+            //mainGrid.Children.Add(downArrowCover);
         }
 
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
@@ -191,13 +197,44 @@ namespace SilverCityOS
         {
             if (orderedNumber < orderNumber)
             {
-                btnDineIn.IsEnabled = true;
-                btnTakeOut.IsEnabled = true;
+                if (!orderControlGrid.Children.Contains(payCover))
+                {
+                    orderControlGrid.Children.Add(payCover);
+                }
+                if (orderControlGrid.Children.Contains(sendCover))
+                {
+                    orderControlGrid.Children.Remove(sendCover);
+                }
+                //btnDineIn.IsEnabled = true;
+                //btnTakeOut.IsEnabled = true;
+                //btnPayBill.IsEnabled = false;
             }
             else
             {
-                btnDineIn.IsEnabled = false;
-                btnTakeOut.IsEnabled = false;
+                if (!orderControlGrid.Children.Contains(sendCover))
+                {
+                    orderControlGrid.Children.Add(sendCover);
+                }
+                if (orderControlGrid.Children.Contains(payCover))
+                {
+                    orderControlGrid.Children.Remove(payCover);
+                }
+                //btnDineIn.IsEnabled = false;
+                //btnTakeOut.IsEnabled = false;
+                //btnPayBill.IsEnabled = true;
+            }
+            //To Disable All At Start
+            if (orderNumber == 0)
+            {
+                if (!orderControlGrid.Children.Contains(sendCover))
+                {
+                    orderControlGrid.Children.Add(sendCover);
+                }
+                if (!orderControlGrid.Children.Contains(payCover))
+                {
+                    orderControlGrid.Children.Add(payCover);
+                }
+                //btnPayBill.IsEnabled = false;
             }
         }
 
@@ -233,8 +270,54 @@ namespace SilverCityOS
                  Fill = Brushes.Black
              };
             Grid.SetColumnSpan(cover, 3);
+
+            sendCover = new TextBox()
+            {
+                Text = "To Place an Order, Please Add New Items Onto Order List",
+                FontSize = 20,
+                TextWrapping = TextWrapping.Wrap,
+                VerticalAlignment = VerticalAlignment.Stretch,
+                VerticalContentAlignment = VerticalAlignment.Center,
+                HorizontalContentAlignment = HorizontalAlignment.Center,
+                BorderThickness = new Thickness(0),
+                Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 }
+            };
+            Grid.SetColumnSpan(sendCover, 2);
+
+
+            payCover = new TextBox()
+            {
+                Text = "To Pay Bill, Please Make Sure All Items are Placed in Order",
+                FontSize = 20,
+                TextWrapping = TextWrapping.Wrap,
+                VerticalAlignment = VerticalAlignment.Stretch,
+                VerticalContentAlignment = VerticalAlignment.Center,
+                HorizontalContentAlignment = HorizontalAlignment.Center,
+                BorderThickness = new Thickness(0),
+                Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 }
+            };
+            Grid.SetColumnSpan(payCover, 2);
+            Grid.SetRow(payCover, 1);
         }
 
+        private void OnScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+            var scrollViewer = (ScrollViewer)sender;
+            if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
+            {
+                if (mainGrid.Children.Contains(downArrowCover))
+                {
+                    mainGrid.Children.Remove(downArrowCover);
+                }
+            }else
+            {
+                if (!mainGrid.Children.Contains(downArrowCover))
+                {
+                    mainGrid.Children.Add(downArrowCover);
+                }
+            }
+                
+        }
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
         {
@@ -328,6 +411,7 @@ namespace SilverCityOS
             foreach (Popup pu in popups) {
                 pu.IsOpen = helpMode;
             }                     
-        }    
+        }
+
     }
 }

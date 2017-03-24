@@ -48,7 +48,7 @@ namespace SilverCityOS
 
         public void sent(bool dineIn)
         {
-            main.Background = Brushes.LightGray;
+            border.Background = Brushes.LightGray;
             main.Children.Remove(button);
             Grid.SetColumn(itemName, 0);
             Grid.SetColumnSpan(itemName, 2);

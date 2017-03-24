@@ -12,7 +12,7 @@
             <Setter Property="FontSize" Value="24" />
             <Setter Property="Margin" Value="5,6,5,3" />
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Height" Value="60"/>
+            <Setter Property="Height" Value="73.5"/>
             <Setter Property="Foreground" Value="AntiqueWhite"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -138,17 +138,15 @@
             <Border BorderThickness="0">
                 <StackPanel x:Name="controlSections">
                     <Button x:Name="btnAppetizers" Content="Appetizers" Click="btnAppetizers_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnSoup" Content="Soups/Sizzling Rice" Click="btnSoup_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnSoup" Content="Soups &amp; Sizzling Rice" Click="btnSoup_Click" Style="{DynamicResource menubutton}"/>
                     <Button x:Name="btnBeef" Content="Beef" Click="btnBeef_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnChicken" Content="Chicken/Duck" Click="btnChicken_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnChicken" Content="Chicken &amp; Duck" Click="btnChicken_Click" Style="{DynamicResource menubutton}"/>
                     <Button x:Name="btnSeafood" Content="Seafood" Click="btnSeafood_Click" Style="{DynamicResource menubutton}"/>
                     <Button x:Name="btnVegie" Content="Vegetables" Click="btnVegie_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnHot" Content="Hot Plate/Pot" Click="btnHot_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnRice" Content="Fried Rice" Click="btnRice_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnNoodle" Content="Fried Noodles" Click="btnNoodle_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnEgg" Content="Egg Foo Young" Click="btnEgg_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnChopSuey" Content="Chop Suey" Click="btnChopSuey_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnAboutUs" Content="About Us" Click="btnAboutUs_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnHot" Content="Hot Plates &amp; Hot Pots" Click="btnHot_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnRice" Content="Fried Rice &amp; Fried Noodles" Click="btnRice_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnEgg" Content="Egg Foo Young &amp; Chop Suey" Click="btnEgg_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnDrinks" Content="Drinks" Click="btnAboutUs_Click" Style="{DynamicResource menubutton}"/>
                 </StackPanel>
             </Border>
                       
@@ -161,7 +159,7 @@
         </StackPanel>
         <StackPanel x:Name="middleSec" Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="70" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
-            <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980">
+            <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980" VerticalScrollBarVisibility="Auto" ScrollChanged="OnScrollChanged">
                 <StackPanel x:Name="sViewer_Stackpanel" >
                 </StackPanel>
             </ScrollViewer>
@@ -173,7 +171,7 @@
         </Popup>
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580">
+            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580" VerticalScrollBarVisibility="Auto">
                 <StackPanel x:Name="orderItems">                 
                 </StackPanel>
             </ScrollViewer>
@@ -201,12 +199,17 @@
                 </Border>
             </Popup>
 
-            <Grid>
+            <Grid x:Name="orderControlGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnDineIn" Height="100" Margin="15 10 5 0" Padding="5" Grid.Column="0" VerticalContentAlignment="Center" IsEnabled="False" Click="btnDineIn_Click">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Button x:Name="btnDineIn" Height="100" Margin="15 10 5 0" Padding="5" Grid.Column="0" VerticalContentAlignment="Center" Click="btnDineIn_Click">
                     <Button.ToolTip>
                         <ToolTip>
                             <TextBlock FontWeight="Bold">Click To Make an Order for Dine In</TextBlock>
@@ -224,43 +227,54 @@
                         <TextBlock  Background="LightYellow" Height="50" Width="100"  TextWrapping="Wrap" Opacity="0.5">Click Here to have your order Placed for Dine In</TextBlock>
                     </Border>
                 </Popup>
-                <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 15 0"  Padding="0 0 0 0" Grid.Column="1" VerticalContentAlignment="Top" IsEnabled="False" Click="btnTakeOut_Click">
+                <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 15 0"  Padding="5" Grid.Column="1" VerticalContentAlignment="Center" Click="btnTakeOut_Click">
                     <Button.ToolTip>
                         <ToolTip>
                             <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>
                         </ToolTip>
                     </Button.ToolTip>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="3*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Image Grid.Row="0" Source="Pictures/ScreenElement/TakeOut2.png"/>
-                        <Label Grid.Row="1" HorizontalAlignment="Center" >TAKEOUT</Label>
-                    </Grid>
+                    <Viewbox>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Pictures/ScreenElement/TakeOut2.png"/>
+                            <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="50">TAKE OUT</Label>
+                        </StackPanel>
+                    </Viewbox>
                 </Button>
                 <Popup  x:Name="popTakeOut"  HorizontalOffset="-75" VerticalOffset="-100" PlacementTarget="{Binding ElementName=btnTakeOut}" AllowsTransparency="True">
                     <Border CornerRadius="3" BorderThickness="1"  BorderBrush="Black">
                         <TextBlock  Background="LightYellow" Height="50" Width="100" Opacity="0.5"  TextWrapping="Wrap">Click Here to have your order Placed for Take out</TextBlock>
                     </Border>
                 </Popup>
+            
+                <Button x:Name="btnPayBill" Grid.Row="2" Grid.ColumnSpan="2"  Padding="5" Height="80" Margin="15 10 15 0" Click="btnPayBill_Click">    
+                    <Grid Width="300">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" HorizontalAlignment="Right" Margin="0 0 5 0" Source="Pictures/ScreenElement/PayBill.png" />
+                        <Label Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="5 0 0 0" FontSize="22">PayBill</Label>
+                    </Grid>
+                </Button>
+                <Popup  x:Name="popBill" Placement="RelativePoint" PlacementTarget="{Binding ElementName=btnPayBill}" AllowsTransparency="True" >
+                    <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black"  >
+                        <TextBlock  Background="Transparent" Height="50" Width="150"  Opacity="0.75" FontWeight="Bold" TextWrapping="Wrap">Click this button to request your Bill</TextBlock>
+                    </Border>
+                </Popup>
             </Grid>
-            <Button x:Name="btnPayBill" Height="70" Margin="15 10 15 0" Click="btnPayBill_Click">    
-                <Grid Width="300">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" HorizontalAlignment="Right" Margin="0 0 5 0" Source="Pictures/ScreenElement/PayBill.png" />
-                    <Label Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="5 0 0 0" FontSize="20">PayBill</Label>
-                </Grid>
-            </Button>
-            <Popup  x:Name="popBill" Placement="RelativePoint" PlacementTarget="{Binding ElementName=btnPayBill}" AllowsTransparency="True" >
-                <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black"  >
-                    <TextBlock  Background="Transparent" Height="50" Width="150"  Opacity="0.75" FontWeight="Bold" TextWrapping="Wrap">Click this button to request your Bill</TextBlock>
-                </Border>
-            </Popup>
         </StackPanel>
         <!--Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/-->
+        <Grid x:Name="downArrowCover" Grid.Column="1" Height="150" VerticalAlignment="Bottom" IsHitTestVisible="False">
+            <Rectangle>
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <!--<GradientStop Color="Transparent" Offset="0.667"/>-->
+                        <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image Source="Pictures/ScreenElement/downArrow.png" VerticalAlignment="Bottom" Opacity="0.8" Width="300" Stretch="Fill" Height="100"/>
+        </Grid>
     </Grid>
 </Window>
