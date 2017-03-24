@@ -137,10 +137,10 @@ namespace SilverCityOS
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
-            mainGrid.Children.Add(cover);          
+           // mainGrid.Children.Add(cover);          
             // new HelpInfo().ShowDialog();
             setHelpBoxes();
-            mainGrid.Children.Remove(cover);
+            //mainGrid.Children.Remove(cover);
         }
 
         private void btnPayBill_Click(object sender, RoutedEventArgs e)
