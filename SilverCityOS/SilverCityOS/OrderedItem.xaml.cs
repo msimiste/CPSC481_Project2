@@ -24,7 +24,7 @@ namespace SilverCityOS
         int code;
         MainWindow window;
         MenuItem item;
-
+        
         public OrderedItem(MenuItem item, MainWindow window, int code)
         {
             this.code = code;
@@ -32,7 +32,7 @@ namespace SilverCityOS
             this.item = item;
             InitializeComponent();
            // qty.Text = code.ToString();
-            itemName.Text = item.getName();
+            itemName.Text = item.getNumber()+". "+item.getName();
             itemPrice.Text = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
         }
 
@@ -49,7 +49,10 @@ namespace SilverCityOS
         public void sent(bool dineIn)
         {
             main.Background = Brushes.LightGray;
-            button.IsEnabled = false;
+            main.Children.Remove(button);
+            Grid.SetColumn(itemName, 0);
+            Grid.SetColumnSpan(itemName, 2);
+            itemName.Padding = new Thickness(10, 0, 0, 0);
             Image mode;
             if (dineIn)
             {

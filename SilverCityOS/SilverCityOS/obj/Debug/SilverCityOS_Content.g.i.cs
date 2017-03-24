@@ -8,10 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/add.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/bell.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/dinein.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/paybill.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/takeout2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/greenokay.png")]
 
 

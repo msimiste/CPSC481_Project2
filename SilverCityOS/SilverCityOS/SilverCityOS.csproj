@@ -179,13 +179,18 @@
     <Resource Include="PIctures\Menu\6.JPG" />
     <Resource Include="PIctures\Menu\6s.JPG" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\redClose.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="PIctures\ScreenElement\add.png" />
     <Resource Include="PIctures\ScreenElement\bell.png" />
     <Resource Include="PIctures\ScreenElement\DineIn.png" />
     <Resource Include="PIctures\ScreenElement\PayBill.png" />
     <Resource Include="PIctures\ScreenElement\TakeOut2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\greenOkay.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

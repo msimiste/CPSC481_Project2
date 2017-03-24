@@ -5,28 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="ItemInfo" Height="600" Width="1100" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
-    <Border BorderBrush="Black" BorderThickness="1 1 1 1">
+        Title="ItemInfo" Height="900" Width="1400" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
+    <Window.Background>
+        <SolidColorBrush Color="White" Opacity="0" />
+    </Window.Background>
+    <Border BorderBrush="Black" BorderThickness="1 1 1 1" Height="800" Width="1300">
         <Grid Background="#FFF">
-            <Grid.RowDefinitions>
+            <!--<Grid.RowDefinitions>
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+            </Grid.RowDefinitions>-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="4*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Padding="20 20">
+            <Border Grid.Row="0" Padding="40">
                 <Image x:Name="itemImg" Source="Pictures/testImage2.jpg"/>
             </Border>
-            <Border Grid.Row="0" Grid.Column="1" Padding="20 20">
+            <Border Grid.Row="0" Grid.Column="1" Padding="20 40">
                 <StackPanel>
                     <Label x:Name="itemName" FontWeight="Bold" FontSize="30" BorderBrush="Black" BorderThickness="0 0 0 2">Item Name</Label>
                     <Label x:Name="itemPrice" FontStyle="Italic" FontSize="20">Price $$$$$</Label>
                     <TextBlock x:Name="itemDesc" TextWrapping="Wrap">Item Description</TextBlock>
                 </StackPanel>
             </Border>
-            <Button Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="Black" Margin="10 10" FontSize="20" IsCancel="True">CLOSE</Button>
+            <!--<Button Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="Black" Margin="10 10" FontSize="20" IsCancel="True">CLOSE</Button>-->
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Height="80" Width="80" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 -40 -40 0" IsCancel="True">
+                <Image Source="Pictures/ScreenElement/redClose.png"/>
+            </Button>
         </Grid>
     </Border>
 </Window>
