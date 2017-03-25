@@ -9,15 +9,15 @@
 
     <Window.Resources>
         <Style x:Key="menubutton" TargetType="{x:Type Button}">
-            <Setter Property="FontSize" Value="24" />
-            <Setter Property="Margin" Value="5,6,5,3" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="10,6,10,3" />
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Height" Value="73.5"/>
             <Setter Property="Foreground" Value="AntiqueWhite"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" BorderBrush="Black" Background="LightSeaGreen" CornerRadius="5" BorderThickness="2" Padding="2">
+                        <Border x:Name="border" BorderBrush="Black" Background="#cc0000" CornerRadius="5" BorderThickness="2" Padding="2">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
                         </Border>
 
@@ -35,8 +35,9 @@
                                 <Setter Property="Foreground" Value="White"/>
                             </Trigger>-->
                             <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="#FFB8B3B3"/>
-                                <Setter Property="BorderThickness" TargetName="border" Value="2"/>
+                                <Setter Property="Background" TargetName="border" Value="White"/>
+                                <Setter Property="Foreground" Value="#cc0000"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="3"/>
                                 <Setter Property="Button.Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
@@ -53,48 +54,29 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="helpbutton" TargetType="{x:Type Button}">
-            <Setter Property="FontSize" Value="24" />
-            <Setter Property="Margin" Value="5,6,5,3" />
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Height" Value="60"/>
-            <Setter Property="Foreground" Value="White"/>
+        <Style x:Key="helpbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" BorderBrush="Black" Background="Green" CornerRadius="5" BorderThickness="2" Padding="2">
+                        <Border x:Name="border" BorderBrush="Black" Background="#666666" CornerRadius="2" BorderThickness="4" Padding="2">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
                         </Border>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsPressed" Value="True">
-                                <!--<Setter Property="Background" TargetName="border" Value="White"/>
-                                <Setter Property="Foreground" Value="Black"/>-->
-                                <Setter Property="Button.Effect">
-                                    <Setter.Value>
-                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                            <!--<Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Foreground" Value="White"/>
-                            </Trigger>-->
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="#FFB8B3B3"/>
-                                <Setter Property="BorderThickness" TargetName="border" Value="2"/>
-                                <Setter Property="Button.Effect">
-                                    <Setter.Value>
-                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Setter Property="Button.Effect">
+        </Style>
+        <Style x:Key="orderbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">
+            <!--Height="100"  Margin="5 10 15 0"  Padding="5"-->
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Margin" Value="9,15,5,5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Template">
                 <Setter.Value>
-                    <DropShadowEffect Color="Black" Direction="230" ShadowDepth="4" BlurRadius="4" Opacity="0.9" />
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="Black" Background="White" CornerRadius="5" BorderThickness="2" Padding="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
+                        </Border>
+                    </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
@@ -106,7 +88,7 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <StackPanel x:Name="stkPanel_MenuPanel" Grid.Column="0" Height="1080" Orientation ="Vertical" VerticalAlignment="Top">
             <Button x:Name="btnCallWaiter" BorderBrush="Black" BorderThickness="10,7,10,3.5" Click="btnCallWaiterClick" Background="{x:Null}">
                 <!--Height="200">-->
@@ -137,20 +119,20 @@
             -->
             <Border BorderThickness="0">
                 <StackPanel x:Name="controlSections">
-                    <Button x:Name="btnAppetizers" Content="Appetizers" Click="btnAppetizers_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnSoup" Content="Soups &amp; Sizzling Rice" Click="btnSoup_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnBeef" Content="Beef" Click="btnBeef_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnChicken" Content="Chicken &amp; Duck" Click="btnChicken_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnSeafood" Content="Seafood" Click="btnSeafood_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnVegie" Content="Vegetables" Click="btnVegie_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnHot" Content="Hot Plates &amp; Hot Pots" Click="btnHot_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnRice" Content="Fried Rice &amp; Fried Noodles" Click="btnRice_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnEgg" Content="Egg Foo Young &amp; Chop Suey" Click="btnEgg_Click" Style="{DynamicResource menubutton}"/>
-                    <Button x:Name="btnDrinks" Content="Drinks" Click="btnAboutUs_Click" Style="{DynamicResource menubutton}"/>
+                    <Button x:Name="btnAppetizers" Content="Appetizers" Click="btnAppetizers_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnSoup" Content="Soups &amp; Sizzling Rice" Click="btnSoup_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnBeef" Content="Beef" Click="btnBeef_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnChicken" Content="Chicken &amp; Duck" Click="btnChicken_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnSeafood" Content="Seafood" Click="btnSeafood_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnVegie" Content="Vegetables" Click="btnVegie_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnHot" Content="Hot Plates &amp; Hot Pots" Click="btnHot_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnRice" Content="Fried Rice &amp; Fried Noodles" Click="btnRice_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnEgg" Content="Egg Foo Young &amp; Chop Suey" Click="btnEgg_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnDrinks" Content="Drinks" Click="btnAboutUs_Click" Style="{StaticResource menubutton}"/>
                 </StackPanel>
             </Border>
-                      
-            <Button x:Name="btnHelp" Height="80" BorderBrush="Black" BorderThickness="10 10" FontSize="30" Style="{DynamicResource helpbutton}" Background="Blue" Click="btnHelp_Click">HELP INFO</Button>
+
+            <Button x:Name="btnHelp" Content="HELP INFO" Click="btnHelp_Click" Style="{DynamicResource helpbutton}"/>
             <Popup  x:Name="popHelp"  HorizontalOffset="100" VerticalOffset="-100" AllowsTransparency="True" >
                 <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black" >
                     <TextBlock  Background="LightYellow" Height="100" Width="150" Opacity="0.5" TextWrapping="Wrap">This is the help menu button. Click this button for help using the system. Click again to toggle help items</TextBlock>
@@ -209,7 +191,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
-                <Button x:Name="btnDineIn" Height="100" Margin="15 10 5 0" Padding="5" Grid.Column="0" VerticalContentAlignment="Center" Click="btnDineIn_Click">
+                <Button x:Name="btnDineIn" Grid.Column="0" Click="btnDineIn_Click" Style="{StaticResource orderbutton}">
                     <Button.ToolTip>
                         <ToolTip>
                             <TextBlock FontWeight="Bold">Click To Make an Order for Dine In</TextBlock>
@@ -218,7 +200,7 @@
                     <Viewbox>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Pictures/ScreenElement/DineIn.png"/>
-                            <Label HorizontalAlignment="Center" VerticalContentAlignment="Center">DINE IN</Label>
+                            <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="20">DINE IN</Label>
                         </StackPanel>
                     </Viewbox>                    
                 </Button>
@@ -227,7 +209,7 @@
                         <TextBlock  Background="LightYellow" Height="50" Width="100"  TextWrapping="Wrap" Opacity="0.5">Click Here to have your order Placed for Dine In</TextBlock>
                     </Border>
                 </Popup>
-                <Button x:Name="btnTakeOut" Height="100"  Margin="5 10 15 0"  Padding="5" Grid.Column="1" VerticalContentAlignment="Center" Click="btnTakeOut_Click">
+                <Button x:Name="btnTakeOut" Grid.Column="1" Click="btnTakeOut_Click" Style="{StaticResource orderbutton}">
                     <Button.ToolTip>
                         <ToolTip>
                             <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>

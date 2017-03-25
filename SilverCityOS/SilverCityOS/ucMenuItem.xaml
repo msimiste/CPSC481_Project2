@@ -27,19 +27,17 @@
                 </Button>
                 <Image Source="Pictures/ScreenElement/zoom.png" Margin="25" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
             </Grid>
-          
-            <Label x:Name="itemName" Grid.Column="2" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="10 0" FontWeight="ExtraBold" FontSize="30" FontStyle="Oblique">
+
+            <Label x:Name="itemName" Grid.Column="2" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="10 0" FontSize="30" HorizontalAlignment="Left" FontWeight="Bold">
                 <Underline>
                     Name
                 </Underline>
             </Label>
             <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">
-                <Label x:Name="itemPriceFront" FontSize="90" HorizontalAlignment="Center" VerticalAlignment="Top" FontStyle="Italic" FontFamily="SketchFlow Print">
-                    $15
-                </Label>
-                <Label x:Name="itemPriceBack" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="SketchFlow Print" Margin="10 0"  FontWeight="ExtraBold">
+                <Label x:Name="itemPriceFront" FontSize="90" HorizontalAlignment="Center" VerticalAlignment="Top" Content="$15"/>
+                <Label x:Name="itemPriceBack" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,10,20" FontWeight="Bold">
                     <Underline>
-                        00
+                        <Run Text="00"/>
                     </Underline>
                 </Label>
             </StackPanel>
