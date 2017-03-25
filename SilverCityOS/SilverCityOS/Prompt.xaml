@@ -29,7 +29,7 @@
                         <Image x:Name="modePic" Source="Pictures/ScreenElement/Takeout2.png"/>
                         <StackPanel x:Name="rightStack" Grid.Column="2">
                             <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontSize="35" Click="Button_Click">Show Bill</Button>
-                            <ScrollViewer x:Name="itemListScroll" Height="275" VerticalScrollBarVisibility="Auto">
+                            <ScrollViewer x:Name="itemListScroll" Height="275" VerticalScrollBarVisibility="Auto" PanningMode="Both">
                                 <StackPanel x:Name="itemList">
                                 </StackPanel>
                             </ScrollViewer>

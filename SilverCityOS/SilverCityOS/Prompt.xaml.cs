@@ -30,7 +30,8 @@ namespace SilverCityOS
             if (mode == (int)MainWindow.type.normal)
             {
                 mainStack.Children.Remove(middleSec);
-                mainGrid.Children.Remove(closeButton);
+                Image waiter = new Image() { Source = new BitmapImage(new Uri("Pictures/ScreenElement/waiter.png", UriKind.Relative)), Height = 300 };
+                mainStack.Children.Add( waiter );
             }
             //To Format for Take Out Prompt
             else if (mode == (int)MainWindow.type.takeOut) {

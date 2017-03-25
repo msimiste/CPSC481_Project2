@@ -38,7 +38,7 @@ namespace SilverCityOS
             itemName.Content = item.getNumber().ToString()+". "+item.getName();
             string[] price = item.getPrice().ToString("C", CultureInfo.CurrentCulture).Split('.');
             itemPriceFront.Content = price[0];
-            itemPriceBack.Content = price[1];
+            itemPriceBack.Content = "."+price[1];
         }
 
         private void button_add(object sender, RoutedEventArgs e)

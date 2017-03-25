@@ -37,7 +37,7 @@
                 <Label x:Name="itemPriceFront" FontSize="90" HorizontalAlignment="Center" VerticalAlignment="Top" FontStyle="Italic" FontFamily="SketchFlow Print">
                     $15
                 </Label>
-                <Label x:Name="itemPriceBack" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="SketchFlow Print" Margin="20 0"  FontWeight="ExtraBold">
+                <Label x:Name="itemPriceBack" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="SketchFlow Print" Margin="10 0"  FontWeight="ExtraBold">
                     <Underline>
                         00
                     </Underline>

@@ -159,7 +159,7 @@
         </StackPanel>
         <StackPanel x:Name="middleSec" Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="70" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
-            <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980" VerticalScrollBarVisibility="Auto" ScrollChanged="OnScrollChanged">
+            <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980" VerticalScrollBarVisibility="Auto" PanningMode="Both" ScrollChanged="OnScrollChanged">
                 <StackPanel x:Name="sViewer_Stackpanel" >
                 </StackPanel>
             </ScrollViewer>
@@ -171,7 +171,7 @@
         </Popup>
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580" VerticalScrollBarVisibility="Auto">
+            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580" VerticalScrollBarVisibility="Auto" PanningMode="Both">
                 <StackPanel x:Name="orderItems">                 
                 </StackPanel>
             </ScrollViewer>
