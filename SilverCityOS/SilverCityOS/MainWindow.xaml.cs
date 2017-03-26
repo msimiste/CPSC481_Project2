@@ -59,24 +59,28 @@ namespace SilverCityOS
             calculatePrice();
         }
 
-        private void btnCallWaiterClick(object sender, RoutedEventArgs e)
-        {
-            if (CallWaiterStatus)
-            {
-                btnCallWaiter.Background = Brushes.Transparent;
-                waiterTextbox.Text = "Call Waiter";
-                btnCallWaiter.ToolTip = new ToolTip { Content = "Click to Call Waiter" };
-                btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Black);
-                CallWaiterStatus = false;
-            }
-            else if (!CallWaiterStatus)
-            {
-                btnCallWaiter.Background = new SolidColorBrush(Colors.Yellow);
-                waiterTextbox.Text = "Cancel Call Waiter";
-                btnCallWaiter.ToolTip = new ToolTip { Content = "Click Again To Cancel Call to Waiter" };
-                CallWaiterStatus = true;
-            }
-        }
+        //private void btnCallWaiterClick(object sender, RoutedEventArgs e)
+        //{
+        //    if (CallWaiterStatus)
+        //    {
+        //        btnCallWaiter.Background = new SolidColorBrush(Colors.AntiqueWhite);
+        //        waiterTextbox.Text = "CALL WAITER";
+        //        waiterTextbox.FontSize = 35;
+        //        waiterTextbox.Height = 100;
+        //        btnCallWaiter.ToolTip = new ToolTip { Content = "Click to Call Waiter" };
+        //        btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Black);
+        //        CallWaiterStatus = false;
+        //    }
+        //    else if (!CallWaiterStatus)
+        //    {
+        //        btnCallWaiter.Background = new SolidColorBrush(Colors.Yellow);
+        //        waiterTextbox.Text = "CANCEL CALL WAITER";
+        //        waiterTextbox.FontSize = 30;
+        //        waiterTextbox.Height = 140;
+        //        btnCallWaiter.ToolTip = new ToolTip { Content = "Click Again To Cancel Call to Waiter" };
+        //        CallWaiterStatus = true;
+        //    }
+        //}
 
         private void setScrollComponents(Menu menu, int category)
         {

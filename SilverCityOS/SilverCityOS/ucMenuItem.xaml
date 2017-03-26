@@ -18,8 +18,30 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
-            <Button Background="#FFF" Grid.RowSpan="2" BorderThickness="0" Padding="40" Click="button_add">
-                <Image Source="Pictures/ScreenElement/add.png"></Image>
+            <Button Background="#FFF" Height="130" Width="130" Grid.RowSpan="2" BorderThickness="5" Click="button_add">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Button.Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="Black" Direction="230" ShadowDepth="5" BlurRadius="7" Opacity="0.8" />
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Grid>
+                                        <Ellipse Stroke="Black" StrokeThickness="3">
+                                            <Ellipse.Fill>
+                                                <ImageBrush ImageSource="Pictures/ScreenElement/add3.png"/>
+                                            </Ellipse.Fill>
+                                        </Ellipse>
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
             </Button>
             <Grid Grid.Column="1" Grid.RowSpan="2">
                 <Button Margin="20" BorderThickness="2" BorderBrush="Black" Click="img_click">
@@ -33,7 +55,7 @@
                     Name
                 </Underline>
             </Label>
-            <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Label x:Name="itemPriceFront" FontSize="90" HorizontalAlignment="Center" VerticalAlignment="Top" Content="$15"/>
                 <Label x:Name="itemPriceBack" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,10,20" FontWeight="Bold">
                     <Underline>
