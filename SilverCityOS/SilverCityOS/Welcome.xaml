@@ -18,7 +18,7 @@
         <Border Padding="50">
             <Image Source="Pictures/sc.jpg"/>
         </Border>
-        <StackPanel Grid.Column="1"  Grid.RowSpan="2" VerticalAlignment="Center">
+        <StackPanel Grid.Column="1"  Grid.RowSpan="2" VerticalAlignment="Top" Margin="0,50,0,0">
             <TextBlock FontStyle="Italic"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="35">Hours of Operation</TextBlock>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -44,11 +44,15 @@
                     <Label FontSize="25">4:00pm - 10:00 pm</Label>
                 </StackPanel>
             </Grid>
+            <TextBlock Text="Contact Information" FontStyle="Italic"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="35" Padding="0,50,0,0"/>
+
+
         </StackPanel>
-        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">            
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">            
             <TextBlock FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center">Start browsing our menu</TextBlock>
             <TextBlock FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center">by selecting</TextBlock>
             <TextBlock FontSize="35" HorizontalAlignment="Center">one of the categories to the left</TextBlock>
         </StackPanel>
+        <Image Grid.Row="1" Source="Pictures/ScreenElement/arrow2.png" HorizontalAlignment="Left" Width="340" />
     </Grid>
 </UserControl>

@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SilverCityOS"
              mc:Ignorable="d" 
-             d:DesignHeight="70" d:DesignWidth="300">
+             d:DesignHeight="70" d:DesignWidth="301">
     <Grid>
-        <Border x:Name="border"  Background="#FFF" BorderThickness="0 2 0 2" BorderBrush="Black" Height="70" Padding="0 0 5 0" >
+        <Border x:Name="border"  Background="#FFF" BorderThickness="2 2 2 2" BorderBrush="Black" Height="70" Padding="0 0 0 0" >
             <Grid x:Name="main" Height="70">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.7*" />

@@ -205,10 +205,22 @@
     <Resource Include="PIctures\ScreenElement\bell2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PIctures\ScreenElement\add3.png" />
+    <Resource Include="PIctures\ScreenElement\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PIctures\ScreenElement\delete.png" />
+    <Resource Include="PIctures\ScreenElement\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\arrow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\PayBill2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\zoom3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

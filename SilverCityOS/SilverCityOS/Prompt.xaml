@@ -6,6 +6,33 @@
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
         Title="Prompt" Height="700" Width="1050" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
+    <Window.Resources>
+        <Style x:Key="okbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="90"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="Black" Background="#3d5afe" CornerRadius="5" BorderThickness="4" Padding="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="showbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="Black" Background="#737373" CornerRadius="5" BorderThickness="4" Padding="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Window.Background>
         <SolidColorBrush Color="Transparent"/>
     </Window.Background>
@@ -28,7 +55,7 @@
                         </Grid.ColumnDefinitions>
                         <Image x:Name="modePic" Source="Pictures/ScreenElement/Takeout2.png"/>
                         <StackPanel x:Name="rightStack" Grid.Column="2">
-                            <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontSize="35" Click="Button_Click">Show Bill</Button>
+                            <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontWeight="Bold" Style="{StaticResource showbutton}" Click="Button_Click">Show Bill</Button>
                             <ScrollViewer x:Name="itemListScroll" Height="275" VerticalScrollBarVisibility="Auto" PanningMode="Both">
                                 <StackPanel x:Name="itemList">
                                 </StackPanel>
@@ -36,9 +63,9 @@
                         </StackPanel>
                     </Grid>
                 </StackPanel>
-                <Button Background="Transparent" BorderThickness="0" Grid.ColumnSpan="2" Width="330" Grid.Row="1" Click="Button_Click_Okay">
-                    <Image Source="Pictures/ScreenElement/greenOkay.png" />
-                </Button>
+            <Button Grid.ColumnSpan="2" Grid.Row="1" Style="{StaticResource okbutton}" Content="OK" FontWeight="Bold" FontSize="40" Click="Button_Click_Okay">
+                
+            </Button>
                 <!--<Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="90 30 30 60" Padding="10 10" Click="Button_Click_Okay">
                     <Viewbox>
                         <Label>
@@ -54,7 +81,29 @@
                     </Viewbox>
                 </Button>-->
             <Button x:Name="closeButton" Grid.Column="2" Background="Transparent" BorderThickness="0" Height="80" Width="80" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 -40 -40 0" IsCancel="True">
-                <Image Source="Pictures/ScreenElement/redClose.png"/>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Button.Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="Black" Direction="230" ShadowDepth="3" BlurRadius="4" Opacity="0.8" />
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Grid>
+                                        <Ellipse Stroke="Black" StrokeThickness="1.5">
+                                            <Ellipse.Fill>
+                                                <ImageBrush ImageSource="Pictures/ScreenElement/delete.png"/>
+                                            </Ellipse.Fill>
+                                        </Ellipse>
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
             </Button>
             </Grid>
         </Border>

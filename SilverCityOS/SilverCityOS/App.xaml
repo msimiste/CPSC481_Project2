@@ -4,6 +4,51 @@
              xmlns:local="clr-namespace:SilverCityOS"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="menubutton" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Margin" Value="10,6,10,3" />
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="73.5"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="Black" Background="#f44336" CornerRadius="5" BorderThickness="2" Padding="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <!--<Setter Property="Background" TargetName="border" Value="White"/>
+                                <Setter Property="Foreground" Value="Black"/>-->
+                                <Setter Property="Button.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <!--<Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>-->
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="White"/>
+                                <Setter Property="Foreground" Value="#cc0000"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="3"/>
+                                <Setter Property="Button.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" Direction="230" ShadowDepth="4" BlurRadius="4" Opacity="0.9" />
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

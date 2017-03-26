@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:SilverCityOS"
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="800">
-    <Border BorderThickness="0 2" BorderBrush="Black">
+    <Border BorderThickness="4,2,4,2" BorderBrush="Black">
         <Grid Background="#FFF" Height="250">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.85*"/>
@@ -32,7 +32,7 @@
                                     <Grid>
                                         <Ellipse Stroke="Black" StrokeThickness="3">
                                             <Ellipse.Fill>
-                                                <ImageBrush ImageSource="Pictures/ScreenElement/add3.png"/>
+                                                <ImageBrush ImageSource="Pictures/ScreenElement/add2.png"/>
                                             </Ellipse.Fill>
                                         </Ellipse>
                                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -47,7 +47,7 @@
                 <Button Margin="20" BorderThickness="2" BorderBrush="Black" Click="img_click">
                     <Image x:Name="itemImg" Source="Pictures/ScreenElement/add.png" Stretch="UniformToFill"/>
                 </Button>
-                <Image Source="Pictures/ScreenElement/zoom.png" Margin="25" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
+                <Image Source="Pictures/ScreenElement/zoom3.png" Margin="25" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
             </Grid>
 
             <Label x:Name="itemName" Grid.Column="2" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="10 0" FontSize="30" HorizontalAlignment="Left" FontWeight="Bold">
