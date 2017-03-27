@@ -283,7 +283,10 @@ namespace SilverCityOS
                 VerticalAlignment = VerticalAlignment.Stretch,
                 VerticalContentAlignment = VerticalAlignment.Center,
                 HorizontalContentAlignment = HorizontalAlignment.Center,
-                BorderThickness = new Thickness(0),
+                BorderBrush = Brushes.Black,
+                BorderThickness = new Thickness(1),
+                Margin = new Thickness(5, 12, 5, 0),
+                Padding = new Thickness(10),
                 Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 }
             };
             Grid.SetColumnSpan(sendCover, 2);
@@ -297,7 +300,10 @@ namespace SilverCityOS
                 VerticalAlignment = VerticalAlignment.Stretch,
                 VerticalContentAlignment = VerticalAlignment.Center,
                 HorizontalContentAlignment = HorizontalAlignment.Center,
-                BorderThickness = new Thickness(0),
+                BorderBrush = Brushes.Black,
+                BorderThickness = new Thickness(1),
+                Margin = new Thickness(5, 0, 5, 0),
+                Padding = new Thickness(10),
                 Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 }
             };
             Grid.SetColumnSpan(payCover, 2);
@@ -325,85 +331,71 @@ namespace SilverCityOS
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Appetizers";
+            lblCategories.Content = "APPETIZERS";
             setScrollComponents(menu, (int)section.Appetizers);
             sectionCheck((Button)sender);
         }
 
         private void btnSoup_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Soups & Sizzling Rice";
+            lblCategories.Content = "SOUPS & SIZZLING RICE";
             setScrollComponents(menu, (int)section.Soup);
             sectionCheck((Button)sender);
         }
 
         private void btnBeef_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Beef";
+            lblCategories.Content = "BEEF";
             setScrollComponents(menu, (int)section.Beef);
             sectionCheck((Button)sender);
         }
 
         private void btnChicken_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Chicken & Duck";
+            lblCategories.Content = "CHICKEN & DUCK";
             setScrollComponents(menu, (int)section.Chicken);
             sectionCheck((Button)sender);
         }
 
         private void btnSeafood_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Seafood";
+            lblCategories.Content = "SEAFOOD";
             setScrollComponents(menu, (int)section.Seafood);
             sectionCheck((Button)sender);
         }
 
         private void btnVegie_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Vegetables";
+            lblCategories.Content = "VEGETABLES";
             setScrollComponents(menu, (int)section.Vegetable);
             sectionCheck((Button)sender);
         }
 
         private void btnHot_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Hot Plates & Hot Pots";
+            lblCategories.Content = "HOT PLATE & HOT POTS";
             setScrollComponents(menu, (int)section.Hotplate);
             sectionCheck((Button)sender);
         }
 
         private void btnRice_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Fried Rice";
+            lblCategories.Content = "FRIED RICE & FRIED NOODLES";
             setScrollComponents(menu, (int)section.Rice);
-            sectionCheck((Button)sender);
-        }
-
-        private void btnNoodle_Click(object sender, RoutedEventArgs e)
-        {
-            lblCategories.Content = "Fried Noodle";
-            setScrollComponents(menu, (int)section.Noodle);
             sectionCheck((Button)sender);
         }
 
         private void btnEgg_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Egg Foo Young";
-            setScrollComponents(menu, (int)section.Egg);
+            lblCategories.Content = "EGG FOO YOUNG & CHOP SUEY";
+            setScrollComponents(menu, (int)section.Noodle);
             sectionCheck((Button)sender);
         }
 
-        private void btnChopSuey_Click(object sender, RoutedEventArgs e)
+        private void btnDrink_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "Chop Suey";
-            setScrollComponents(menu, (int)section.Chopsuey);
-            sectionCheck((Button)sender);
-        }
-
-        private void btnAboutUs_Click(object sender, RoutedEventArgs e)
-        {
-            lblCategories.Content = "Appetizers";
-            setScrollComponents(menu, (int)section.Appetizers);
+            lblCategories.Content = "DRINKS";
+            setScrollComponents(menu, (int)section.Noodle);
             sectionCheck((Button)sender);
         }
 

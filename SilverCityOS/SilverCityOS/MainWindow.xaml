@@ -147,7 +147,7 @@
                     <Button x:Name="btnHot" Content="Hot Plates &amp; Hot Pots" Click="btnHot_Click" Style="{StaticResource menubutton}"/>
                     <Button x:Name="btnRice" Content="Fried Rice &amp; Fried Noodles" Click="btnRice_Click" Style="{StaticResource menubutton}"/>
                     <Button x:Name="btnEgg" Content="Egg Foo Young &amp; Chop Suey" Click="btnEgg_Click" Style="{StaticResource menubutton}"/>
-                    <Button x:Name="btnDrinks" Content="Drinks" Click="btnAboutUs_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnDrinks" Content="Drinks" Click="btnDrink_Click" Style="{StaticResource menubutton}"/>
                 </StackPanel>
             </Border>
 
@@ -274,7 +274,7 @@
                     </LinearGradientBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <Image Source="Pictures/ScreenElement/arrow.png" VerticalAlignment="Bottom" Opacity="0.8" Width="300" Height="100"/>
+            <Image Source="Pictures/ScreenElement/arrow.png" VerticalAlignment="Bottom" Opacity="0.3" Width="300" Height="100"/>
         </Grid>
     </Grid>
 </Window>

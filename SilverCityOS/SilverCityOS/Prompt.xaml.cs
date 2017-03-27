@@ -66,6 +66,7 @@ namespace SilverCityOS
         private void generateItemList(MainWindow window, bool payBill)
         {
             itemList.Children.Clear();
+            Boolean first = true;
             foreach (OrderedItem item in window.orderItems.Children)
             {
                 if (item.getCode() >= window.orderedNumber || payBill)
@@ -90,6 +91,15 @@ namespace SilverCityOS
                     Grid.SetColumn(entry.itemName, 0);
                     Grid.SetColumnSpan(entry.itemName, 2);
                     entry.border.Background = Brushes.Transparent;
+                    if(first)
+                    {
+                        entry.border.BorderThickness = new Thickness(0, 2, 0, 2);
+                    }
+                    else
+                    {
+                        entry.border.BorderThickness = new Thickness(0, 0, 0, 2);
+                    }
+                    first = false;
                     itemList.Children.Add(entry);
                 }
             }
