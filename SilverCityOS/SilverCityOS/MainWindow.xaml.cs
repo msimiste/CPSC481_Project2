@@ -28,7 +28,7 @@ namespace SilverCityOS
         Rectangle cover;
         TextBox sendCover;
         TextBox payCover;
-        enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey };
+        enum section { Blank, Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey };
         public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
         bool helpMode = false;

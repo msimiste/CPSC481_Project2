@@ -50,7 +50,7 @@
                 <Image Source="Pictures/ScreenElement/zoom3.png" Margin="25" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
             </Grid>
 
-            <Label x:Name="itemName" Grid.Column="2" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="10 0" FontSize="30" HorizontalAlignment="Left" FontWeight="Bold">
+            <Label x:Name="itemName" Grid.Column="2"  VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="10 0" FontSize="30" HorizontalAlignment="Left" FontWeight="Bold">
                 <Underline>
                     Name
                 </Underline>

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace SilverCityOS
 {
-    public class Menu {
+    public class Menu
+    {
 
         private List<ucMenuItem> appetizers;
         private List<ucMenuItem> soup;
@@ -55,14 +56,18 @@ namespace SilverCityOS
         {
             soup = new List<ucMenuItem>()
             {
-                new  ucMenuItem (window, new MenuItem((decimal)3.50 , 1, "Pictures/Menu/1.jpg", "Pictures/Menu/1s.jpg", "Vegetable Spring Rolls", "Vegetable Spring Rolls (2)")),
-                new  ucMenuItem (window, new MenuItem((decimal)6.50 , 2, "Pictures/Menu/2.jpg", "Pictures/Menu/2s.jpg", "Spring Rolls", "Vietnamese Spring Rolls (4)")),
-                new  ucMenuItem (window, new MenuItem((decimal)9.50 , 3, "Pictures/Menu/3.jpg", "Pictures/Menu/3s.jpg", "Wontons", "Deep Fried Wonton")),
-                new  ucMenuItem (window, new MenuItem((decimal)10.95, 4, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Chicken Wings", "Deep Fried Chicken Wings")),
-                new  ucMenuItem (window, new MenuItem((decimal)11.95, 5, "Pictures/Menu/5.jpg", "Pictures/Menu/5s.jpg", "Chicken Wings", "Salt & Pepper Chicken Wings")),
-                new  ucMenuItem (window, new MenuItem((decimal)11.95, 6, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Spare Ribs", "Dry Garlic Spareribs")),
-                new  ucMenuItem (window, new MenuItem((decimal)11.95, 7, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Spare Ribs", "Salt & Pepper Spareribs")),
-                new  ucMenuItem (window, new MenuItem((decimal)10.95, 8, "Pictures/Menu/8.jpg", "Pictures/Menu/8s.jpg", "Dumplings", "Grilled Pork with Vegetable Dumplings(10)"))
+               new  ucMenuItem (window, new MenuItem((decimal)4.50 , 9, "Pictures/Menu/1.jpg", "Pictures/Menu/1s.jpg", "Wonton Soup","Soup")),
+               new  ucMenuItem (window, new MenuItem((decimal)8.95 , 10, "Pictures/Menu/2.jpg", "Pictures/Menu/2s.jpg", "Wor Wonton Soup","Soup")),
+               new  ucMenuItem (window, new MenuItem((decimal)8.95 , 11, "Pictures/Menu/3.jpg", "Pictures/Menu/3s.jpg", "Hot & Sour Soup","Soup")),
+               new  ucMenuItem (window, new MenuItem((decimal)12.95, 12, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Crab Meat & Fish Maw Soup","Soup")),
+               new  ucMenuItem (window, new MenuItem((decimal)10.95, 13, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Chicken & Cream Corn Soup","Soup")),
+               new  ucMenuItem (window, new MenuItem((decimal)10.95, 14, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Beef & Egg Drop in Thick Soup","Soup")),
+               new  ucMenuItem (window, new MenuItem((decimal)13.95 , 15, "Pictures/Menu/1.jpg", "Pictures/Menu/1s.jpg","Hot & Sour Soup on Sizzling Rice", "Rice")), 
+               new  ucMenuItem (window, new MenuItem((decimal)13.95 , 16, "Pictures/Menu/2.jpg", "Pictures/Menu/2s.jpg","Shrimp & tomato on Sizzling Rice", "Rice")),
+               new  ucMenuItem (window, new MenuItem((decimal)15.95 , 17, "Pictures/Menu/3.jpg", "Pictures/Menu/3s.jpg","Seafood & vegetable on Sizzling Rice", "Rice")),
+               new  ucMenuItem (window, new MenuItem((decimal)13.95, 18, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Beef & Mixed Vegetable on Sizzling Rice", "Rice")),
+               new  ucMenuItem (window, new MenuItem((decimal)13.95, 19, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Chicken & Mixed Vegetable on Sizzling Rice", "Rice")),
+               new  ucMenuItem (window, new MenuItem((decimal)11.95, 20, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Mixed Vegetable on Sizzling Rice", "Rice"))   
             };
         }
 
@@ -70,14 +75,19 @@ namespace SilverCityOS
         {
             beef = new List<ucMenuItem>()
             {
-                new  ucMenuItem (window, new MenuItem((decimal)3.50 , 1, "Pictures/Menu/1.jpg", "Pictures/Menu/1s.jpg", "Vegetable Spring Rolls", "Vegetable Spring Rolls (2)")),
-                new  ucMenuItem (window, new MenuItem((decimal)6.50 , 2, "Pictures/Menu/2.jpg", "Pictures/Menu/2s.jpg", "Spring Rolls", "Vietnamese Spring Rolls (4)")),
-                new  ucMenuItem (window, new MenuItem((decimal)9.50 , 3, "Pictures/Menu/3.jpg", "Pictures/Menu/3s.jpg", "Wontons", "Deep Fried Wonton")),
-                new  ucMenuItem (window, new MenuItem((decimal)10.95, 4, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Chicken Wings", "Deep Fried Chicken Wings")),
-                new  ucMenuItem (window, new MenuItem((decimal)11.95, 5, "Pictures/Menu/5.jpg", "Pictures/Menu/5s.jpg", "Chicken Wings", "Salt & Pepper Chicken Wings")),
-                new  ucMenuItem (window, new MenuItem((decimal)11.95, 6, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Spare Ribs", "Dry Garlic Spareribs")),
-                new  ucMenuItem (window, new MenuItem((decimal)11.95, 7, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Spare Ribs", "Salt & Pepper Spareribs")),
-                new  ucMenuItem (window, new MenuItem((decimal)10.95, 8, "Pictures/Menu/8.jpg", "Pictures/Menu/8s.jpg", "Dumplings", "Grilled Pork with Vegetable Dumplings(10)"))
+                new  ucMenuItem (window, new MenuItem((decimal)12.50 , 21, "Pictures/Menu/1.jpg", "Pictures/Menu/1s.jpg","Ginger Beef","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)12.95 , 22, "Pictures/Menu/2.jpg", "Pictures/Menu/2s.jpg","Curried Beef","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)12.95 , 23, "Pictures/Menu/3.jpg", "Pictures/Menu/3s.jpg","Beef with 2 Kinds of Mushroom","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)12.95, 24, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Beef with Black Bean Sauce","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)12.95, 26, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Beef with Tomatoes","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)13.95, 25, "Pictures/Menu/5.jpg", "Pictures/Menu/5s.jpg", "Beef with Broccoli","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)13.95, 27, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Beef with Snow Peas","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)13.95, 28, "Pictures/Menu/8.jpg", "Pictures/Menu/8s.jpg", "Beef with Mixed Vegetables","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)13.95 , 29, "Pictures/Menu/3.jpg", "Pictures/Menu/3s.jpg","Beef with Chinese Broccoli","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)13.95, 30, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Beef with Ginger & Onion","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)13.95, 31, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Beef with Satay Sauce","Beef")),
+                new  ucMenuItem (window, new MenuItem((decimal)13.95, 32, "Pictures/Menu/5.jpg", "Pictures/Menu/5s.jpg", "Szechuan Syle Beef","Beef"))
+
             };
         }
 
