@@ -24,7 +24,6 @@ namespace SilverCityOS
     {
         public int orderNumber = 0;
         public int orderedNumber = 0;
-        private bool CallWaiterStatus = false;
         Rectangle cover;
         TextBox sendCover;
         TextBox payCover;
@@ -59,31 +58,9 @@ namespace SilverCityOS
             calculatePrice();
         }
 
-        //private void btnCallWaiterClick(object sender, RoutedEventArgs e)
-        //{
-        //    if (CallWaiterStatus)
-        //    {
-        //        btnCallWaiter.Background = new SolidColorBrush(Colors.AntiqueWhite);
-        //        waiterTextbox.Text = "CALL WAITER";
-        //        waiterTextbox.FontSize = 35;
-        //        waiterTextbox.Height = 100;
-        //        btnCallWaiter.ToolTip = new ToolTip { Content = "Click to Call Waiter" };
-        //        btnCallWaiter.BorderBrush = new SolidColorBrush(Colors.Black);
-        //        CallWaiterStatus = false;
-        //    }
-        //    else if (!CallWaiterStatus)
-        //    {
-        //        btnCallWaiter.Background = new SolidColorBrush(Colors.Yellow);
-        //        waiterTextbox.Text = "CANCEL CALL WAITER";
-        //        waiterTextbox.FontSize = 30;
-        //        waiterTextbox.Height = 140;
-        //        btnCallWaiter.ToolTip = new ToolTip { Content = "Click Again To Cancel Call to Waiter" };
-        //        CallWaiterStatus = true;
-        //    }
-        //}
-
         private void setScrollComponents(Menu menu, int category)
         {
+            scrlViewer_MenuItems.ScrollToTop();
             Grid.SetColumnSpan(middleSec, 1);
             stkPanel_OrderPanel.Opacity = 1;
             stkPanel_OrderPanel.IsHitTestVisible = true;

@@ -78,11 +78,11 @@ namespace SilverCityOS
                         BorderBrush = Brushes.Black,
                         BorderThickness = new Thickness(0, 0, 0, 1)
                     };*/
-                    OrderedItem entry = new OrderedItem(item.getItem(), window, window.orderNumber) { Height = 50 };
-                    entry.border.Height = 50;
-                    entry.main.Height = 50;
+                    OrderedItem entry = new OrderedItem(item.getItem(), window, window.orderNumber) { Height = 60 };
+                    entry.border.Height = 60;
+                    entry.main.Height = 60;
                     Grid.SetRowSpan(entry.itemPrice, 2);
-                    entry.itemPrice.FontSize = 25;
+                    entry.itemPrice.FontSize = 28;
                     entry.main.Children.RemoveAt(0);
                     //Viewbox view = new Viewbox();
                     //view.Child = new Label() { Content = item.getItem().getNumber() };
