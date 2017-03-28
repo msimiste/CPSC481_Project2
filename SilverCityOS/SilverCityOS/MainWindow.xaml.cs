@@ -28,7 +28,7 @@ namespace SilverCityOS
         Rectangle cover;
         TextBox sendCover;
         TextBox payCover;
-        enum section { Blank, Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey };
+        enum section { Blank, Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey, Drinks };
         public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
         bool helpMode = false;
@@ -395,7 +395,7 @@ namespace SilverCityOS
         private void btnDrink_Click(object sender, RoutedEventArgs e)
         {
             lblCategories.Content = "DRINKS";
-            setScrollComponents(menu, (int)section.Noodle);
+            setScrollComponents(menu, (int)section.Drinks);
             sectionCheck((Button)sender);
         }
 
