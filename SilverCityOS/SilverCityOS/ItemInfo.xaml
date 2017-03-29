@@ -22,7 +22,6 @@
                 <StackPanel Orientation="Horizontal">
                     <Label x:Name="itemName" Height="100" Margin="10,10,10,-21" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="40" BorderBrush="Black" BorderThickness="0 0 0 0" Content="Item Name"/>
                     <Label x:Name="itemPrice" Height="100" FontStyle="Italic" FontSize="40" VerticalContentAlignment="Center" Content="Price $$$$$"  Margin="10,10,10,-21"/>
-
                 </StackPanel>
             </Border>
             <!--<Button Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="Black" Margin="10 10" FontSize="20" IsCancel="True">CLOSE</Button>-->

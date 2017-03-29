@@ -46,7 +46,7 @@
                 <Image Source="Pictures/ScreenElement/zoom3.png" Margin="25" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
             </Grid>
             <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBox x:Name="itemName" BorderThickness="0 0 0 2" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Margin="10 0" FontSize="30" HorizontalAlignment="Left" TextWrapping="Wrap" FontWeight="Bold" IsHitTestVisible="False">
+                <TextBox x:Name="itemName" BorderThickness="0 0 0 0" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Margin="10 0" FontSize="30" HorizontalAlignment="Left" TextWrapping="Wrap" FontWeight="Bold" IsHitTestVisible="False">
                     Name
                 </TextBox>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
