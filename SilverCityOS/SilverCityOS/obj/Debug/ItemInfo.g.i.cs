@@ -41,7 +41,7 @@ namespace SilverCityOS {
     public partial class ItemInfo : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 23 "..\..\ItemInfo.xaml"
+        #line 19 "..\..\ItemInfo.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image itemImg;
         
@@ -49,7 +49,7 @@ namespace SilverCityOS {
         #line hidden
         
         
-        #line 27 "..\..\ItemInfo.xaml"
+        #line 23 "..\..\ItemInfo.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label itemName;
         
@@ -57,17 +57,9 @@ namespace SilverCityOS {
         #line hidden
         
         
-        #line 28 "..\..\ItemInfo.xaml"
+        #line 24 "..\..\ItemInfo.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label itemPrice;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 29 "..\..\ItemInfo.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock itemDesc;
         
         #line default
         #line hidden
@@ -110,9 +102,6 @@ namespace SilverCityOS {
             return;
             case 3:
             this.itemPrice = ((System.Windows.Controls.Label)(target));
-            return;
-            case 4:
-            this.itemDesc = ((System.Windows.Controls.TextBlock)(target));
             return;
             }
             this._contentLoaded = true;

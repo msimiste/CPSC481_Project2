@@ -9,29 +9,47 @@
     <Window.Background>
         <SolidColorBrush Color="White" Opacity="0" />
     </Window.Background>
-    <Border BorderBrush="Black" BorderThickness="1 1 1 1" Height="800" Width="1300">
-        <Grid Background="#FFF">
-            <!--<Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
+    <Border BorderBrush="Black" BorderThickness="1 1 1 1" Height="800" Width="1100">
+        <Grid Background="#FFF" >
+            <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>-->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Padding="40">
-                <Image x:Name="itemImg" Source="Pictures/testImage2.jpg"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="1" Padding="10">
+                <Image x:Name="itemImg" Source="Pictures/testImage2.jpg" Stretch="UniformToFill"/>
             </Border>
-            <Border Grid.Row="0" Grid.Column="1" Padding="20 40">
-                <StackPanel>
-                    <Label x:Name="itemName" FontWeight="Bold" FontSize="30" BorderBrush="Black" BorderThickness="0 0 0 2">Item Name</Label>
-                    <Label x:Name="itemPrice" FontStyle="Italic" FontSize="20">Price $$$$$</Label>
-                    <TextBlock x:Name="itemDesc" TextWrapping="Wrap">Item Description</TextBlock>
+            <Border Grid.Row="0" Padding="30,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Label x:Name="itemName" Height="100" Margin="10,10,10,-21" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="40" BorderBrush="Black" BorderThickness="0 0 0 0" Content="Item Name"/>
+                    <Label x:Name="itemPrice" Height="100" FontStyle="Italic" FontSize="40" VerticalContentAlignment="Center" Content="Price $$$$$"  Margin="10,10,10,-21"/>
+
                 </StackPanel>
             </Border>
             <!--<Button Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="Black" Margin="10 10" FontSize="20" IsCancel="True">CLOSE</Button>-->
             <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Height="80" Width="80" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 -40 -40 0" IsCancel="True">
-                <Image Source="Pictures/ScreenElement/redClose.png"/>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Button.Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="Black" Direction="230" ShadowDepth="3" BlurRadius="4" Opacity="0.8" />
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Grid>
+                                        <Ellipse Stroke="Black" StrokeThickness="1.5">
+                                            <Ellipse.Fill>
+                                                <ImageBrush ImageSource="Pictures/ScreenElement/delete.png"/>
+                                            </Ellipse.Fill>
+                                        </Ellipse>
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
             </Button>
         </Grid>
     </Border>
