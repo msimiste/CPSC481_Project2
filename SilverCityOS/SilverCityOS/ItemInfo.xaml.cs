@@ -24,7 +24,7 @@ namespace SilverCityOS
         {
             InitializeComponent();
             itemImg.Source = new BitmapImage(new Uri(item.getSImgPath(), UriKind.Relative));
-            itemName.Content = "Item #"+ item.getNumber();
+            itemName.Content = "#"+ item.getNumber()+". "+item.getName();
             itemPrice.Content = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
         }
     }

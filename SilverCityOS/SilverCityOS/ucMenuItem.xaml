@@ -45,13 +45,16 @@
                 </Button>
                 <Image Source="Pictures/ScreenElement/zoom3.png" Margin="25" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
             </Grid>
-            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBox x:Name="itemName" BorderThickness="0 0 0 0" BorderBrush="Black" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Margin="10 0" FontSize="30" HorizontalAlignment="Left" TextWrapping="Wrap" FontWeight="Bold" IsHitTestVisible="False">
-                    Name
-                </TextBox>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
-                    <Label x:Name="itemPriceFront" FontSize="90" HorizontalAlignment="Center" VerticalAlignment="Top" Content="$15" />
-                    <Label x:Name="itemPriceBack" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,10,40" FontWeight="Bold" Content="00"/>
+            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="itemNumber" VerticalAlignment="Top" BorderThickness="0" Margin="10 0 0 0" FontSize="30" HorizontalAlignment="Right" FontWeight="Bold" IsHitTestVisible="False">Item #</TextBox>
+                        <TextBox x:Name="itemName" VerticalAlignment="Bottom" BorderThickness="0" Margin="0" Width="430" FontSize="30" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" IsHitTestVisible="False">
+                            Name
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Label x:Name="itemPriceFront" FontSize="90" HorizontalAlignment="Center" VerticalAlignment="Top" Content="$15" FontFamily="SketchFlow Print" />
+                    <Label x:Name="itemPriceBack" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,10,40" FontWeight="Bold" Content="00" FontFamily="SketchFlow Print"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

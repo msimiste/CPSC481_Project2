@@ -35,7 +35,8 @@ namespace SilverCityOS
         private void setUp()
         {
             itemImg.Source = new BitmapImage(new Uri(item.getSImgPath(), UriKind.Relative));
-            itemName.Text = item.getNumber().ToString()+". "+item.getName();
+            itemNumber.Text = item.getNumber().ToString() + ". ";
+            itemName.Text = item.getName();
             string[] price = item.getPrice().ToString("C", CultureInfo.CurrentCulture).Split('.');
             itemPriceFront.Content = price[0];
             itemPriceBack.Content = "."+price[1];
