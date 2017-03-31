@@ -1,0 +1,9 @@
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\App.g.cs
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox_MarkupCompile.cache
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.Properties.Resources.resources
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.csproj.GenerateResource.Cache
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\bin\Debug\EnumComboBox.exe.config
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\bin\Debug\EnumComboBox.exe
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\bin\Debug\EnumComboBox.pdb
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.exe
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.pdb

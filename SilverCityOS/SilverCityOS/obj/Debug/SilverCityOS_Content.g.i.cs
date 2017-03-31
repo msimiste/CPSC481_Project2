@@ -8,6 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/waiter.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/delete24.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/disk_blue.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/error.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/error20.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/help.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/help20.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/information.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/information20.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/toast.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/warning.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/warning20.png")]
 
 

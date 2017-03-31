@@ -17,6 +17,8 @@ using System.Windows.Shapes;
 
 namespace SilverCityOS
 {
+
+   
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -31,6 +33,7 @@ namespace SilverCityOS
         public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
         bool helpMode = false;
+      
 
 
         public MainWindow()
@@ -385,6 +388,20 @@ namespace SilverCityOS
                 pu.IsOpen = helpMode;
             }                     
         }
+        /// <summary>
+        /// Texts the box general use mouse enter.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="System.Windows.Input.MouseEventArgs"/> instance containing the event data.</param>
+        //private void TextBoxGeneralUseMouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        //{
+        //    if (this.balloon == null || !this.balloon.IsLoaded)                
+        //    {
+        //        var temp = new Balloon(this.textBoxGeneralUse, "Testing 1232", BalloonType.Help);
+        //        this.balloon = temp;//new Balloon(this.textBoxGeneralUse, "You have moussed over this textbox.", ((ViewModel)this.DataContext).BalloonType, false, ((ViewModel)this.DataContext).ShowBalloonCloseButton);
+        //        this.balloon.Show();
+        //    }
+        //}
 
     }
 }
