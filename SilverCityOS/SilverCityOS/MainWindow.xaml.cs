@@ -379,14 +379,25 @@ namespace SilverCityOS
             sectionCheck((Button)sender);
         }
 
-        private void setHelpBoxes() {
+        private void setHelpBoxes()
+        {
             if (helpMode == false) { helpMode = true; }
             else { helpMode = false; }
-
+            
+            
+            var helpBalloons = Utilities.FindVisualChildren<HelpBalloon>(this);
+            foreach (HelpBalloon b in helpBalloons) {
+                if (helpMode)
+                {
+                    b.Visibility = Visibility.Visible;                   
+                }
+                else { b.Visibility = Visibility.Hidden; }
+            }
             var popups = Utilities.FindVisualChildren<Popup>(this);
-            foreach (Popup pu in popups) {
+            foreach (Popup pu in popups)
+            {
                 pu.IsOpen = helpMode;
-            }                     
+            }
         }
         /// <summary>
         /// Texts the box general use mouse enter.
