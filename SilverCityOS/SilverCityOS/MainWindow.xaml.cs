@@ -304,8 +304,7 @@ namespace SilverCityOS
             {
                 if (mainGrid.Children.Contains(downArrowCover))
                 {
-                    mainGrid.Children.Remove(downArrowCover);
-                    if (!mainGrid.Children.Contains(upArrowCover)) { mainGrid.Children.Add(upArrowCover); }
+                    mainGrid.Children.Remove(downArrowCover);                    
                 }
             }
             else if (scrollViewer.VerticalOffset == 0) {
