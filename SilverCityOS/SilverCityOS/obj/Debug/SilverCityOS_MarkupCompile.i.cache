@@ -16,5 +16,5 @@ DEBUG;TRACE
 231777921428
 Balloon.xaml;HelpBalloon.xaml;HelpInfo.xaml;ItemInfo.xaml;MainWindow.xaml;OrderedItem.xaml;Prompt.xaml;ToastPopUp.xaml;ucMenuItem.xaml;Welcome.xaml;
 
-True
+False
 

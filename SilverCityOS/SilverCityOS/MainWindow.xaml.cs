@@ -413,7 +413,7 @@ namespace SilverCityOS
                 else { b.Visibility = Visibility.Hidden; }
             }
 
-            
+
             //var popups = Utilities.FindVisualChildren<Popup>(this);
             //foreach (Popup pu in popups)
             //{
@@ -422,21 +422,37 @@ namespace SilverCityOS
 
             if (helpMode)
             {
-                if (b == null) {
-                    b = new Balloon(btnTakeOut, "Test Caption", BalloonType.Help, false, true);
-                    c = new Balloon(btnDineIn, "Dine in Caption", BalloonType.Help, false, true);
-                    Point p = btnDineIn.PointToScreen(new Point(0d, 0d));
-                    c.Margin = new Thickness(p.X+30, p.Y+30, 0, 0);
+                if (b == null)
+                {
+                    b = new Balloon(btnTakeOut, "Test Caption", BalloonType.Help, false, false);
+                    c = new Balloon(btnDineIn, "Dine in Caption", BalloonType.Help, false, false);
+                    d = new Balloon(btnCallWaiter, "Call Waiter Caption", BalloonType.Help, false, false);
+                    Point pd = btnCallWaiter.PointToScreen(new Point(0d, 0d));
+                    d.Left = pd.X + 300;
+                    d.Top = pd.Y ;
+                    d.PathPointBottomLeft.Visibility = Visibility.Visible;
+                    d.PathPointRight.Visibility = Visibility.Hidden;
+                    d.PathPointLeft.Visibility = Visibility.Hidden;
 
+                    Point p = btnDineIn.PointToScreen(new Point(0d, 0d));
+                    c.Margin = new Thickness(p.X + 300, p.Y + 300, 0, 0);
+                    c.Left = p.X - 250;
+                    c.Top = p.Y - 80;
+                    c.PathPointRight.Visibility = Visibility.Hidden;
+                    c.PathPointLeft.Visibility = Visibility.Hidden;
+                    c.PathPointBottomRight.Visibility = Visibility.Visible;                    
                 }
                 b.Show();
                 c.Show();
+                d.Show();
             }
-            else {
+            else
+            {
 
                 b.Visibility = Visibility.Collapsed;
                 c.Visibility = Visibility.Collapsed;
-                }
+                d.Visibility = Visibility.Collapsed; 
+            }
 
 
 

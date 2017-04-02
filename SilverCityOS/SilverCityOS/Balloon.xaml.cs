@@ -270,6 +270,7 @@ namespace SilverCityOS
                 {
                     this.PathPointRight.Visibility = Visibility.Hidden;
                     this.PathPointLeft.Visibility = Visibility.Visible;
+                    
                     this.Left = leftPosition;
                 }
                 else
@@ -278,7 +279,8 @@ namespace SilverCityOS
                     this.PathPointRight.Visibility = Visibility.Visible;
                     this.Left = location.X + (this.control.ActualWidth / 2) + captionPointMargin - this.Width;
                 }
-
+                this.PathPointBottomLeft.Visibility = Visibility.Hidden;
+                this.PathPointBottomRight.Visibility = Visibility.Hidden;
                 this.Top = location.Y + (this.control.ActualHeight / 2);
             }
         }

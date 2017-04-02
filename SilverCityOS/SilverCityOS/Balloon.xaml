@@ -67,6 +67,36 @@
                         Data="M10402.992,55.5381 L10284.783,3.2963597 0.7,54.9"
                         x:Name="PathPointRight">
                 </Path>
+                <Path Grid.Column="0" 
+                        HorizontalAlignment="Right"
+                        Margin="0,73.567,0.767,-70.567"
+                        Data="M10402.992,55.5381 L10284.783,3.2963597 0.7,54.9"
+                        x:Name="PathPointBottomLeft" RenderTransformOrigin="0.5,0.5" Fill="{DynamicResource HelpGradient}" Panel.ZIndex="100">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-179.033"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Grid.Column="1"
+                        
+                        HorizontalAlignment="Left"  
+                        Margin="175.13,73.824,0,-70.824" 
+                        Data="M10402.99154,55.5381 L10.9919,0.64 0.7,54.9"
+                        x:Name="PathPointBottomRight" RenderTransformOrigin="0.5,0.5" Fill="{DynamicResource HelpGradient}" Panel.ZIndex="100" Stroke="{DynamicResource HelpGradient}" OpacityMask="{DynamicResource HelpGradient}">
+
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-181.104"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
             </Grid>
 
             <Border Margin="5,-3,5,5" 
