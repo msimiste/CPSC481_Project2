@@ -33,7 +33,9 @@ namespace SilverCityOS
         public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
         bool helpMode = false;
-      
+        Balloon b,c,d; 
+
+
 
 
         public MainWindow()
@@ -44,11 +46,12 @@ namespace SilverCityOS
             setupStart();
         }
         
-        //To setup on start and reset
+        //To setup on start and resetf
         private void setupStart()
         {
             orderNumber = 0;
             orderedNumber = 0;
+            mainGrid.Children.Remove(upArrowCover);
             sViewer_Stackpanel.Children.Clear();
             orderItems.Children.Clear();
             lblCategories.Content = "SILVER CITY RESTAURANT";
@@ -58,7 +61,9 @@ namespace SilverCityOS
             Grid.SetColumnSpan(middleSec, 2);
             sectionCheck(new Button());
             sendCheck();
-            calculatePrice();
+            calculatePrice();            
+         
+           
         }
 
         private void setScrollComponents(Menu menu, int category)
@@ -248,6 +253,7 @@ namespace SilverCityOS
 
         private void setupCover()
         {
+            mainGrid.Children.Remove(upArrowCover);
             cover = new Rectangle()
              {
                  Opacity = 0.7,
@@ -293,20 +299,31 @@ namespace SilverCityOS
         private void OnScrollChanged(object sender, ScrollChangedEventArgs e)
         {
             var scrollViewer = (ScrollViewer)sender;
+            
             if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
             {
                 if (mainGrid.Children.Contains(downArrowCover))
                 {
                     mainGrid.Children.Remove(downArrowCover);
+                    if (!mainGrid.Children.Contains(upArrowCover)) { mainGrid.Children.Add(upArrowCover); }
                 }
-            }else
+            }
+            else if (scrollViewer.VerticalOffset == 0) {
+                if (mainGrid.Children.Contains(upArrowCover)) { mainGrid.Children.Remove(upArrowCover); }
+                if (!mainGrid.Children.Contains(downArrowCover)) { mainGrid.Children.Add(downArrowCover); }
+
+            }
+            else
             {
                 if (!mainGrid.Children.Contains(downArrowCover))
                 {
-                    mainGrid.Children.Add(downArrowCover);
+                    mainGrid.Children.Add(downArrowCover);                    
+                }
+                if (!mainGrid.Children.Contains(upArrowCover))
+                {
+                    mainGrid.Children.Add(upArrowCover);
                 }
             }
-                
         }
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
@@ -381,23 +398,51 @@ namespace SilverCityOS
 
         private void setHelpBoxes()
         {
-            if (helpMode == false) { helpMode = true; }
-            else { helpMode = false; }
-            
-            
-            var helpBalloons = Utilities.FindVisualChildren<HelpBalloon>(this);
-            foreach (HelpBalloon b in helpBalloons) {
+           
+
+            if (helpMode == false) { helpMode = true;  }
+            else { helpMode = false;  }
+
+
+            var helpBalloons = Utilities.FindVisualChildren<Balloon>(this);
+            foreach (Balloon b in helpBalloons)
+            {
                 if (helpMode)
                 {
-                    b.Visibility = Visibility.Visible;                   
+                    b.Visibility = Visibility.Visible;
                 }
                 else { b.Visibility = Visibility.Hidden; }
             }
-            var popups = Utilities.FindVisualChildren<Popup>(this);
-            foreach (Popup pu in popups)
+
+            
+            //var popups = Utilities.FindVisualChildren<Popup>(this);
+            //foreach (Popup pu in popups)
+            //{
+            //    pu.IsOpen = helpMode;
+            //}
+
+            if (helpMode)
             {
-                pu.IsOpen = helpMode;
+                if (b == null) {
+                    b = new Balloon(btnTakeOut, "Test Caption", BalloonType.Help, false, true);
+                    c = new Balloon(btnDineIn, "Dine in Caption", BalloonType.Help, false, true);
+                    Point p = btnDineIn.PointToScreen(new Point(0d, 0d));
+                    c.Margin = new Thickness(p.X+30, p.Y+30, 0, 0);
+
+                }
+                b.Show();
+                c.Show();
             }
+            else {
+
+                b.Visibility = Visibility.Collapsed;
+                c.Visibility = Visibility.Collapsed;
+                }
+
+
+
+
+            //this.helpTakeOut.showBalloon(); //new Balloon(this.btnTakeOut, "testing out this balloon", BalloonType.Help);
         }
         /// <summary>
         /// Texts the box general use mouse enter.

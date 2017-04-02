@@ -30,7 +30,7 @@ namespace SilverCityOS
             this.item = item;
             this.window = window;
             setUp();
-        } 
+        }
 
         private void setUp()
         {
@@ -39,7 +39,7 @@ namespace SilverCityOS
             itemName.Text = item.getName();
             string[] price = item.getPrice().ToString("C", CultureInfo.CurrentCulture).Split('.');
             itemPriceFront.Content = price[0];
-            itemPriceBack.Content = "."+price[1];
+            itemPriceBack.Content = "." + price[1];
         }
 
         private void button_add(object sender, RoutedEventArgs e)
@@ -56,5 +56,15 @@ namespace SilverCityOS
             desc.ShowDialog();
             window.mainGrid.Children.Remove(window.getCover());
         }
+
+        public void showBalloon()
+        {
+            if (this.IsHitTestVisible)
+            {
+                Balloon b = new Balloon(btnAdd, "Test Caption", BalloonType.Help, true, true);
+            }
+
+        }
     }
 }
+

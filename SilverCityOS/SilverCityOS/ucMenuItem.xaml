@@ -14,7 +14,7 @@
                 <ColumnDefinition Width="1.5*"/>
                 <!--<ColumnDefinition Width="0.75*"/>-->
             </Grid.ColumnDefinitions>          
-            <Button Background="#FFF" Height="130" Width="130" BorderThickness="5" Click="button_add">
+            <Button x:Name="btnAdd" Background="#FFF" Height="130" Width="130" BorderThickness="5" Click="button_add">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Button.Effect">
@@ -39,19 +39,19 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <local:HelpBalloon x:Name="helpAddToOrder" Margin="0,20,0,0" 
+            <!--<local:HelpBalloon x:Name="helpAddToOrder" Margin="0,20,0,0" 
                                       Caption="Press this button to add this item to your order" 
                                       BalloonType="{Binding BalloonType}" 
                                       AutoWidth="{Binding AutoWidth}"
                                       MaxHeight="{Binding MaxHeight}"
                                       MaxWidth="{Binding MaxWidth}"
                                       Title="{Binding BalloonTitle}"                       
-                                      ShowCloseButton="True" Visibility="Hidden" Panel.ZIndex="20" VerticalAlignment="Top" />
+                                      ShowCloseButton="True" Visibility="Hidden" Panel.ZIndex="20" VerticalAlignment="Top" />-->
             <Grid Grid.Column="1">
                 <Button Margin="20" BorderThickness="2" BorderBrush="Black" Click="img_click">
                     <Image x:Name="itemImg" Source="Pictures/ScreenElement/add.png" Stretch="UniformToFill"/>                   
                 </Button>
-                <local:HelpBalloon x:Name="helpLargerImage" Margin="0,20,0,0" 
+                <!--<local:HelpBalloon x:Name="helpLargerImage" Margin="0,20,0,0" 
                                       Caption="Press this button to see a larger image of this item" 
                                       BalloonType="{Binding BalloonType}" 
                                       AutoWidth="{Binding AutoWidth}"
@@ -59,7 +59,7 @@
                                       MaxWidth="{Binding MaxWidth}"
                                       Title="{Binding BalloonTitle}"
                     
-                  ShowCloseButton="True" Visibility="Hidden" />
+                  ShowCloseButton="True" Visibility="Hidden" />-->
                 <Image Source="Pictures/ScreenElement/zoom3.png" Margin="25" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
             </Grid>
             <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch">
