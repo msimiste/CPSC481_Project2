@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="800">
     <Border BorderThickness="4,2,4,2" BorderBrush="Black">
-        <Grid Background="#FFF" Height="250">
+        <Grid x:Name="mainGrid" Background="#FFF" Height="250">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.85*"/>
                 <ColumnDefinition Width="*"/>
@@ -29,6 +29,32 @@
                                         <Ellipse Stroke="Black" StrokeThickness="3">
                                             <Ellipse.Fill>
                                                 <ImageBrush ImageSource="Pictures/ScreenElement/add2.png"/>
+                                            </Ellipse.Fill>
+                                        </Ellipse>
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button x:Name="addClicked" Background="#FFF" Height="130" Width="130" BorderThickness="5" Click="button_add">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Button.Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="Black" Direction="230" ShadowDepth="5" BlurRadius="7" Opacity="0.8" />
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Grid>
+                                        <Ellipse Stroke="Black" StrokeThickness="3">
+                                            <Ellipse.Fill>
+                                                <ImageBrush ImageSource="Pictures/ScreenElement/addClicked.png"/>
                                             </Ellipse.Fill>
                                         </Ellipse>
                                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top"/>

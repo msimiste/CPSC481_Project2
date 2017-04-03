@@ -21,15 +21,18 @@ namespace SilverCityOS
         private int number;
         private string imgPath;
         private string name;
+        bool spicy;
         
-        public MenuItem(decimal price, int number, string imgPath, string name)
+        public MenuItem(bool spicy, decimal price, int number, string imgPath, string name)
         {
+            this.spicy = spicy;
             this.price = price;
             this.number = number;
             this.imgPath = imgPath;
             this.name = name;
         }
 
+        public bool isSpicy() { return this.spicy; }
         public decimal getPrice() { return this.price; }
         public int getNumber() { return this.number; }
         public string getImgPath() { return this.imgPath; }

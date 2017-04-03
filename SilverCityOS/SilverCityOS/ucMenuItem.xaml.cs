@@ -37,16 +37,25 @@ namespace SilverCityOS
             itemImg.Source = new BitmapImage(new Uri(item.getImgPath(), UriKind.Relative));
             itemNumber.Text = item.getNumber().ToString() + ". ";
             itemName.Text = item.getName();
+            if (item.isSpicy())
+            {
+                itemName.Text = item.getName() + " 🌶";
+                itemName.Foreground = Brushes.Red;
+            }
             string[] price = item.getPrice().ToString("C", CultureInfo.CurrentCulture).Split('.');
             itemPriceFront.Content = price[0];
             itemPriceBack.Content = "."+price[1];
+            mainGrid.Children.Remove(addClicked);
         }
 
-        private void button_add(object sender, RoutedEventArgs e)
+        private async void button_add(object sender, RoutedEventArgs e)
         {
             window.addToOrder(item);
             window.scrlViewerOrderItems.ScrollToBottom();
             window.sendCheck();
+            mainGrid.Children.Add(addClicked);
+            await Task.Delay(100);
+            mainGrid.Children.Remove(addClicked);
         }
 
         private void img_click(object sender, RoutedEventArgs e)
@@ -56,5 +65,6 @@ namespace SilverCityOS
             desc.ShowDialog();
             window.mainGrid.Children.Remove(window.getCover());
         }
+
     }
 }

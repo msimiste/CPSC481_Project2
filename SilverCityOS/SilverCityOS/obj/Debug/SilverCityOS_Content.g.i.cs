@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/closemessage.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/screenelement/addclicked.png")]
 
 

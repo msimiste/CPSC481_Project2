@@ -154,7 +154,7 @@
         </StackPanel>
 
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Background="LightGray">
-            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
+            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER LIST</Label>
             <ScrollViewer x:Name="scrlViewerOrderItems" Height="575" VerticalScrollBarVisibility="Auto" PanningMode="Both">
                 <StackPanel x:Name="orderItems">
                 </StackPanel>
@@ -190,7 +190,7 @@
                     </Button.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <Image Width="80" Source="Pictures/ScreenElement/DineIn.png"/>
-                        <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30">DINE IN</TextBox>
+                        <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22">ORDER DINE IN</TextBox>
                     </StackPanel>
                 </Button>
 
@@ -202,7 +202,7 @@
                     </Button.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <Image Width="80" Source="Pictures/ScreenElement/TakeOut2.png"/>
-                        <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30">TAKE OUT</TextBox>
+                        <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22">ORDER TAKE OUT</TextBox>
                     </StackPanel>
                 </Button>
 

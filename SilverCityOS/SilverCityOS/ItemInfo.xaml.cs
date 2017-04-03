@@ -30,6 +30,11 @@ namespace SilverCityOS
             this.item = item;
             itemImg.Source = new BitmapImage(new Uri(item.getImgPath(), UriKind.Relative));
             itemName.Content = "#"+ item.getNumber()+". "+item.getName();
+            if (item.isSpicy())
+            {
+                itemName.Content = "#" + item.getNumber() + ". " + item.getName() + " 🌶";
+                itemName.Foreground = Brushes.Red;
+            }
             itemPrice.Content = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
         }
 
