@@ -20,25 +20,19 @@ namespace SilverCityOS
         private decimal price;
         private int number;
         private string imgPath;
-        private string sImgPath;
         private string name;
-        private string description;
         
-        public MenuItem(decimal price, int number, string imgPath, string sImgPath, string name, string description)
+        public MenuItem(decimal price, int number, string imgPath, string name)
         {
             this.price = price;
             this.number = number;
             this.imgPath = imgPath;
-            this.sImgPath = sImgPath;
             this.name = name;
-            this.description = description;
         }
 
         public decimal getPrice() { return this.price; }
         public int getNumber() { return this.number; }
         public string getImgPath() { return this.imgPath; }
-        public string getSImgPath() { return this.sImgPath; }
         public string getName() { return this.name; }
-        public string getDescription() { return this.description; }
     }
 }

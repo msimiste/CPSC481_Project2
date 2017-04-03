@@ -23,7 +23,7 @@ namespace SilverCityOS
         public ItemInfo(MenuItem item)
         {
             InitializeComponent();
-            itemImg.Source = new BitmapImage(new Uri(item.getSImgPath(), UriKind.Relative));
+            itemImg.Source = new BitmapImage(new Uri(item.getImgPath(), UriKind.Relative));
             itemName.Content = "#"+ item.getNumber()+". "+item.getName();
             itemPrice.Content = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
         }

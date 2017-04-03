@@ -27,7 +27,7 @@ namespace SilverCityOS
         Rectangle cover;
         TextBox sendCover;
         TextBox payCover;
-        enum section { Blank, Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey, Drinks };
+        enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Egg, Drinks };
         public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
         bool helpMode = false;
@@ -176,47 +176,47 @@ namespace SilverCityOS
 
         public void sendCheck()
         {
-            if (orderedNumber < orderNumber)
-            {
-                if (!orderControlGrid.Children.Contains(payCover))
-                {
-                    orderControlGrid.Children.Add(payCover);
-                }
-                if (orderControlGrid.Children.Contains(sendCover))
-                {
-                    orderControlGrid.Children.Remove(sendCover);
-                }
-                //btnDineIn.IsEnabled = true;
-                //btnTakeOut.IsEnabled = true;
-                //btnPayBill.IsEnabled = false;
-            }
-            else
-            {
-                if (!orderControlGrid.Children.Contains(sendCover))
-                {
-                    orderControlGrid.Children.Add(sendCover);
-                }
-                if (orderControlGrid.Children.Contains(payCover))
-                {
-                    orderControlGrid.Children.Remove(payCover);
-                }
-                //btnDineIn.IsEnabled = false;
-                //btnTakeOut.IsEnabled = false;
-                //btnPayBill.IsEnabled = true;
-            }
-            //To Disable All At Start
-            if (orderNumber == 0)
-            {
-                if (!orderControlGrid.Children.Contains(sendCover))
-                {
-                    orderControlGrid.Children.Add(sendCover);
-                }
-                if (!orderControlGrid.Children.Contains(payCover))
-                {
-                    orderControlGrid.Children.Add(payCover);
-                }
-                //btnPayBill.IsEnabled = false;
-            }
+            //if (orderedNumber < orderNumber)
+            //{
+            //    if (!orderControlGrid.Children.Contains(payCover))
+            //    {
+            //        orderControlGrid.Children.Add(payCover);
+            //    }
+            //    if (orderControlGrid.Children.Contains(sendCover))
+            //    {
+            //        orderControlGrid.Children.Remove(sendCover);
+            //    }
+            //    btnDineIn.IsEnabled = true;
+            //    btnTakeOut.IsEnabled = true;
+            //    btnPayBill.IsEnabled = false;
+            //}
+            //else
+            //{
+            //    if (!orderControlGrid.Children.Contains(sendCover))
+            //    {
+            //        orderControlGrid.Children.Add(sendCover);
+            //    }
+            //    if (orderControlGrid.Children.Contains(payCover))
+            //    {
+            //        orderControlGrid.Children.Remove(payCover);
+            //    }
+            //    btnDineIn.IsEnabled = false;
+            //    btnTakeOut.IsEnabled = false;
+            //    btnPayBill.IsEnabled = true;
+            //}
+            ////To Disable All At Start
+            //if (orderNumber == 0)
+            //{
+            //    if (!orderControlGrid.Children.Contains(sendCover))
+            //    {
+            //        orderControlGrid.Children.Add(sendCover);
+            //    }
+            //    if (!orderControlGrid.Children.Contains(payCover))
+            //    {
+            //        orderControlGrid.Children.Add(payCover);
+            //    }
+            //    btnPayBill.IsEnabled = false;
+            //}
         }
 
         private void sectionCheck(Button toDisable)
@@ -264,7 +264,8 @@ namespace SilverCityOS
                 BorderThickness = new Thickness(1),
                 Margin = new Thickness(5, 12, 5, 0),
                 Padding = new Thickness(10),
-                Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 }
+                Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 },
+                IsHitTestVisible = false
             };
             Grid.SetColumnSpan(sendCover, 2);
 
@@ -281,7 +282,8 @@ namespace SilverCityOS
                 BorderThickness = new Thickness(1),
                 Margin = new Thickness(5, 0, 5, 0),
                 Padding = new Thickness(10),
-                Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 }
+                Background = new SolidColorBrush() { Color = Colors.White, Opacity = 0.9 },
+                IsHitTestVisible = false
             };
             Grid.SetColumnSpan(payCover, 2);
             Grid.SetRow(payCover, 1);
@@ -336,7 +338,7 @@ namespace SilverCityOS
 
         private void btnSeafood_Click(object sender, RoutedEventArgs e)
         {
-            lblCategories.Content = "SEAFOOD";
+            lblCategories.Content = "PORK & SEAFOOD";
             setScrollComponents(menu, (int)section.Seafood);
             sectionCheck((Button)sender);
         }
@@ -365,7 +367,7 @@ namespace SilverCityOS
         private void btnEgg_Click(object sender, RoutedEventArgs e)
         {
             lblCategories.Content = "EGG FOO YOUNG & CHOP SUEY";
-            setScrollComponents(menu, (int)section.Noodle);
+            setScrollComponents(menu, (int)section.Egg);
             sectionCheck((Button)sender);
         }
 
