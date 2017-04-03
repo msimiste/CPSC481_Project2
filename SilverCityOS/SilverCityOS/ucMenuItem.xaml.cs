@@ -51,7 +51,7 @@ namespace SilverCityOS
 
         private void img_click(object sender, RoutedEventArgs e)
         {
-            ItemInfo desc = new ItemInfo(item);
+            ItemInfo desc = new ItemInfo(item, window);
             window.mainGrid.Children.Add(window.getCover());
             desc.ShowDialog();
             window.mainGrid.Children.Remove(window.getCover());

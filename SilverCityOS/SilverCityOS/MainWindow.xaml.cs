@@ -30,8 +30,6 @@ namespace SilverCityOS
         enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Egg, Drinks };
         public enum type { normal, takeOut, dineIn, payBill};
         Menu menu;
-        bool helpMode = false;
-
 
         public MainWindow()
         {
@@ -46,6 +44,7 @@ namespace SilverCityOS
         {
             orderNumber = 0;
             orderedNumber = 0;
+            mainGrid.Children.Remove(upArrowCover);
             sViewer_Stackpanel.Children.Clear();
             orderItems.Children.Clear();
             lblCategories.Content = "SILVER CITY RESTAURANT";
@@ -69,7 +68,6 @@ namespace SilverCityOS
             {
                 sViewer_Stackpanel.Children.Add(item);
             }
-            //mainGrid.Children.Add(downArrowCover);
         }
 
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
@@ -124,10 +122,9 @@ namespace SilverCityOS
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
-           // mainGrid.Children.Add(cover);          
-            // new HelpInfo().ShowDialog();
-            setHelpBoxes();
-            //mainGrid.Children.Remove(cover);
+           mainGrid.Children.Add(cover);          
+           new HelpInfo().ShowDialog();
+           mainGrid.Children.Remove(cover);
         }
 
         private void btnPayBill_Click(object sender, RoutedEventArgs e)
@@ -165,7 +162,7 @@ namespace SilverCityOS
 
         public void viewItem(MenuItem item)
         {
-            ItemInfo view = new ItemInfo(item);
+            ItemInfo view = new ItemInfo(item, this);
             view.ShowDialog();
         }
 
@@ -176,47 +173,47 @@ namespace SilverCityOS
 
         public void sendCheck()
         {
-            //if (orderedNumber < orderNumber)
-            //{
-            //    if (!orderControlGrid.Children.Contains(payCover))
-            //    {
-            //        orderControlGrid.Children.Add(payCover);
-            //    }
-            //    if (orderControlGrid.Children.Contains(sendCover))
-            //    {
-            //        orderControlGrid.Children.Remove(sendCover);
-            //    }
-            //    btnDineIn.IsEnabled = true;
-            //    btnTakeOut.IsEnabled = true;
-            //    btnPayBill.IsEnabled = false;
-            //}
-            //else
-            //{
-            //    if (!orderControlGrid.Children.Contains(sendCover))
-            //    {
-            //        orderControlGrid.Children.Add(sendCover);
-            //    }
-            //    if (orderControlGrid.Children.Contains(payCover))
-            //    {
-            //        orderControlGrid.Children.Remove(payCover);
-            //    }
-            //    btnDineIn.IsEnabled = false;
-            //    btnTakeOut.IsEnabled = false;
-            //    btnPayBill.IsEnabled = true;
-            //}
-            ////To Disable All At Start
-            //if (orderNumber == 0)
-            //{
-            //    if (!orderControlGrid.Children.Contains(sendCover))
-            //    {
-            //        orderControlGrid.Children.Add(sendCover);
-            //    }
-            //    if (!orderControlGrid.Children.Contains(payCover))
-            //    {
-            //        orderControlGrid.Children.Add(payCover);
-            //    }
-            //    btnPayBill.IsEnabled = false;
-            //}
+            if (orderedNumber < orderNumber)
+            {
+                if (!orderControlGrid.Children.Contains(payCover))
+                {
+                    orderControlGrid.Children.Add(payCover);
+                }
+                if (orderControlGrid.Children.Contains(sendCover))
+                {
+                    orderControlGrid.Children.Remove(sendCover);
+                }
+                btnDineIn.IsEnabled = true;
+                btnTakeOut.IsEnabled = true;
+                btnPayBill.IsEnabled = false;
+            }
+            else
+            {
+                if (!orderControlGrid.Children.Contains(sendCover))
+                {
+                    orderControlGrid.Children.Add(sendCover);
+                }
+                if (orderControlGrid.Children.Contains(payCover))
+                {
+                    orderControlGrid.Children.Remove(payCover);
+                }
+                btnDineIn.IsEnabled = false;
+                btnTakeOut.IsEnabled = false;
+                btnPayBill.IsEnabled = true;
+            }
+            //To Disable All At Start
+            if (orderNumber == 0)
+            {
+                if (!orderControlGrid.Children.Contains(sendCover))
+                {
+                    orderControlGrid.Children.Add(sendCover);
+                }
+                if (!orderControlGrid.Children.Contains(payCover))
+                {
+                    orderControlGrid.Children.Add(payCover);
+                }
+                btnPayBill.IsEnabled = false;
+            }
         }
 
         private void sectionCheck(Button toDisable)
@@ -298,11 +295,26 @@ namespace SilverCityOS
                 {
                     mainGrid.Children.Remove(downArrowCover);
                 }
+            }
+            else if (scrollViewer.VerticalOffset == 0)
+            {
+                if (!mainGrid.Children.Contains(downArrowCover))
+                {
+                    mainGrid.Children.Add(downArrowCover);
+                }
+                if (mainGrid.Children.Contains(upArrowCover))
+                {
+                    mainGrid.Children.Remove(upArrowCover);
+                }
             }else
             {
                 if (!mainGrid.Children.Contains(downArrowCover))
                 {
                     mainGrid.Children.Add(downArrowCover);
+                }
+                if (!mainGrid.Children.Contains(upArrowCover))
+                {
+                    mainGrid.Children.Add(upArrowCover);
                 }
             }
                 
@@ -376,16 +388,6 @@ namespace SilverCityOS
             lblCategories.Content = "DRINKS";
             setScrollComponents(menu, (int)section.Drinks);
             sectionCheck((Button)sender);
-        }
-
-        private void setHelpBoxes() {
-            if (helpMode == false) { helpMode = true; }
-            else { helpMode = false; }
-
-            var popups = Utilities.FindVisualChildren<Popup>(this);
-            foreach (Popup pu in popups) {
-                pu.IsOpen = helpMode;
-            }                     
         }
 
     }

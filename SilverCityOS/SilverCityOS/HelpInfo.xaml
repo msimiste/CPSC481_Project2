@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SilverCityOS"
         mc:Ignorable="d"
-        Title="HelpInfo" Height="600" Width="1100" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True">
-    <Border BorderBrush="Black" BorderThickness="1 1 1 1">
-        <Grid Background="#FFF">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Border Grid.Row="0" Padding="20 20">
-                <Image Source="Pictures/interface.JPG"/>
-            </Border>
-            <Button Grid.Row="1" BorderBrush="Black" Margin="10 10" FontSize="20" IsCancel="True">CLOSE</Button>
-        </Grid>
-    </Border>
+        Title="HelpInfo" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized" AllowsTransparency="True" WindowStyle="None">
+    <Window.Background>
+        <SolidColorBrush Color="White" Opacity="0" />
+    </Window.Background>
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.RowSpan="2" Fill="Black" Opacity="0.5" MouseDown="Image_MouseDown"/>
+        <Image Margin="0 20 0 0" Source="Pictures/ScreenElement/closeMessage.png" MouseDown="Image_MouseDown"/>
+        <Image Margin="20 0 20 20" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Source="Pictures/ScreenElement/interface.png" MouseDown="Image_MouseDown"/>
+    </Grid>
 </Window>

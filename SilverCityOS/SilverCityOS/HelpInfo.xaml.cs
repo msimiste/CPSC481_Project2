@@ -23,5 +23,10 @@ namespace SilverCityOS
         {
             InitializeComponent();
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DialogResult = false;
+        }
     }
 }
