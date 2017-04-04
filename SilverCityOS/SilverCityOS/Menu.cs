@@ -39,7 +39,7 @@ namespace SilverCityOS
             generateDrinks(window);
         }
 
-     
+
 
         private void generateAppetizers(MainWindow window)
         {
@@ -66,12 +66,12 @@ namespace SilverCityOS
                new  ucMenuItem (window, new MenuItem((decimal)12.95, 12, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Crab Meat & Fish Maw Soup","Soup")),
                new  ucMenuItem (window, new MenuItem((decimal)10.95, 13, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Chicken & Cream Corn Soup","Soup")),
                new  ucMenuItem (window, new MenuItem((decimal)10.95, 14, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Beef & Egg Drop in Thick Soup","Soup")),
-               new  ucMenuItem (window, new MenuItem((decimal)13.95 , 15, "Pictures/Menu/1.jpg", "Pictures/Menu/1s.jpg","Hot & Sour Soup on Sizzling Rice", "Rice")), 
+               new  ucMenuItem (window, new MenuItem((decimal)13.95 , 15, "Pictures/Menu/1.jpg", "Pictures/Menu/1s.jpg","Hot & Sour Soup on Sizzling Rice", "Rice")),
                new  ucMenuItem (window, new MenuItem((decimal)13.95 , 16, "Pictures/Menu/2.jpg", "Pictures/Menu/2s.jpg","Shrimp & tomato on Sizzling Rice", "Rice")),
                new  ucMenuItem (window, new MenuItem((decimal)15.95 , 17, "Pictures/Menu/3.jpg", "Pictures/Menu/3s.jpg","Seafood & vegetable on Sizzling Rice", "Rice")),
                new  ucMenuItem (window, new MenuItem((decimal)13.95, 18, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg", "Beef & Mixed Vegetable on Sizzling Rice", "Rice")),
                new  ucMenuItem (window, new MenuItem((decimal)13.95, 19, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg", "Chicken & Mixed Vegetable on Sizzling Rice", "Rice")),
-               new  ucMenuItem (window, new MenuItem((decimal)11.95, 20, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Mixed Vegetable on Sizzling Rice", "Rice"))   
+               new  ucMenuItem (window, new MenuItem((decimal)11.95, 20, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg", "Mixed Vegetable on Sizzling Rice", "Rice"))
             };
         }
 
@@ -119,8 +119,8 @@ namespace SilverCityOS
                 new  ucMenuItem (window, new MenuItem((decimal)12.95, 50, "Pictures/Menu/4.jpg", "Pictures/Menu/4s.jpg","Hong Kong Style Diced Cripsy Chicken","Chicken & Duck")),
                 new  ucMenuItem (window, new MenuItem((decimal)12.95, 51, "Pictures/Menu/5.jpg", "Pictures/Menu/5s.jpg","Stir Fried Chicken w/Deep Fried Vegetables","Chicken & Duck")),
                 new  ucMenuItem (window, new MenuItem((decimal)12.95, 52, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg","Peking Duck","Chicken & Duck"))
-                             
-            };                                                                                                        
+
+            };
         }
 
         private void generateSeafood(MainWindow window)
@@ -142,7 +142,7 @@ namespace SilverCityOS
                 new  ucMenuItem (window, new MenuItem((decimal)17.50, 73, "Pictures/Menu/5.jpg", "Pictures/Menu/5s.jpg","Salt & Pepper Seafood","Seafood")),
                 new  ucMenuItem (window, new MenuItem((decimal)15.95, 74, "Pictures/Menu/6.jpg", "Pictures/Menu/6s.jpg","Salt & Pepper Prawns","Seafood")),
                 new  ucMenuItem (window, new MenuItem((decimal)14.95, 75, "Pictures/Menu/7.jpg", "Pictures/Menu/7s.jpg","Salt & Pepper Fish Filets","Seafood"))
-                                                              
+
             };
         }
 

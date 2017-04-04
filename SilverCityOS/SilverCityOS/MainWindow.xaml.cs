@@ -18,7 +18,7 @@ using System.Windows.Shapes;
 namespace SilverCityOS
 {
 
-   
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -30,13 +30,10 @@ namespace SilverCityOS
         TextBox sendCover;
         TextBox payCover;
         enum section { Blank, Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Noodle, Egg, Chopsuey, Drinks };
-        public enum type { normal, takeOut, dineIn, payBill};
+        public enum type { normal, takeOut, dineIn, payBill };
         Menu menu;
         bool helpMode = false;
-        Balloon b,c,d; 
-
-
-
+        List<Balloon> helpBalloons;
 
         public MainWindow()
         {
@@ -44,8 +41,9 @@ namespace SilverCityOS
             menu = new Menu(this);
             setupCover();
             setupStart();
+
         }
-        
+
         //To setup on start and resetf
         private void setupStart()
         {
@@ -61,9 +59,10 @@ namespace SilverCityOS
             Grid.SetColumnSpan(middleSec, 2);
             sectionCheck(new Button());
             sendCheck();
-            calculatePrice();            
-         
-           
+            calculatePrice();
+
+
+
         }
 
         private void setScrollComponents(Menu menu, int category)
@@ -76,8 +75,7 @@ namespace SilverCityOS
             foreach (var item in menu.getCategory(category))
             {
                 sViewer_Stackpanel.Children.Add(item);
-            }
-            //mainGrid.Children.Add(downArrowCover);
+            }            
         }
 
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
@@ -96,11 +94,11 @@ namespace SilverCityOS
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);
-            if(hi == true)
+            if (hi == true)
             {
-                foreach(OrderedItem item in orderItems.Children)
+                foreach (OrderedItem item in orderItems.Children)
                 {
-                    if(item.getCode() >= orderedNumber)
+                    if (item.getCode() >= orderedNumber)
                     {
                         item.sent(true);
                     }
@@ -131,11 +129,8 @@ namespace SilverCityOS
         }
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
-        {
-           // mainGrid.Children.Add(cover);          
-            // new HelpInfo().ShowDialog();
-            setHelpBoxes();
-            //mainGrid.Children.Remove(cover);
+        {            
+            setHelpBoxes();            
         }
 
         private void btnPayBill_Click(object sender, RoutedEventArgs e)
@@ -153,9 +148,9 @@ namespace SilverCityOS
         public void deleteFromOrder(int code)
         {
             orderItems.Children.RemoveAt(code);
-            foreach(OrderedItem item in orderItems.Children)
+            foreach (OrderedItem item in orderItems.Children)
             {
-                if(item.getCode() >= code)
+                if (item.getCode() >= code)
                 {
                     item.decCode();
                 }
@@ -194,9 +189,7 @@ namespace SilverCityOS
                 {
                     orderControlGrid.Children.Remove(sendCover);
                 }
-                //btnDineIn.IsEnabled = true;
-                //btnTakeOut.IsEnabled = true;
-                //btnPayBill.IsEnabled = false;
+                
             }
             else
             {
@@ -207,10 +200,7 @@ namespace SilverCityOS
                 if (orderControlGrid.Children.Contains(payCover))
                 {
                     orderControlGrid.Children.Remove(payCover);
-                }
-                //btnDineIn.IsEnabled = false;
-                //btnTakeOut.IsEnabled = false;
-                //btnPayBill.IsEnabled = true;
+                }                
             }
             //To Disable All At Start
             if (orderNumber == 0)
@@ -222,8 +212,7 @@ namespace SilverCityOS
                 if (!orderControlGrid.Children.Contains(payCover))
                 {
                     orderControlGrid.Children.Add(payCover);
-                }
-                //btnPayBill.IsEnabled = false;
+                }                
             }
         }
 
@@ -255,10 +244,10 @@ namespace SilverCityOS
         {
             mainGrid.Children.Remove(upArrowCover);
             cover = new Rectangle()
-             {
-                 Opacity = 0.7,
-                 Fill = Brushes.Black
-             };
+            {
+                Opacity = 0.7,
+                Fill = Brushes.Black
+            };
             Grid.SetColumnSpan(cover, 3);
 
             sendCover = new TextBox()
@@ -280,7 +269,7 @@ namespace SilverCityOS
 
             payCover = new TextBox()
             {
-                Text = "To Pay Bill, Please Make Sure All Items are Placed in Order",
+                Text = "To Pay Bill, Please Make an order by adding items to the order list and pressing Dine-In or Take-Out",
                 FontSize = 20,
                 TextWrapping = TextWrapping.Wrap,
                 VerticalAlignment = VerticalAlignment.Stretch,
@@ -299,15 +288,16 @@ namespace SilverCityOS
         private void OnScrollChanged(object sender, ScrollChangedEventArgs e)
         {
             var scrollViewer = (ScrollViewer)sender;
-            
+
             if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
             {
                 if (mainGrid.Children.Contains(downArrowCover))
                 {
-                    mainGrid.Children.Remove(downArrowCover);                    
+                    mainGrid.Children.Remove(downArrowCover);
                 }
             }
-            else if (scrollViewer.VerticalOffset == 0) {
+            else if (scrollViewer.VerticalOffset == 0)
+            {
                 if (mainGrid.Children.Contains(upArrowCover)) { mainGrid.Children.Remove(upArrowCover); }
                 if (!mainGrid.Children.Contains(downArrowCover)) { mainGrid.Children.Add(downArrowCover); }
 
@@ -316,14 +306,40 @@ namespace SilverCityOS
             {
                 if (!mainGrid.Children.Contains(downArrowCover))
                 {
-                    mainGrid.Children.Add(downArrowCover);                    
+                    mainGrid.Children.Add(downArrowCover);
                 }
                 if (!mainGrid.Children.Contains(upArrowCover))
                 {
                     mainGrid.Children.Add(upArrowCover);
                 }
             }
+
+            if (helpMode)
+            {
+                var scrollBalloons = Utilities.FindVisualChildren<ucMenuItem>(scrollViewer);
+
+
+                foreach (ucMenuItem b in scrollBalloons)
+                {
+                    b.hideBalloons();
+                }
+
+                foreach (ucMenuItem b in scrollBalloons)
+                {
+                    var position = b.btnAdd.TransformToAncestor(this.scrlViewer_MenuItems).Transform(new Point(0, 0));
+                    position.Y = position.Y - 250;           
+                                     
+                    if (-position.Y < b.ActualHeight && position.Y < scrollViewer.Height - 100)
+                    {
+                        b.showBalloons();
+                        break;
+                    }
+                }
+
+
+            }
         }
+
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
         {
@@ -395,84 +411,149 @@ namespace SilverCityOS
             sectionCheck((Button)sender);
         }
 
+        private void ordItemsChanged(object sender, ScrollChangedEventArgs e)
+        {
+            if (helpMode)
+            {
+                var scrollViewer = (ScrollViewer)sender;
+                var orderedBalloons = Utilities.FindVisualChildren<OrderedItem>(this.scrlViewerOrderItems);
+
+                foreach (OrderedItem ordI in orderedBalloons)
+                {
+                    ordI.hideBalloons();
+                }
+
+                foreach (OrderedItem ordI in orderedBalloons)
+                {
+                    var position = ordI.TransformToAncestor(this.scrlViewerOrderItems).Transform(new Point(0, 0));                             
+
+                    if (-position.Y < ordI.ActualHeight && position.Y < scrollViewer.Height)
+                    {
+                        ordI.showBalloons();
+                        break;
+                    }
+                }
+            }
+        }
+
         private void setHelpBoxes()
         {
-           
-
-            if (helpMode == false) { helpMode = true;  }
-            else { helpMode = false;  }
-
-
-            var helpBalloons = Utilities.FindVisualChildren<Balloon>(this);
-            foreach (Balloon b in helpBalloons)
+            if (helpBalloons == null)
             {
-                if (helpMode)
-                {
-                    b.Visibility = Visibility.Visible;
-                }
-                else { b.Visibility = Visibility.Hidden; }
+                setupHelpBalloons();
             }
 
+            if (helpMode == false) { helpMode = true; }
+            else { helpMode = false; }
+            
 
-            //var popups = Utilities.FindVisualChildren<Popup>(this);
-            //foreach (Popup pu in popups)
-            //{
-            //    pu.IsOpen = helpMode;
-            //}
+            foreach (Balloon bal in helpBalloons)
+            {
+                if (helpMode)      { bal.Show(); }
+                else
+                { bal.Visibility = Visibility.Collapsed; }
+
+            }            
+          
+
+            var scrollBalloons = Utilities.FindVisualChildren<ucMenuItem>(this.scrlViewer_MenuItems);
+            var orderedBalloons = Utilities.FindVisualChildren<OrderedItem>(this.scrlViewerOrderItems);
+
+            foreach (ucMenuItem b in scrollBalloons)
+            {
+                b.hideBalloons();
+            }
+
+            foreach (OrderedItem ordI in orderedBalloons)
+            {
+                ordI.hideBalloons();
+            }
+
 
             if (helpMode)
             {
-                if (b == null)
+                foreach (ucMenuItem b in scrollBalloons)
                 {
-                    b = new Balloon(btnTakeOut, "Test Caption", BalloonType.Help, false, false);
-                    c = new Balloon(btnDineIn, "Dine in Caption", BalloonType.Help, false, false);
-                    d = new Balloon(btnCallWaiter, "Call Waiter Caption", BalloonType.Help, false, false);
-                    Point pd = btnCallWaiter.PointToScreen(new Point(0d, 0d));
-                    d.Left = pd.X + 300;
-                    d.Top = pd.Y ;
-                    d.PathPointBottomLeft.Visibility = Visibility.Visible;
-                    d.PathPointRight.Visibility = Visibility.Hidden;
-                    d.PathPointLeft.Visibility = Visibility.Hidden;
+                    var position = b.btnAdd.TransformToAncestor(this.scrlViewer_MenuItems).Transform(new Point(0, 0));
+                    position.Y = position.Y - 250;                   
 
-                    Point p = btnDineIn.PointToScreen(new Point(0d, 0d));
-                    c.Margin = new Thickness(p.X + 300, p.Y + 300, 0, 0);
-                    c.Left = p.X - 250;
-                    c.Top = p.Y - 80;
-                    c.PathPointRight.Visibility = Visibility.Hidden;
-                    c.PathPointLeft.Visibility = Visibility.Hidden;
-                    c.PathPointBottomRight.Visibility = Visibility.Visible;                    
+                    if (-position.Y < b.ActualHeight && position.Y < this.scrlViewer_MenuItems.Height - 100)
+                    {
+                        b.showBalloons();
+                        break;
+                    }
+                }     
+                                
+                foreach (OrderedItem ordI in orderedBalloons)
+                {
+                    var position = ordI.TransformToAncestor(this.scrlViewerOrderItems).Transform(new Point(0, 0));
+
+                    if (-position.Y < ordI.ActualHeight && position.Y < this.scrlViewerOrderItems.Height)
+                    {
+                        ordI.showBalloons();
+                        break;
+                    }
                 }
-                b.Show();
-                c.Show();
-                d.Show();
-            }
-            else
-            {
-
-                b.Visibility = Visibility.Collapsed;
-                c.Visibility = Visibility.Collapsed;
-                d.Visibility = Visibility.Collapsed; 
-            }
-
-
-
-
-            //this.helpTakeOut.showBalloon(); //new Balloon(this.btnTakeOut, "testing out this balloon", BalloonType.Help);
+            }            
         }
-        /// <summary>
-        /// Texts the box general use mouse enter.
-        /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="System.Windows.Input.MouseEventArgs"/> instance containing the event data.</param>
-        //private void TextBoxGeneralUseMouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
-        //{
-        //    if (this.balloon == null || !this.balloon.IsLoaded)                
-        //    {
-        //        var temp = new Balloon(this.textBoxGeneralUse, "Testing 1232", BalloonType.Help);
-        //        this.balloon = temp;//new Balloon(this.textBoxGeneralUse, "You have moussed over this textbox.", ((ViewModel)this.DataContext).BalloonType, false, ((ViewModel)this.DataContext).ShowBalloonCloseButton);
-        //        this.balloon.Show();
-        //    }
-        //}
 
+        private void setupHelpBalloons()
+        {
+            helpBalloons = new List<Balloon>();
+            Balloon balloon_waiter = new Balloon(btnCallWaiter, "Press this button to request/cancel server assistance", BalloonType.Help, false, false);
+            Balloon balloon_help = new Balloon(btnHelp, "Press this button to view/remove help balloons", BalloonType.Help, false, false);
+            Balloon balloon_dietary = new Balloon(btnSpecialNote, "Press this button to address dietary/allergy concerns", BalloonType.Help, false, false);
+            Balloon balloon_dineIn = new Balloon(btnDineIn, "Press this button to place an order for Dine-In", BalloonType.Help, false, false);
+            Balloon balloon_takeout = new Balloon(btnTakeOut, "Press this button to place an order for Take-Out", BalloonType.Help, false, false);
+            Balloon balloon_payBill = new Balloon(btnPayBill, "Press this button to request your bill", BalloonType.Help, false, false);
+
+            //place the call waiter help balloon
+            Point pd = btnCallWaiter.PointToScreen(new Point(0d, 0d));
+            balloon_waiter.Left = pd.X + 300;
+            balloon_waiter.Top = pd.Y;
+            balloon_waiter.PathPointBottomLeft.Visibility = Visibility.Visible;
+            balloon_waiter.PathPointRight.Visibility = Visibility.Hidden;
+            balloon_waiter.PathPointLeft.Visibility = Visibility.Hidden;
+
+            //place the help menu help balloon
+            pd = btnHelp.PointToScreen(new Point(0d, 0d));                     
+            balloon_help.Top = pd.Y - 50;
+            balloon_help.PathPointRight.Visibility = Visibility.Hidden;
+            balloon_help.PathPointLeft.Visibility = Visibility.Hidden;
+            balloon_help.PathPointBottomLeft.Visibility = Visibility.Visible;
+
+            pd = btnSpecialNote.PointToScreen(new Point(0d, 0d));                       
+            balloon_dietary.Top = pd.Y - 80;
+            balloon_dietary.Left = pd.X - 20;
+            balloon_dietary.PathPointRight.Visibility = Visibility.Hidden;
+            balloon_dietary.PathPointLeft.Visibility = Visibility.Hidden;
+            balloon_dietary.PathPointBottomRight.Visibility = Visibility.Visible;
+
+
+            //place the dine in balloon
+            pd = btnDineIn.PointToScreen(new Point(0d, 0d));           
+            balloon_dineIn.Left = pd.X - 200;
+            balloon_dineIn.Top = pd.Y - 50;
+            balloon_dineIn.PathPointRight.Visibility = Visibility.Hidden;
+            balloon_dineIn.PathPointLeft.Visibility = Visibility.Hidden;
+            balloon_dineIn.PathPointBottomRight.Visibility = Visibility.Visible;
+
+            pd = btnTakeOut.PointToScreen(new Point(0d, 0d));            
+
+            pd = btnPayBill.PointToScreen(new Point(0d, 0d));
+            balloon_payBill.Left = pd.X - 200;
+            balloon_payBill.Top = pd.Y - 30;
+            balloon_payBill.PathPointRight.Visibility = Visibility.Hidden;
+            balloon_payBill.PathPointLeft.Visibility = Visibility.Hidden;
+            balloon_payBill.PathPointBottomRight.Visibility = Visibility.Visible;
+
+            helpBalloons.Add(balloon_takeout);
+            helpBalloons.Add(balloon_help);
+            helpBalloons.Add(balloon_dietary);
+            helpBalloons.Add(balloon_dineIn);
+            helpBalloons.Add(balloon_waiter);
+            helpBalloons.Add(balloon_payBill);
+
+        }
     }
 }

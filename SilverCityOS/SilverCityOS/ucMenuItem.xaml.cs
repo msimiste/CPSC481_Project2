@@ -24,12 +24,15 @@ namespace SilverCityOS
         MenuItem item;
         MainWindow window;
 
+        Balloon bAdd, bImage;
+
         public ucMenuItem(MainWindow window, MenuItem item)
         {
             InitializeComponent();
             this.item = item;
             this.window = window;
             setUp();
+
         }
 
         private void setUp()
@@ -57,13 +60,43 @@ namespace SilverCityOS
             window.mainGrid.Children.Remove(window.getCover());
         }
 
-        public void showBalloon()
+        public void showBalloons()
+        {
+            hideBalloons();
+            if (this.IsHitTestVisible)
+            {
+                if (bAdd == null)
+                {
+                    bAdd = new Balloon(btnAdd, "Press this button to add an item to the order list", BalloonType.Help, true, false);
+                    
+                }
+                if (bImage == null)
+                {
+                    bImage = new Balloon(btnImage, "Press this button to view a larger image", BalloonType.Help, true, false);
+                    Point pd = btnImage.PointToScreen(new Point(0d, 0d));
+                    bImage.Left = pd.X + 100;
+                    bImage.Top = pd.Y + 50;
+                    bImage.PathPointRight.Visibility = Visibility.Hidden;
+                    bImage.PathPointLeft.Visibility = Visibility.Visible;
+                }
+                bAdd.Show();
+                bImage.Show();
+            }
+        }
+
+        public void hideBalloons()
         {
             if (this.IsHitTestVisible)
             {
-                Balloon b = new Balloon(btnAdd, "Test Caption", BalloonType.Help, true, true);
+                if (bAdd != null)
+                {
+                    bAdd.Hide();
+                }
+                if (bImage != null)
+                {
+                    bImage.Hide();
+                }
             }
-
         }
     }
 }

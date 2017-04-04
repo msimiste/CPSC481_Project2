@@ -216,7 +216,8 @@ namespace SilverCityOS
             }
 
             var container = (FrameworkElement)VisualTreeHelper.GetParent(this.control);
-            Rect bounds = this.control.TransformToAncestor(container).TransformBounds(new Rect(0.0, 0.0, this.control.RenderSize.Width, this.control.RenderSize.Height));
+            Rect bounds = this.control.TransformToAncestor(container).TransformBounds(new Rect(0.0, 0.0, this.control.RenderSize.Width, this.control.RenderSize.Height));           
+
             Rect rect = new Rect(0.0, 0.0, container.ActualWidth, container.ActualHeight);
             return rect.IntersectsWith(bounds);
         }
@@ -358,6 +359,10 @@ namespace SilverCityOS
         private void ImageCloseMouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             this.Close();
+        }
+
+        public Control getControl() {
+            return this.control;
         }
         #endregion
     }

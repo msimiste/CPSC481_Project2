@@ -19,8 +19,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="orderbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">
-            <!--Height="100"  Margin="5 10 15 0"  Padding="5"-->
+        <Style x:Key="orderbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">           
             <Setter Property="Height" Value="100"/>
             <Setter Property="Margin" Value="9,15,5,5"/>
             <Setter Property="Padding" Value="5"/>
@@ -39,8 +38,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="spbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">
-            <!--Height="40" HorizontalAlignment="Stretch" Margin="10 10 10 0" FontSize="22" Padding="10 0"-->
+        <Style x:Key="spbutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">            
             <Setter Property="Margin" Value="9,5,7,0"/>
             <Setter Property="Height" Value="60"/>
             <Setter Property="FontSize" Value="25"/>
@@ -55,10 +53,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="paybutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">
-            <!--Padding="5" Height="80" Margin="15 10 15 0"-->
+        <Style x:Key="paybutton" BasedOn="{StaticResource menubutton}" TargetType="{x:Type Button}">            
             <Setter Property="Height" Value="80"/>
-
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -70,7 +66,6 @@
             </Setter>
         </Style>
     </Window.Resources>
-
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -94,17 +89,7 @@
                                     <Border x:Name="wborder" BorderBrush="Black" Background="White" CornerRadius="5" BorderThickness="2" Padding="2">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="Pictures/ScreenElement/bell2.png" Height="150"/>
-                                            <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="158" FontSize="30" Height="100" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="CALL WAITER" Padding="0,10,0,0"/>
-                                            <!--<Popup  x:Name="popCallWaiter"  Placement="Center" PlacementTarget="{Binding ElementName=waiterTextbox}" AllowsTransparency="True" >
-                                                <local:HelpBalloon x:Name="helpCallWaiter" Margin="0,20,0,0" 
-                                                 Caption="Press this button when you would like assistance from your server" 
-                                                 BalloonType="{Binding BalloonType}" 
-                                                 AutoWidth="{Binding AutoWidth}"
-                                                 MaxHeight="{Binding MaxHeight}"
-                                                 MaxWidth="{Binding MaxWidth}"
-                                                 Title="{Binding BalloonTitle}"
-                                                 ShowCloseButton="True"  Visibility="Visible" />
-                                            </Popup>-->
+                                            <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="158" FontSize="30" Height="100" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="CALL WAITER" Padding="0,10,0,0"/>                                          
                                         </StackPanel>                                       
                                     </Border>
                                     <ControlTemplate.Triggers>
@@ -127,20 +112,8 @@
                             </Setter.Value>
                         </Setter>
                     </Style>
-                </ToggleButton.Style>
-                <!--Height="200">-->
-                <!--<ToggleButton.ToolTip>
-                    <ToolTip>
-                        <StackPanel>
-                            <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
-                            <TextBlock>Lets the server know you require immediate assistance</TextBlock>
-                        </StackPanel>
-                    </ToolTip>
-                </ToggleButton.ToolTip>-->              
-            </ToggleButton>
-
-            <!--<Label Height="80" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="10 5 10 5" Background="LightGray">MENU</Label>
-            -->
+                </ToggleButton.Style>                         
+            </ToggleButton>            
             <Border BorderThickness="0">
                 <StackPanel x:Name="controlSections">
                     <Button x:Name="btnAppetizers" Content="Appetizers" Click="btnAppetizers_Click" Style="{StaticResource menubutton}"/>
@@ -155,13 +128,7 @@
                     <Button x:Name="btnDrinks" Content="Drinks" Click="btnDrink_Click" Style="{StaticResource menubutton}"/>
                 </StackPanel>
             </Border>
-
-            <Button x:Name="btnHelp" Content="HELP INFO" Click="btnHelp_Click" Style="{DynamicResource helpbutton}"/>
-            <!--<Popup  x:Name="popHelp"  HorizontalOffset="100" VerticalOffset="-100" AllowsTransparency="True" >
-                <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black" >
-                    <TextBlock  Background="LightYellow" Height="100" Width="150" Opacity="0.5" TextWrapping="Wrap">This is the help menu button. Click this button for help using the system. Click again to toggle help items</TextBlock>
-                </Border>
-            </Popup>-->
+            <Button x:Name="btnHelp" Content="HELP INFO" Click="btnHelp_Click" Style="{DynamicResource helpbutton}"/>       
         </StackPanel>
         <StackPanel x:Name="middleSec" Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="4 4 4 4" Height="100" FontSize="70" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
@@ -169,51 +136,24 @@
                 <StackPanel x:Name="sViewer_Stackpanel" >
                 </StackPanel>
             </ScrollViewer>
-        </StackPanel>
-        <!--<Popup  x:Name="popMenu"  Placement="Center" PlacementTarget="{Binding ElementName=lblCategories}" AllowsTransparency="True" >
-            <Border CornerRadius="3" BorderThickness="1"  >
-                <TextBlock  Background="LightYellow" Height="100" Width="150" Opacity="0.5"  TextWrapping="Wrap">This Is the Menu section. Click the Image to see a more detailed view and description of a Menu Item</TextBlock>
-            </Border>
-        </Popup>-->
+        </StackPanel>        
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Background="LightGray">
             <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580" VerticalScrollBarVisibility="Auto" PanningMode="Both">
+            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580" VerticalScrollBarVisibility="Auto" PanningMode="Both" ScrollChanged="ordItemsChanged">
                 <StackPanel x:Name="orderItems">           
                 </StackPanel>
-            </ScrollViewer>
-           
+            </ScrollViewer>           
             <Label x:Name="lblSTotal" Height="30" Margin="10 0 0 0"  Padding="0 0 20 0"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
             <Label x:Name="lblTax" Height="30" Margin="10 0 0 0" Padding="0 0 20 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
             <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2" Margin="10 0" Padding="0 0 10 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
-            <!--<Popup  x:Name="popOrderpanel"  Placement="Center" PlacementTarget="{Binding ElementName=orderItems}" AllowsTransparency="True" >
-                <local:HelpBalloon x:Name="helpOrderpanel" Margin="0,20,0,0" 
-                                      Caption="These are your ordered items" 
-                                      BalloonType="{Binding BalloonType}" 
-                                      AutoWidth="{Binding AutoWidth}"
-                                      MaxHeight="{Binding MaxHeight}"
-                                      MaxWidth="{Binding MaxWidth}"
-                                      Title="{Binding BalloonTitle}"                    
-                                      ShowCloseButton="True"  Visibility="Visible" />
-            </Popup>-->
             <Button x:Name="btnSpecialNote" Style="{StaticResource spbutton}" Click="btnSpecialNote_Click">
-                <Button.ToolTip>
+                <!--<Button.ToolTip>
                     <ToolTip>
                         <TextBlock FontWeight="Bold">Click if need for special help</TextBlock>
                     </ToolTip>
-                </Button.ToolTip>
+                </Button.ToolTip>-->
                 Dietary/Allergy Concerns
-            </Button>
-            <!--<Popup  x:Name="popAllergy"  Placement="Center" PlacementTarget="{Binding ElementName=btnSpecialNote}" AllowsTransparency="True" >
-                <local:HelpBalloon x:Name="helpAllergy" Margin="0,20,0,0" 
-                                      Caption="Press this button to express an Allergy or a Dietary concern to your server" 
-                                      BalloonType="{Binding BalloonType}" 
-                                      AutoWidth="{Binding AutoWidth}"
-                                      MaxHeight="{Binding MaxHeight}"
-                                      MaxWidth="{Binding MaxWidth}"
-                                      Title="{Binding BalloonTitle}"
-                    
-                  ShowCloseButton="True"  Visibility="Visible" />
-            </Popup>-->
+            </Button>          
             <Grid x:Name="orderControlGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -224,58 +164,22 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button x:Name="btnDineIn" Grid.Column="0" Click="btnDineIn_Click" Style="{StaticResource orderbutton}">
-                    <Button.ToolTip>
-                        <ToolTip>
-                            <TextBlock FontWeight="Bold">Click To Make an Order for Dine In</TextBlock>
-                        </ToolTip>
-                    </Button.ToolTip>
+                <Button x:Name="btnDineIn" Grid.Column="0" Click="btnDineIn_Click" Style="{StaticResource orderbutton}">                   
                     <Viewbox>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Pictures/ScreenElement/DineIn.png"/>
                             <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="20">DINE IN</Label>
                         </StackPanel>
                     </Viewbox>
-                </Button>
-                <!--<Popup  x:Name="popDineIn"  Placement="Center" PlacementTarget="{Binding ElementName=btnDineIn}" AllowsTransparency="True">
-                    <Border CornerRadius="3" BorderThickness="1"  >
-                        <TextBlock  Background="LightYellow" Height="50" Width="100"  TextWrapping="Wrap" Opacity="0.5">Click Here to have your order Placed for Dine In</TextBlock>
-                    </Border>
-                </Popup>-->
-                <Button x:Name="btnTakeOut" Grid.Column="1" Click="btnTakeOut_Click" Style="{StaticResource orderbutton}">
-                    <Button.ToolTip>
-                        <ToolTip>
-                            <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>
-                        </ToolTip>
-                    </Button.ToolTip>
+                </Button>               
+                <Button x:Name="btnTakeOut" Grid.Column="1" Click="btnTakeOut_Click" Style="{StaticResource orderbutton}">                   
                     <Viewbox>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Pictures/ScreenElement/TakeOut2.png"/>
                             <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="50">TAKE OUT</Label>
                         </StackPanel>
                     </Viewbox>
-                </Button>                
-                <!--<local:HelpBalloon x:Name="helpDineIn" Margin="0,20,0,0" 
-                                      Caption="This button is to be pressed when you wish to place your order for 'Dine in'" 
-                                      BalloonType="{Binding BalloonType}" 
-                                      AutoWidth="{Binding AutoWidth}"
-                                      MaxHeight="{Binding MaxHeight}"
-                                      MaxWidth="{Binding MaxWidth}"
-                                      Title="{Binding BalloonTitle}"
-                    
-                  ShowCloseButton="True"  Visibility="Hidden" />-->
-                <Popup  x:Name="popTakeOut"  HorizontalOffset="-75" VerticalOffset="-100" PlacementTarget="{Binding ElementName=btnTakeOut}" AllowsTransparency="True">
-                    <!--<local:HelpBalloon x:Name="helpTakeOut" Margin="0,20,0,0" 
-                                      Caption="This button is to be pressed when you wish to place your order for 'Take Out'" 
-                                      BalloonType="{Binding BalloonType}" 
-                                      AutoWidth="{Binding AutoWidth}"
-                                      MaxHeight="{Binding MaxHeight}"
-                                      MaxWidth="{Binding MaxWidth}"
-                                      Title="{Binding BalloonTitle}"
-                    
-                  ShowCloseButton="True"  Visibility="Visible" />-->
-                </Popup>
-
+                </Button>              
                 <Button x:Name="btnPayBill" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource paybutton}" Click="btnPayBill_Click">
                     <Grid Width="300">
                         <Grid.ColumnDefinitions>
@@ -285,36 +189,14 @@
                         <Image Grid.Column="0" HorizontalAlignment="Right" Margin="0 0 30 0" Source="Pictures/ScreenElement/PayBill2.png" />
                         <Label HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="125,0,0,0" FontSize="30" Grid.ColumnSpan="2">PAY BILL</Label>
                     </Grid>
-                </Button>
-                <!--<local:HelpBalloon x:Name="helpDineIn" Margin="0,20,0,0" 
-                                      Caption="This button is to be pressed when you wish to place your order for 'Dine in'" 
-                                      BalloonType="{Binding BalloonType}" 
-                                      AutoWidth="{Binding AutoWidth}"
-                                      MaxHeight="{Binding MaxHeight}"
-                                      MaxWidth="{Binding MaxWidth}"
-                                      Title="{Binding BalloonTitle}"
-                    
-                  ShowCloseButton="True"  Visibility="Hidden" />-->
-                
-                <!--<TextBox x:Name="textBoxGeneralUse" 
-                     TextWrapping="WrapWithOverflow" 
-                     Height="40" 
-                     Text="Move your mouse over this textbox."
-                     MouseEnter="TextBoxGeneralUseMouseEnter"/>-->
-                <!--<Popup  x:Name="popBill" Placement="RelativePoint" PlacementTarget="{Binding ElementName=btnPayBill}" AllowsTransparency="True" >
-                    <Border CornerRadius="3" BorderThickness="1" BorderBrush="Black"  >
-                        <TextBlock  Background="Transparent" Height="50" Width="150"  Opacity="0.75" FontWeight="Bold" TextWrapping="Wrap">Click this button to request your Bill</TextBlock>
-                    </Border>
-                </Popup>-->
+                </Button>               
             </Grid>
-        </StackPanel>
-        <!--Rectangle x:Name="cover" Grid.ColumnSpan="3" Opacity="0.7" Fill="Black"/-->
+        </StackPanel>        
         <Grid x:Name="upArrowCover" Grid.Column="1" Margin="0 100 0 0" Height="100" VerticalAlignment="Top"  IsHitTestVisible="False">
             <Rectangle >
                 <Rectangle.Fill>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Color="Transparent" Offset="1"/>
-                        <!--<GradientStop Color="Transparent" Offset="0.667"/>-->
+                        <GradientStop Color="Transparent" Offset="1"/>                        
                         <GradientStop Color="#FFFFFFFF" Offset="0"/>
                     </LinearGradientBrush>
                 </Rectangle.Fill>
@@ -325,8 +207,7 @@
             <Rectangle>
                 <Rectangle.Fill>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Color="Transparent" Offset="0"/>
-                        <!--<GradientStop Color="Transparent" Offset="0.667"/>-->
+                        <GradientStop Color="Transparent" Offset="0"/>                       
                         <GradientStop Color="#FFFFFFFF" Offset="1"/>
                     </LinearGradientBrush>
                 </Rectangle.Fill>

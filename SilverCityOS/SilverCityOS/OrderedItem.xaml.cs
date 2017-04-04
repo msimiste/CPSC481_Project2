@@ -24,14 +24,15 @@ namespace SilverCityOS
         int code;
         MainWindow window;
         MenuItem item;
-        
+        Balloon bAdd;
+
+
         public OrderedItem(MenuItem item, MainWindow window, int code)
         {
             this.code = code;
             this.window = window;
             this.item = item;
-            InitializeComponent();
-           // qty.Text = code.ToString();
+            InitializeComponent();          
             itemName.Text = item.getNumber()+". "+item.getName();
             itemPrice.Text = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
         }
@@ -49,7 +50,7 @@ namespace SilverCityOS
         public void sent(bool dineIn)
         {
             border.Background = Brushes.LightGray;
-            main.Children.Remove(button);
+            main.Children.Remove(buttonAdd);
             Grid.SetColumn(itemName, 0);
             Grid.SetColumnSpan(itemName, 2);
             itemName.Padding = new Thickness(10, 0, 0, 0);
@@ -75,6 +76,33 @@ namespace SilverCityOS
         {
             window.deleteFromOrder(code);
             window.sendCheck();
+        }
+
+
+        public void showBalloons()
+        {
+            hideBalloons();
+            if (this.IsHitTestVisible)
+            {
+                if (bAdd == null)
+                {
+                    bAdd = new Balloon(buttonAdd, "Press this button to remove an Item from the Order list", BalloonType.Help, false, false);
+                }
+                bAdd.Show();
+            }
+
+        }
+
+        public void hideBalloons()
+        {
+            if (this.IsHitTestVisible)
+            {
+                if (bAdd != null)
+                {
+                    bAdd.Hide();
+                }
+               
+            }
         }
     }
 }

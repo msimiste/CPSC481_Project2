@@ -48,7 +48,7 @@
                                       Title="{Binding BalloonTitle}"                       
                                       ShowCloseButton="True" Visibility="Hidden" Panel.ZIndex="20" VerticalAlignment="Top" />-->
             <Grid Grid.Column="1">
-                <Button Margin="20" BorderThickness="2" BorderBrush="Black" Click="img_click">
+                <Button x:Name="btnImage" Margin="20" BorderThickness="2" BorderBrush="Black" Click="img_click">
                     <Image x:Name="itemImg" Source="Pictures/ScreenElement/add.png" Stretch="UniformToFill"/>                   
                 </Button>
                 <!--<local:HelpBalloon x:Name="helpLargerImage" Margin="0,20,0,0" 
