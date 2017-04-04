@@ -53,9 +53,12 @@ namespace SilverCityOS
             window.addToOrder(item);
             window.scrlViewerOrderItems.ScrollToBottom();
             window.sendCheck();
-            mainGrid.Children.Add(addClicked);
-            await Task.Delay(100);
-            mainGrid.Children.Remove(addClicked);
+            if (!mainGrid.Children.Contains(addClicked))
+            {
+                mainGrid.Children.Add(addClicked);
+                await Task.Delay(100);
+                mainGrid.Children.Remove(addClicked);
+            }
         }
 
         private void img_click(object sender, RoutedEventArgs e)
