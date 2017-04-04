@@ -41,6 +41,7 @@ namespace SilverCityOS
             {
                 itemName.Text = item.getName() + " 🌶";
                 itemName.Foreground = Brushes.Red;
+                itemNumber.Foreground = Brushes.Red;
             }
             string[] price = item.getPrice().ToString("C", CultureInfo.CurrentCulture).Split('.');
             itemPriceFront.Content = price[0];
@@ -56,7 +57,7 @@ namespace SilverCityOS
             if (!mainGrid.Children.Contains(addClicked))
             {
                 mainGrid.Children.Add(addClicked);
-                await Task.Delay(100);
+                await Task.Delay(50);
                 mainGrid.Children.Remove(addClicked);
             }
         }
