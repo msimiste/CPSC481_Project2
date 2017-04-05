@@ -32,6 +32,8 @@ namespace SilverCityOS
         enum section { Appetizers, Soup, Beef, Chicken, Seafood, Vegetable, Hotplate, Rice, Egg, Drinks };
         public enum type { normal, takeOut, dineIn, payBill };
         Menu menu;
+        bool helpMode = false;
+        bool pastMainScreen = false;
         List<Balloon> helpBalloons;
 
         public MainWindow()
@@ -79,6 +81,7 @@ namespace SilverCityOS
 
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
         {
+            
             Prompt prompt = new Prompt(this, "Waiter will be here shortly to address your concern", (int)type.normal);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
@@ -89,6 +92,7 @@ namespace SilverCityOS
 
         private void btnDineIn_Click(object sender, RoutedEventArgs e)
         {
+
             Prompt prompt = new Prompt(this, "Order as DINE-IN?", (int)type.dineIn);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
@@ -130,7 +134,7 @@ namespace SilverCityOS
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {            
             setHelpBoxes();            
-        {
+        
            mainGrid.Children.Add(cover);          
            new HelpInfo().ShowDialog();
            mainGrid.Children.Remove(cover);
@@ -354,6 +358,7 @@ namespace SilverCityOS
 
         private void btnAppetizers_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "APPETIZERS";
             setScrollComponents(menu, (int)section.Appetizers);
             sectionCheck((Button)sender);
@@ -361,6 +366,7 @@ namespace SilverCityOS
 
         private void btnSoup_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "SOUPS & SIZZLING RICE";
             setScrollComponents(menu, (int)section.Soup);
             sectionCheck((Button)sender);
@@ -368,6 +374,7 @@ namespace SilverCityOS
 
         private void btnBeef_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "BEEF";
             setScrollComponents(menu, (int)section.Beef);
             sectionCheck((Button)sender);
@@ -375,6 +382,7 @@ namespace SilverCityOS
 
         private void btnChicken_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "CHICKEN & DUCK";
             setScrollComponents(menu, (int)section.Chicken);
             sectionCheck((Button)sender);
@@ -382,6 +390,7 @@ namespace SilverCityOS
 
         private void btnSeafood_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "PORK & SEAFOOD";
             setScrollComponents(menu, (int)section.Seafood);
             sectionCheck((Button)sender);
@@ -389,6 +398,7 @@ namespace SilverCityOS
 
         private void btnVegie_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "VEGETABLES";
             setScrollComponents(menu, (int)section.Vegetable);
             sectionCheck((Button)sender);
@@ -396,6 +406,7 @@ namespace SilverCityOS
 
         private void btnHot_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "HOT PLATE & HOT POTS";
             setScrollComponents(menu, (int)section.Hotplate);
             sectionCheck((Button)sender);
@@ -403,6 +414,7 @@ namespace SilverCityOS
 
         private void btnRice_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "FRIED RICE & FRIED NOODLES";
             setScrollComponents(menu, (int)section.Rice);
             sectionCheck((Button)sender);
@@ -410,6 +422,7 @@ namespace SilverCityOS
 
         private void btnEgg_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "EGG FOO YOUNG & CHOP SUEY";
             setScrollComponents(menu, (int)section.Egg);
             sectionCheck((Button)sender);
@@ -417,6 +430,7 @@ namespace SilverCityOS
 
         private void btnDrink_Click(object sender, RoutedEventArgs e)
         {
+            pastMainScreen = true;
             lblCategories.Content = "DRINKS";
             setScrollComponents(menu, (int)section.Drinks);
             sectionCheck((Button)sender);
@@ -454,7 +468,8 @@ namespace SilverCityOS
                 setupHelpBalloons();
             }
 
-            if (helpMode == false) { helpMode = true; }
+            if ((helpMode == false) && (pastMainScreen == true))
+            { helpMode = true; }
             else { helpMode = false; }
             
 
