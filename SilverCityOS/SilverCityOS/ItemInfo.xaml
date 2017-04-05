@@ -21,8 +21,21 @@
             <Label x:Name="itemName" Height="100" Margin="10,10,10,-21" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="40" Padding="30 0" Content="Item Name"/>
             <Label x:Name="itemPrice" Height="100" FontStyle="Italic" FontSize="40" HorizontalAlignment="Right" Padding="50 0" VerticalContentAlignment="Center" Content="Price $$$$$"  Margin="10,10,10,-21"/>
 
-            <Button BorderBrush="Black" BorderThickness="2" Grid.Row="2" Margin="75 0 0 43" Padding="70 0 0 0" Width="300" Height="100" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="button_add">
-                <TextBox BorderThickness="0" TextWrapping="Wrap" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsHitTestVisible="False">Click To Add Item To Order</TextBox>
+            <Button BorderBrush="Black" BorderThickness="2" Grid.Row="2" Margin="75 0 0 43" Padding="80 0 0 0" Width="250" Height="100" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="button_add">
+                <TextBox BorderThickness="0" TextWrapping="Wrap" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsHitTestVisible="False" Padding="5 0 5 0">Add Item To Order</TextBox>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="border" BorderBrush="Black" Background="White" CornerRadius="5" BorderThickness="4" Padding="80 0 0 0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
             </Button>
             <Button Background="#FFF" Height="130" Width="130" BorderThickness="5" Click="button_add" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="30 0 0 30">
                 <Button.Style>

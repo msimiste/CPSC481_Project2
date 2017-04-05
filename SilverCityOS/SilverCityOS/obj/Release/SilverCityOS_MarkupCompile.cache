@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Release\
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Release\
 SilverCityOS
 none
 false
 TRACE
-\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\App.xaml
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\App.xaml
 10-164719798
 
 28-2022937781
-22200060434
+22-291666405
 Balloon.xaml;HelpBalloon.xaml;HelpInfo.xaml;ItemInfo.xaml;MainWindow.xaml;OrderedItem.xaml;Prompt.xaml;ToastPopUp.xaml;ucMenuItem.xaml;Welcome.xaml;
 
 False

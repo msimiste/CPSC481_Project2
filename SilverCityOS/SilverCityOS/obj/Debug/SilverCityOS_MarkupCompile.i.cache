@@ -4,28 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\obj\Debug\
-=======
 C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\obj\Debug\
->>>>>>> 85b95b948fda861ffea1c197c6ca1134864130ca
 SilverCityOS
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\SilverCityOS\App.xaml
-10-164719798
-
-321100566927
-231777921428
-=======
 C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\SilverCityOS\App.xaml
 10-164719798
 
 32-1857334122
 22880503348
->>>>>>> 85b95b948fda861ffea1c197c6ca1134864130ca
 Balloon.xaml;HelpBalloon.xaml;HelpInfo.xaml;ItemInfo.xaml;MainWindow.xaml;OrderedItem.xaml;Prompt.xaml;ToastPopUp.xaml;ucMenuItem.xaml;Welcome.xaml;
 
 True

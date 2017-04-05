@@ -16,7 +16,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Border Padding="50">
-            <Image Source="Pictures/sc.jpg"/>
+            <Image Source="Pictures/sc.jpg" Stretch="UniformToFill"/>
         </Border>
         <StackPanel Grid.Column="1"  Grid.RowSpan="2" VerticalAlignment="Top" Margin="0,50,0,0">
             <TextBlock FontStyle="Italic"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="35">Hours of Operation</TextBlock>
@@ -45,10 +45,26 @@
                 </StackPanel>
             </Grid>
             <TextBlock Text="Contact Information" FontStyle="Italic"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="35" Padding="0,50,0,0"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBlock FontSize="25" Height="45">Address:</TextBlock>
+                    <TextBlock FontSize="25" Height="45">Phone:</TextBlock>
+                    <TextBlock FontSize="25" >Website:</TextBlock>
 
+                </StackPanel>
+                <StackPanel  Grid.Column="2" HorizontalAlignment="Left">
+                    <TextBlock FontSize="25" TextWrapping="Wrap" Height="45">11 Hidden Creek Drive NW</TextBlock>
+                    <TextBlock FontSize="25" Height="45">403-730-6138</TextBlock>
+                    <TextBlock FontSize="25" TextWrapping="Wrap">www.silvercityrestaurant.ca</TextBlock>
+                </StackPanel>
+            </Grid>
 
         </StackPanel>
-        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">            
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center">Start browsing our menu</TextBlock>
             <TextBlock FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center">by selecting</TextBlock>
             <TextBlock FontSize="35" HorizontalAlignment="Center">one of the categories to the left</TextBlock>

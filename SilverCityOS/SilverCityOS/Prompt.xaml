@@ -28,6 +28,18 @@
                         <Border x:Name="border" BorderBrush="Black" Background="#737373" CornerRadius="5" BorderThickness="4" Padding="2">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold" />
                         </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="White"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="3"/>
+                                <Setter Property="Button.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="Black" Direction="220" ShadowDepth="0" BlurRadius="0" Opacity="0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -37,36 +49,36 @@
         <SolidColorBrush Color="Transparent"/>
     </Window.Background>
     <Border BorderBrush="Black" BorderThickness="1" Height="600" Width="950">
-            <Grid x:Name="mainGrid" Background="#FFF">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="3*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <StackPanel x:Name="mainStack" Grid.ColumnSpan="2" VerticalAlignment="Center">
-                    <TextBlock x:Name="message" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="80 50 80 0" TextAlignment="Center" FontSize="40" Padding="30 0" TextWrapping="Wrap">Waiter Has Been Notified</TextBlock>
-                    <Grid x:Name="middleSec" Height="275" Margin="70 10 70 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image x:Name="modePic" Source="Pictures/ScreenElement/Takeout2.png"/>
-                        <StackPanel x:Name="rightStack" Grid.Column="2">
-                            <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontWeight="Bold" Style="{StaticResource showbutton}" Click="Button_Click">Show Bill</Button>
-                            <ScrollViewer x:Name="itemListScroll" Height="275" VerticalScrollBarVisibility="Auto" PanningMode="Both">
-                                <StackPanel x:Name="itemList">
-                                </StackPanel>
-                            </ScrollViewer>
-                        </StackPanel>
-                    </Grid>
-                </StackPanel>
+        <Grid x:Name="mainGrid" Background="#FFF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="mainStack" Grid.ColumnSpan="2" VerticalAlignment="Center">
+                <TextBlock x:Name="message" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="80 50 80 0" TextAlignment="Center" FontSize="40" Padding="30 0" TextWrapping="Wrap">Waiter Has Been Notified</TextBlock>
+                <Grid x:Name="middleSec" Height="275" Margin="70 10 70 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="modePic" Source="Pictures/ScreenElement/Takeout2.png"/>
+                    <StackPanel x:Name="rightStack" Grid.Column="2">
+                        <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontWeight="Bold" Style="{StaticResource showbutton}" Click="Button_Click">Show Bill</Button>
+                        <ScrollViewer x:Name="itemListScroll" Height="275" VerticalScrollBarVisibility="Auto" PanningMode="Both">
+                            <StackPanel x:Name="itemList">
+                            </StackPanel>
+                        </ScrollViewer>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
             <Button Grid.ColumnSpan="2" Grid.Row="1" Style="{StaticResource okbutton}" Content="OK" FontWeight="Bold" FontSize="40" Click="Button_Click_Okay">
-                
+
             </Button>
-                <!--<Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="90 30 30 60" Padding="10 10" Click="Button_Click_Okay">
+            <!--<Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="90 30 30 60" Padding="10 10" Click="Button_Click_Okay">
                     <Viewbox>
                         <Label>
                             OKAY
@@ -105,6 +117,6 @@
                     </Style>
                 </Button.Style>
             </Button>
-            </Grid>
-        </Border>
+        </Grid>
+    </Border>
 </Window>
