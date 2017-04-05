@@ -1,0 +1,10 @@
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\bin\Release\EnumComboBox.exe.config
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\bin\Release\EnumComboBox.exe
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\bin\Release\EnumComboBox.pdb
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Release\EnumComboBox.csprojResolveAssemblyReference.cache
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Release\App.g.cs
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Release\EnumComboBox_MarkupCompile.cache
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Release\EnumComboBox.Properties.Resources.resources
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Release\EnumComboBox.csproj.GenerateResource.Cache
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Release\EnumComboBox.exe
+\\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Release\EnumComboBox.pdb
