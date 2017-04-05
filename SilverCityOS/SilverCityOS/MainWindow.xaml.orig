@@ -89,13 +89,8 @@
                                     <Border x:Name="wborder" BorderBrush="Black" Background="White" CornerRadius="5" BorderThickness="2" Padding="2">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="Pictures/ScreenElement/bell2.png" Height="150"/>
-<<<<<<< HEAD
-                                            <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="158" FontSize="30" Height="100" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="CALL WAITER" Padding="0,10,0,0"/>                                          
-                                        </StackPanel>                                       
-=======
                                             <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="158" FontSize="30" Height="100" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="CALL WAITER" Padding="0,10,0,0"/>
                                         </StackPanel>
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsChecked" Value="True">
@@ -117,22 +112,8 @@
                             </Setter.Value>
                         </Setter>
                     </Style>
-<<<<<<< HEAD
                 </ToggleButton.Style>                         
             </ToggleButton>            
-=======
-                </ToggleButton.Style>
-                <ToggleButton.ToolTip>
-                    <ToolTip>
-                        <StackPanel>
-                            <TextBlock FontWeight="Bold">Call Waiter</TextBlock>
-                            <TextBlock>Lets the server know you require immediate assistance</TextBlock>
-                        </StackPanel>
-                    </ToolTip>
-                </ToggleButton.ToolTip>
-            </ToggleButton>
-
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
             <Border BorderThickness="0">
                 <StackPanel x:Name="controlSections">
                     <Button x:Name="btnAppetizers" Content="Appetizers" Click="btnAppetizers_Click" Style="{StaticResource menubutton}"/>
@@ -147,11 +128,7 @@
                     <Button x:Name="btnDrinks" Content="Drinks" Click="btnDrink_Click" Style="{StaticResource menubutton}"/>
                 </StackPanel>
             </Border>
-<<<<<<< HEAD
-            <Button x:Name="btnHelp" Content="HELP INFO" Click="btnHelp_Click" Style="{DynamicResource helpbutton}"/>       
-=======
             <Button x:Name="btnHelp" Content="HELP INFO" Click="btnHelp_Click" Style="{DynamicResource helpbutton}"/>
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
         </StackPanel>
         
         <StackPanel x:Name="middleSec" Grid.Column="1">
@@ -160,18 +137,6 @@
                 <StackPanel x:Name="sViewer_Stackpanel" >
                 </StackPanel>
             </ScrollViewer>
-<<<<<<< HEAD
-        </StackPanel>        
-        <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Background="LightGray">
-            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580" VerticalScrollBarVisibility="Auto" PanningMode="Both" ScrollChanged="ordItemsChanged">
-                <StackPanel x:Name="orderItems">           
-                </StackPanel>
-            </ScrollViewer>           
-            <Label x:Name="lblSTotal" Height="30" Margin="10 0 0 0"  Padding="0 0 20 0"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
-            <Label x:Name="lblTax" Height="30" Margin="10 0 0 0" Padding="0 0 20 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
-            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2" Margin="10 0" Padding="0 0 10 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
-=======
         </StackPanel>
 
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Background="LightGray">
@@ -184,7 +149,6 @@
             <Label x:Name="lblSTotal" Height="35" Margin="10 0 0 0"  Padding="0 0 20 0"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="25">Sub Total: $100.00</Label>
             <Label x:Name="lblTax" Height="35" Margin="10 0 0 0" Padding="0 0 20 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="25">Tax: $100.00</Label>
             <Label x:Name="lblTotal" Height ="45" BorderBrush="Black" BorderThickness="0 2" Margin="10 0" Padding="0 0 10 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" VerticalContentAlignment="Bottom" FontSize="30">Total: $1600.00</Label>
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
             <Button x:Name="btnSpecialNote" Style="{StaticResource spbutton}" Click="btnSpecialNote_Click">
                 <!--<Button.ToolTip>
                     <ToolTip>
@@ -192,12 +156,8 @@
                     </ToolTip>
                 </Button.ToolTip>-->
                 Dietary/Allergy Concerns
-<<<<<<< HEAD
-            </Button>          
-=======
             </Button>
 
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
             <Grid x:Name="orderControlGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -208,49 +168,19 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-<<<<<<< HEAD
                 <Button x:Name="btnDineIn" Grid.Column="0" Click="btnDineIn_Click" Style="{StaticResource orderbutton}">                   
-                    <Viewbox>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Pictures/ScreenElement/DineIn.png"/>
-                            <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="20">DINE IN</Label>
-                        </StackPanel>
-                    </Viewbox>
-                </Button>               
-                <Button x:Name="btnTakeOut" Grid.Column="1" Click="btnTakeOut_Click" Style="{StaticResource orderbutton}">                   
-                    <Viewbox>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Pictures/ScreenElement/TakeOut2.png"/>
-                            <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="50">TAKE OUT</Label>
-                        </StackPanel>
-                    </Viewbox>
-                </Button>              
-=======
-                <Button x:Name="btnDineIn" Grid.Column="0" Click="btnDineIn_Click" Style="{StaticResource orderbutton}">
-                    <Button.ToolTip>
-                        <ToolTip>
-                            <TextBlock FontWeight="Bold">Click To Make an Order for Dine In</TextBlock>
-                        </ToolTip>
-                    </Button.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <Image Width="80" Source="Pictures/ScreenElement/DineIn.png"/>
                         <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22">ORDER DINE IN</TextBox>
                     </StackPanel>
-                </Button>
-
-                <Button x:Name="btnTakeOut" Grid.Column="1" Click="btnTakeOut_Click" Style="{StaticResource orderbutton}">
-                    <Button.ToolTip>
-                        <ToolTip>
-                            <TextBlock FontWeight="Bold">Click To Make an Order for Take Out</TextBlock>
-                        </ToolTip>
-                    </Button.ToolTip>
+                </Button>               
+                <Button x:Name="btnTakeOut" Grid.Column="1" Click="btnTakeOut_Click" Style="{StaticResource orderbutton}">                   
                     <StackPanel Orientation="Horizontal">
                         <Image Width="80" Source="Pictures/ScreenElement/TakeOut2.png"/>
                         <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22">ORDER TAKE OUT</TextBox>
                     </StackPanel>
                 </Button>
 
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
                 <Button x:Name="btnPayBill" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource paybutton}" Click="btnPayBill_Click">
                     <Grid Width="300">
                         <Grid.ColumnDefinitions>
@@ -262,7 +192,6 @@
                     </Grid>
                 </Button>               
             </Grid>
-<<<<<<< HEAD
         </StackPanel>        
         <Grid x:Name="upArrowCover" Grid.Column="1" Margin="0 100 0 0" Height="100" VerticalAlignment="Top"  IsHitTestVisible="False">
             <Rectangle >
@@ -275,11 +204,7 @@
             </Rectangle>
             <Image Source="Pictures/ScreenElement/arrowUp.png" VerticalAlignment="Top"  Opacity="0.3" Width="300" Height="100"/>
         </Grid>
-=======
-        </StackPanel>
-        
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
-        <Grid x:Name="downArrowCover" Grid.Column="1" Height="150" VerticalAlignment="Bottom" IsHitTestVisible="False">
+        <Grid x:Name="downArrowCover" Grid.Column="1" Height="150" VerticalAlignment="Bottom" IsHitTestVisible="False">           
             <Rectangle Margin="1 0">
                 <Rectangle.Fill>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
@@ -289,27 +214,11 @@
                 </Rectangle.Fill>
             </Rectangle>
             <Image Source="Pictures/ScreenElement/arrow.png" VerticalAlignment="Bottom" Opacity="0.3" Width="300" Height="100"/>
+        </Grid>
 <<<<<<< HEAD
-        </Grid>       
+        <Button x:Name="btnHelp1" Margin="20" Click="btnHelp1_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="60" Width="60" Background="Transparent" BorderThickness="0"/>
 =======
-        </Grid>
-
-        <Grid x:Name="upArrowCover" Grid.Column="1" Height="150" VerticalAlignment="Top" Margin="0 100 0 0" IsHitTestVisible="False">
-            <Rectangle Margin="1 0">
-                <Rectangle.Fill>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Color="#FFFFFFFF" Offset="0"/>
-                        <!--<GradientStop Color="Transparent" Offset="0.667"/>-->
-                        <GradientStop Color="Transparent" Offset="1"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <Image Source="Pictures/ScreenElement/arrow.png" VerticalAlignment="Top" Opacity="0.3" Width="300" Height="100" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <ScaleTransform ScaleY="-1"/>
-                </Image.RenderTransform>
-            </Image>
-        </Grid>
->>>>>>> d4467edaf1849823268b940f9232e65cd54dd1c7
+        <Button x:Name="btnHelp1" Click="btnHelp1_Click" Height="60" Width="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderThickness="0" Background="Transparent" Margin="15"/>
+>>>>>>> 85b95b948fda861ffea1c197c6ca1134864130ca
     </Grid>
 </Window>

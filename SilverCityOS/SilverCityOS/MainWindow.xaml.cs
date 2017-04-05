@@ -50,6 +50,7 @@ namespace SilverCityOS
         {
             orderNumber = 0;
             orderedNumber = 0;
+            pastMainScreen = false;
             mainGrid.Children.Remove(upArrowCover);
             sViewer_Stackpanel.Children.Clear();
             orderItems.Children.Clear();

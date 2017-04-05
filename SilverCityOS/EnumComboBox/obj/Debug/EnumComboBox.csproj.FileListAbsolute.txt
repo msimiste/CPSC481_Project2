@@ -8,3 +8,13 @@
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.exe
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.pdb
 \\cs-fs01\Profiles\ug\msimiste\Desktop\AlexProj\Proj2Alex\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\bin\Debug\EnumComboBox.exe.config
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\bin\Debug\EnumComboBox.exe
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\bin\Debug\EnumComboBox.pdb
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\obj\Debug\App.g.cs
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox_MarkupCompile.cache
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.Properties.Resources.resources
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.csproj.GenerateResource.Cache
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.exe
+C:\Users\Alexander\Documents\GitHub\CPSC481_Project2\SilverCityOS\EnumComboBox\obj\Debug\EnumComboBox.pdb
