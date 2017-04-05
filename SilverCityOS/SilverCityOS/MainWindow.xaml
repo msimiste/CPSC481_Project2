@@ -214,6 +214,7 @@
                 </Rectangle.Fill>
             </Rectangle>
             <Image Source="Pictures/ScreenElement/arrow.png" VerticalAlignment="Bottom" Opacity="0.3" Width="300" Height="100"/>
-        </Grid>       
+        </Grid>
+        <Button x:Name="btnHelp1" Click="btnHelp1_Click" Height="60" Width="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" BorderThickness="0" Background="Transparent" Margin="15"/>
     </Grid>
 </Window>

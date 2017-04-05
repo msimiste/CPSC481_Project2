@@ -50,6 +50,7 @@ namespace SilverCityOS
         {
             orderNumber = 0;
             orderedNumber = 0;
+            pastMainScreen = false;
             mainGrid.Children.Remove(upArrowCover);
             sViewer_Stackpanel.Children.Clear();
             orderItems.Children.Clear();
@@ -133,11 +134,14 @@ namespace SilverCityOS
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {            
-            setHelpBoxes();            
-        
            mainGrid.Children.Add(cover);          
            new HelpInfo().ShowDialog();
            mainGrid.Children.Remove(cover);
+        }
+
+        private void btnHelp1_Click(object sender, RoutedEventArgs e)
+        {
+            setHelpBoxes();
         }
 
         private void btnPayBill_Click(object sender, RoutedEventArgs e)
