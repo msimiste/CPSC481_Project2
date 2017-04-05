@@ -20,12 +20,30 @@ namespace SilverCityOS
     /// </summary>
     public partial class ItemInfo : Window
     {
-        public ItemInfo(MenuItem item)
+        MainWindow window;
+        MenuItem item;
+
+        public ItemInfo(MenuItem item, MainWindow window)
         {
             InitializeComponent();
-            itemImg.Source = new BitmapImage(new Uri(item.getSImgPath(), UriKind.Relative));
+            this.window = window;
+            this.item = item;
+            itemImg.Source = new BitmapImage(new Uri(item.getImgPath(), UriKind.Relative));
             itemName.Content = "#"+ item.getNumber()+". "+item.getName();
+            if (item.isSpicy())
+            {
+                itemName.Content = "#" + item.getNumber() + ". " + item.getName() + " 🌶";
+                itemName.Foreground = Brushes.Red;
+            }
             itemPrice.Content = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
+        }
+
+        private void button_add(object sender, RoutedEventArgs e)
+        {
+            window.addToOrder(item);
+            window.scrlViewerOrderItems.ScrollToBottom();
+            window.sendCheck();
+            DialogResult = false;
         }
     }
 }

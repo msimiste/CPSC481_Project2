@@ -32,8 +32,13 @@ namespace SilverCityOS
             this.code = code;
             this.window = window;
             this.item = item;
-            InitializeComponent();          
-            itemName.Text = item.getNumber()+". "+item.getName();
+            InitializeComponent();
+            // qty.Text = code.ToString();
+            itemName.Text = item.getNumber() + ". " + item.getName();
+            if (item.isSpicy())
+            { 
+                itemName.Text = item.getNumber() + ". " + item.getName() + " 🌶";
+            }
             itemPrice.Text = item.getPrice().ToString("C",CultureInfo.CurrentCulture);
         }
 

@@ -74,6 +74,7 @@ namespace SilverCityOS {
         
         
         #line 118 "..\..\MainWindow.xaml"
+        #line 132 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel controlSections;
         
@@ -82,6 +83,7 @@ namespace SilverCityOS {
         
         
         #line 119 "..\..\MainWindow.xaml"
+        #line 133 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAppetizers;
         
@@ -90,6 +92,7 @@ namespace SilverCityOS {
         
         
         #line 120 "..\..\MainWindow.xaml"
+        #line 134 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnSoup;
         
@@ -98,6 +101,7 @@ namespace SilverCityOS {
         
         
         #line 121 "..\..\MainWindow.xaml"
+        #line 135 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnBeef;
         
@@ -106,6 +110,7 @@ namespace SilverCityOS {
         
         
         #line 122 "..\..\MainWindow.xaml"
+        #line 136 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnChicken;
         
@@ -114,6 +119,7 @@ namespace SilverCityOS {
         
         
         #line 123 "..\..\MainWindow.xaml"
+        #line 137 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnSeafood;
         
@@ -122,6 +128,7 @@ namespace SilverCityOS {
         
         
         #line 124 "..\..\MainWindow.xaml"
+        #line 138 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnVegie;
         
@@ -130,6 +137,7 @@ namespace SilverCityOS {
         
         
         #line 125 "..\..\MainWindow.xaml"
+        #line 139 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnHot;
         
@@ -138,6 +146,7 @@ namespace SilverCityOS {
         
         
         #line 126 "..\..\MainWindow.xaml"
+        #line 140 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRice;
         
@@ -146,6 +155,7 @@ namespace SilverCityOS {
         
         
         #line 127 "..\..\MainWindow.xaml"
+        #line 141 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnEgg;
         
@@ -154,6 +164,7 @@ namespace SilverCityOS {
         
         
         #line 128 "..\..\MainWindow.xaml"
+        #line 142 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnDrinks;
         
@@ -162,6 +173,7 @@ namespace SilverCityOS {
         
         
         #line 131 "..\..\MainWindow.xaml"
+        #line 145 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnHelp;
         
@@ -170,6 +182,7 @@ namespace SilverCityOS {
         
         
         #line 133 "..\..\MainWindow.xaml"
+        #line 148 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel middleSec;
         
@@ -178,6 +191,7 @@ namespace SilverCityOS {
         
         
         #line 134 "..\..\MainWindow.xaml"
+        #line 149 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblCategories;
         
@@ -186,6 +200,7 @@ namespace SilverCityOS {
         
         
         #line 135 "..\..\MainWindow.xaml"
+        #line 150 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ScrollViewer scrlViewer_MenuItems;
         
@@ -194,6 +209,7 @@ namespace SilverCityOS {
         
         
         #line 136 "..\..\MainWindow.xaml"
+        #line 151 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel sViewer_Stackpanel;
         
@@ -202,6 +218,7 @@ namespace SilverCityOS {
         
         
         #line 140 "..\..\MainWindow.xaml"
+        #line 156 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel stkPanel_OrderPanel;
         
@@ -210,6 +227,7 @@ namespace SilverCityOS {
         
         
         #line 141 "..\..\MainWindow.xaml"
+        #line 157 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblOrderItems;
         
@@ -218,6 +236,7 @@ namespace SilverCityOS {
         
         
         #line 142 "..\..\MainWindow.xaml"
+        #line 158 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ScrollViewer scrlViewerOrderItems;
         
@@ -226,6 +245,7 @@ namespace SilverCityOS {
         
         
         #line 143 "..\..\MainWindow.xaml"
+        #line 159 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel orderItems;
         
@@ -234,6 +254,7 @@ namespace SilverCityOS {
         
         
         #line 146 "..\..\MainWindow.xaml"
+        #line 163 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblSTotal;
         
@@ -242,6 +263,7 @@ namespace SilverCityOS {
         
         
         #line 147 "..\..\MainWindow.xaml"
+        #line 164 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblTax;
         
@@ -250,6 +272,7 @@ namespace SilverCityOS {
         
         
         #line 148 "..\..\MainWindow.xaml"
+        #line 165 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblTotal;
         
@@ -258,6 +281,7 @@ namespace SilverCityOS {
         
         
         #line 149 "..\..\MainWindow.xaml"
+        #line 166 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnSpecialNote;
         
@@ -266,6 +290,7 @@ namespace SilverCityOS {
         
         
         #line 157 "..\..\MainWindow.xaml"
+        #line 175 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid orderControlGrid;
         
@@ -274,6 +299,7 @@ namespace SilverCityOS {
         
         
         #line 167 "..\..\MainWindow.xaml"
+        #line 185 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnDineIn;
         
@@ -282,6 +308,7 @@ namespace SilverCityOS {
         
         
         #line 175 "..\..\MainWindow.xaml"
+        #line 197 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnTakeOut;
         
@@ -290,6 +317,7 @@ namespace SilverCityOS {
         
         
         #line 183 "..\..\MainWindow.xaml"
+        #line 209 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnPayBill;
         
@@ -297,17 +325,28 @@ namespace SilverCityOS {
         #line hidden
         
         
+        #line 219 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Primitives.Popup popBill;
+        
+        #line default
+        #line hidden
+        
+        
         #line 195 "..\..\MainWindow.xaml"
+        #line 227 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid upArrowCover;
+        internal System.Windows.Controls.Grid downArrowCover;
         
         #line default
         #line hidden
         
         
         #line 206 "..\..\MainWindow.xaml"
+        #line 240 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Grid downArrowCover;
+        internal System.Windows.Controls.Grid upArrowCover;
         
         #line default
         #line hidden
@@ -361,6 +400,7 @@ namespace SilverCityOS {
             this.btnAppetizers = ((System.Windows.Controls.Button)(target));
             
             #line 119 "..\..\MainWindow.xaml"
+            #line 133 "..\..\MainWindow.xaml"
             this.btnAppetizers.Click += new System.Windows.RoutedEventHandler(this.btnAppetizers_Click);
             
             #line default
@@ -370,6 +410,7 @@ namespace SilverCityOS {
             this.btnSoup = ((System.Windows.Controls.Button)(target));
             
             #line 120 "..\..\MainWindow.xaml"
+            #line 134 "..\..\MainWindow.xaml"
             this.btnSoup.Click += new System.Windows.RoutedEventHandler(this.btnSoup_Click);
             
             #line default
@@ -379,6 +420,7 @@ namespace SilverCityOS {
             this.btnBeef = ((System.Windows.Controls.Button)(target));
             
             #line 121 "..\..\MainWindow.xaml"
+            #line 135 "..\..\MainWindow.xaml"
             this.btnBeef.Click += new System.Windows.RoutedEventHandler(this.btnBeef_Click);
             
             #line default
@@ -388,6 +430,7 @@ namespace SilverCityOS {
             this.btnChicken = ((System.Windows.Controls.Button)(target));
             
             #line 122 "..\..\MainWindow.xaml"
+            #line 136 "..\..\MainWindow.xaml"
             this.btnChicken.Click += new System.Windows.RoutedEventHandler(this.btnChicken_Click);
             
             #line default
@@ -397,6 +440,7 @@ namespace SilverCityOS {
             this.btnSeafood = ((System.Windows.Controls.Button)(target));
             
             #line 123 "..\..\MainWindow.xaml"
+            #line 137 "..\..\MainWindow.xaml"
             this.btnSeafood.Click += new System.Windows.RoutedEventHandler(this.btnSeafood_Click);
             
             #line default
@@ -406,6 +450,7 @@ namespace SilverCityOS {
             this.btnVegie = ((System.Windows.Controls.Button)(target));
             
             #line 124 "..\..\MainWindow.xaml"
+            #line 138 "..\..\MainWindow.xaml"
             this.btnVegie.Click += new System.Windows.RoutedEventHandler(this.btnVegie_Click);
             
             #line default
@@ -415,6 +460,7 @@ namespace SilverCityOS {
             this.btnHot = ((System.Windows.Controls.Button)(target));
             
             #line 125 "..\..\MainWindow.xaml"
+            #line 139 "..\..\MainWindow.xaml"
             this.btnHot.Click += new System.Windows.RoutedEventHandler(this.btnHot_Click);
             
             #line default
@@ -424,6 +470,7 @@ namespace SilverCityOS {
             this.btnRice = ((System.Windows.Controls.Button)(target));
             
             #line 126 "..\..\MainWindow.xaml"
+            #line 140 "..\..\MainWindow.xaml"
             this.btnRice.Click += new System.Windows.RoutedEventHandler(this.btnRice_Click);
             
             #line default
@@ -433,6 +480,7 @@ namespace SilverCityOS {
             this.btnEgg = ((System.Windows.Controls.Button)(target));
             
             #line 127 "..\..\MainWindow.xaml"
+            #line 141 "..\..\MainWindow.xaml"
             this.btnEgg.Click += new System.Windows.RoutedEventHandler(this.btnEgg_Click);
             
             #line default
@@ -442,6 +490,7 @@ namespace SilverCityOS {
             this.btnDrinks = ((System.Windows.Controls.Button)(target));
             
             #line 128 "..\..\MainWindow.xaml"
+            #line 142 "..\..\MainWindow.xaml"
             this.btnDrinks.Click += new System.Windows.RoutedEventHandler(this.btnDrink_Click);
             
             #line default
@@ -451,6 +500,7 @@ namespace SilverCityOS {
             this.btnHelp = ((System.Windows.Controls.Button)(target));
             
             #line 131 "..\..\MainWindow.xaml"
+            #line 145 "..\..\MainWindow.xaml"
             this.btnHelp.Click += new System.Windows.RoutedEventHandler(this.btnHelp_Click);
             
             #line default
@@ -466,6 +516,7 @@ namespace SilverCityOS {
             this.scrlViewer_MenuItems = ((System.Windows.Controls.ScrollViewer)(target));
             
             #line 135 "..\..\MainWindow.xaml"
+            #line 150 "..\..\MainWindow.xaml"
             this.scrlViewer_MenuItems.ScrollChanged += new System.Windows.Controls.ScrollChangedEventHandler(this.OnScrollChanged);
             
             #line default
@@ -505,6 +556,7 @@ namespace SilverCityOS {
             this.btnSpecialNote = ((System.Windows.Controls.Button)(target));
             
             #line 149 "..\..\MainWindow.xaml"
+            #line 166 "..\..\MainWindow.xaml"
             this.btnSpecialNote.Click += new System.Windows.RoutedEventHandler(this.btnSpecialNote_Click);
             
             #line default
@@ -517,6 +569,7 @@ namespace SilverCityOS {
             this.btnDineIn = ((System.Windows.Controls.Button)(target));
             
             #line 167 "..\..\MainWindow.xaml"
+            #line 185 "..\..\MainWindow.xaml"
             this.btnDineIn.Click += new System.Windows.RoutedEventHandler(this.btnDineIn_Click);
             
             #line default
@@ -526,6 +579,7 @@ namespace SilverCityOS {
             this.btnTakeOut = ((System.Windows.Controls.Button)(target));
             
             #line 175 "..\..\MainWindow.xaml"
+            #line 197 "..\..\MainWindow.xaml"
             this.btnTakeOut.Click += new System.Windows.RoutedEventHandler(this.btnTakeOut_Click);
             
             #line default
@@ -535,6 +589,7 @@ namespace SilverCityOS {
             this.btnPayBill = ((System.Windows.Controls.Button)(target));
             
             #line 183 "..\..\MainWindow.xaml"
+            #line 209 "..\..\MainWindow.xaml"
             this.btnPayBill.Click += new System.Windows.RoutedEventHandler(this.btnPayBill_Click);
             
             #line default
@@ -545,6 +600,9 @@ namespace SilverCityOS {
             return;
             case 34:
             this.downArrowCover = ((System.Windows.Controls.Grid)(target));
+            return;
+            case 35:
+            this.upArrowCover = ((System.Windows.Controls.Grid)(target));
             return;
             }
             this._contentLoaded = true;

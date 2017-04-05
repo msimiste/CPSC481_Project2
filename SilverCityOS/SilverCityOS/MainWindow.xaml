@@ -89,8 +89,8 @@
                                     <Border x:Name="wborder" BorderBrush="Black" Background="White" CornerRadius="5" BorderThickness="2" Padding="2">
                                         <StackPanel Orientation="Horizontal">
                                             <Image Source="Pictures/ScreenElement/bell2.png" Height="150"/>
-                                            <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="158" FontSize="30" Height="100" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="CALL WAITER" Padding="0,10,0,0"/>                                          
-                                        </StackPanel>                                       
+                                            <TextBlock x:Name="waiterTextbox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="158" FontSize="30" Height="100" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Text="CALL WAITER" Padding="0,10,0,0"/>
+                                        </StackPanel>
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsChecked" Value="True">
@@ -120,7 +120,7 @@
                     <Button x:Name="btnSoup" Content="Soups &amp; Sizzling Rice" Click="btnSoup_Click" Style="{StaticResource menubutton}"/>
                     <Button x:Name="btnBeef" Content="Beef" Click="btnBeef_Click" Style="{StaticResource menubutton}"/>
                     <Button x:Name="btnChicken" Content="Chicken &amp; Duck" Click="btnChicken_Click" Style="{StaticResource menubutton}"/>
-                    <Button x:Name="btnSeafood" Content="Seafood" Click="btnSeafood_Click" Style="{StaticResource menubutton}"/>
+                    <Button x:Name="btnSeafood" Content="Pork &amp; Seafood" Click="btnSeafood_Click" Style="{StaticResource menubutton}"/>
                     <Button x:Name="btnVegie" Content="Vegetables" Click="btnVegie_Click" Style="{StaticResource menubutton}"/>
                     <Button x:Name="btnHot" Content="Hot Plates &amp; Hot Pots" Click="btnHot_Click" Style="{StaticResource menubutton}"/>
                     <Button x:Name="btnRice" Content="Fried Rice &amp; Fried Noodles" Click="btnRice_Click" Style="{StaticResource menubutton}"/>
@@ -128,24 +128,27 @@
                     <Button x:Name="btnDrinks" Content="Drinks" Click="btnDrink_Click" Style="{StaticResource menubutton}"/>
                 </StackPanel>
             </Border>
-            <Button x:Name="btnHelp" Content="HELP INFO" Click="btnHelp_Click" Style="{DynamicResource helpbutton}"/>       
+            <Button x:Name="btnHelp" Content="HELP INFO" Click="btnHelp_Click" Style="{DynamicResource helpbutton}"/>
         </StackPanel>
+        
         <StackPanel x:Name="middleSec" Grid.Column="1">
             <Label x:Name="lblCategories" BorderBrush="Black" BorderThickness="4 4 4 4" Height="100" FontSize="70" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">SILVER CITY RESTAURANT</Label>
             <ScrollViewer x:Name="scrlViewer_MenuItems" VerticalAlignment="Top" Height="980" VerticalScrollBarVisibility="Hidden" PanningMode="Both" ScrollChanged="OnScrollChanged">
                 <StackPanel x:Name="sViewer_Stackpanel" >
                 </StackPanel>
             </ScrollViewer>
-        </StackPanel>        
+        </StackPanel>
+
         <StackPanel x:Name="stkPanel_OrderPanel" Grid.Column="2" Background="LightGray">
-            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER ITEMS</Label>
-            <ScrollViewer x:Name="scrlViewerOrderItems" Height="580" VerticalScrollBarVisibility="Auto" PanningMode="Both" ScrollChanged="ordItemsChanged">
-                <StackPanel x:Name="orderItems">           
+            <Label x:Name="lblOrderItems" BorderBrush="Black" BorderThickness="0 4 4 4" Height="100" FontSize="50" FontWeight="DemiBold"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center">ORDER LIST</Label>
+            <ScrollViewer x:Name="scrlViewerOrderItems" Height="575" VerticalScrollBarVisibility="Auto" PanningMode="Both">
+                <StackPanel x:Name="orderItems">
                 </StackPanel>
-            </ScrollViewer>           
-            <Label x:Name="lblSTotal" Height="30" Margin="10 0 0 0"  Padding="0 0 20 0"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Sub Total: $100.00</Label>
-            <Label x:Name="lblTax" Height="30" Margin="10 0 0 0" Padding="0 0 20 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="18">Tax: $100.00</Label>
-            <Label x:Name="lblTotal" Height ="40" BorderBrush="Black" BorderThickness="0 2" Margin="10 0" Padding="0 0 10 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" VerticalContentAlignment="Bottom" FontSize="22">Total: $1600.00</Label>
+            </ScrollViewer>
+
+            <Label x:Name="lblSTotal" Height="35" Margin="10 0 0 0"  Padding="0 0 20 0"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="25">Sub Total: $100.00</Label>
+            <Label x:Name="lblTax" Height="35" Margin="10 0 0 0" Padding="0 0 20 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="25">Tax: $100.00</Label>
+            <Label x:Name="lblTotal" Height ="45" BorderBrush="Black" BorderThickness="0 2" Margin="10 0" Padding="0 0 10 0" FontWeight="Bold" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" VerticalContentAlignment="Bottom" FontSize="30">Total: $1600.00</Label>
             <Button x:Name="btnSpecialNote" Style="{StaticResource spbutton}" Click="btnSpecialNote_Click">
                 <!--<Button.ToolTip>
                     <ToolTip>
@@ -153,7 +156,8 @@
                     </ToolTip>
                 </Button.ToolTip>-->
                 Dietary/Allergy Concerns
-            </Button>          
+            </Button>
+
             <Grid x:Name="orderControlGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -165,21 +169,18 @@
                 </Grid.RowDefinitions>
 
                 <Button x:Name="btnDineIn" Grid.Column="0" Click="btnDineIn_Click" Style="{StaticResource orderbutton}">                   
-                    <Viewbox>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Pictures/ScreenElement/DineIn.png"/>
-                            <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="20">DINE IN</Label>
-                        </StackPanel>
-                    </Viewbox>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="80" Source="Pictures/ScreenElement/DineIn.png"/>
+                        <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22">ORDER DINE IN</TextBox>
+                    </StackPanel>
                 </Button>               
                 <Button x:Name="btnTakeOut" Grid.Column="1" Click="btnTakeOut_Click" Style="{StaticResource orderbutton}">                   
-                    <Viewbox>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Pictures/ScreenElement/TakeOut2.png"/>
-                            <Label HorizontalAlignment="Center" VerticalContentAlignment="Center" FontSize="50">TAKE OUT</Label>
-                        </StackPanel>
-                    </Viewbox>
-                </Button>              
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="80" Source="Pictures/ScreenElement/TakeOut2.png"/>
+                        <TextBox Width="80" Background="Transparent" TextWrapping="Wrap" IsHitTestVisible="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22">ORDER TAKE OUT</TextBox>
+                    </StackPanel>
+                </Button>
+
                 <Button x:Name="btnPayBill" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource paybutton}" Click="btnPayBill_Click">
                     <Grid Width="300">
                         <Grid.ColumnDefinitions>
@@ -205,6 +206,7 @@
         </Grid>
         <Grid x:Name="downArrowCover" Grid.Column="1" Height="150" VerticalAlignment="Bottom" IsHitTestVisible="False">
             <Rectangle>
+            <Rectangle Margin="1 0">
                 <Rectangle.Fill>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                         <GradientStop Color="Transparent" Offset="0"/>                       

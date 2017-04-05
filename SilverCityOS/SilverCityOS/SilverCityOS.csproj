@@ -227,22 +227,6 @@
     <Resource Include="PIctures\interface.JPG" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PIctures\Menu\1.jpg" />
-    <Resource Include="PIctures\Menu\1s.jpg" />
-    <Resource Include="PIctures\Menu\2.jpg" />
-    <Resource Include="PIctures\Menu\2s.jpg" />
-    <Resource Include="PIctures\Menu\3.jpg" />
-    <Resource Include="PIctures\Menu\3s.jpg" />
-    <Resource Include="PIctures\Menu\4.jpg" />
-    <Resource Include="PIctures\Menu\4s.jpg" />
-    <Resource Include="PIctures\Menu\5.jpg" />
-    <Resource Include="PIctures\Menu\5s.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PIctures\Menu\6.JPG" />
-    <Resource Include="PIctures\Menu\6s.JPG" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PIctures\ScreenElement\redClose.png" />
   </ItemGroup>
   <ItemGroup>
@@ -354,6 +338,163 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PIctures\ScreenElement\arrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\Menu\119.jpg" />
+    <Resource Include="PIctures\Menu\49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\Menu\1.jpg" />
+    <Resource Include="PIctures\Menu\2.jpg" />
+    <Resource Include="PIctures\Menu\3.jpg" />
+    <Resource Include="PIctures\Menu\4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\Menu\10.jpg" />
+    <Resource Include="PIctures\Menu\100.jpg" />
+    <Resource Include="PIctures\Menu\101.jpg" />
+    <Resource Include="PIctures\Menu\102.jpg" />
+    <Resource Include="PIctures\Menu\103.jpg" />
+    <Resource Include="PIctures\Menu\104.JPG" />
+    <Resource Include="PIctures\Menu\105.jpg" />
+    <Resource Include="PIctures\Menu\106.jpg" />
+    <Resource Include="PIctures\Menu\107.jpg" />
+    <Resource Include="PIctures\Menu\108.jpg" />
+    <Resource Include="PIctures\Menu\109.jpg" />
+    <Resource Include="PIctures\Menu\11.jpg" />
+    <Resource Include="PIctures\Menu\110.jpg" />
+    <Resource Include="PIctures\Menu\111.jpg" />
+    <Resource Include="PIctures\Menu\112.jpg" />
+    <Resource Include="PIctures\Menu\113.jpg" />
+    <Resource Include="PIctures\Menu\114.jpg" />
+    <Resource Include="PIctures\Menu\115.jpg" />
+    <Resource Include="PIctures\Menu\116.jpg" />
+    <Resource Include="PIctures\Menu\117.jpg" />
+    <Resource Include="PIctures\Menu\118.jpg" />
+    <Resource Include="PIctures\Menu\12.jpg" />
+    <Resource Include="PIctures\Menu\120.jpg" />
+    <Resource Include="PIctures\Menu\121.jpg" />
+    <Resource Include="PIctures\Menu\122.jpg" />
+    <Resource Include="PIctures\Menu\123.jpg" />
+    <Resource Include="PIctures\Menu\124.jpg" />
+    <Resource Include="PIctures\Menu\125.jpg" />
+    <Resource Include="PIctures\Menu\126.jpg" />
+    <Resource Include="PIctures\Menu\127.jpg" />
+    <Resource Include="PIctures\Menu\128.jpg" />
+    <Resource Include="PIctures\Menu\129.jpg" />
+    <Resource Include="PIctures\Menu\13.jpg" />
+    <Resource Include="PIctures\Menu\130.jpg" />
+    <Resource Include="PIctures\Menu\131.jpg" />
+    <Resource Include="PIctures\Menu\132.jpg" />
+    <Resource Include="PIctures\Menu\133.jpg" />
+    <Resource Include="PIctures\Menu\134.jpg" />
+    <Resource Include="PIctures\Menu\135.jpg" />
+    <Resource Include="PIctures\Menu\136.JPG" />
+    <Resource Include="PIctures\Menu\14.jpg" />
+    <Resource Include="PIctures\Menu\15.jpg" />
+    <Resource Include="PIctures\Menu\16.jpg" />
+    <Resource Include="PIctures\Menu\17.jpg" />
+    <Resource Include="PIctures\Menu\18.jpg" />
+    <Resource Include="PIctures\Menu\19.jpg" />
+    <Resource Include="PIctures\Menu\20.jpg" />
+    <Resource Include="PIctures\Menu\21.jpg" />
+    <Resource Include="PIctures\Menu\22.jpg" />
+    <Resource Include="PIctures\Menu\23.jpg" />
+    <Resource Include="PIctures\Menu\24.jpg" />
+    <Resource Include="PIctures\Menu\25.jpg" />
+    <Resource Include="PIctures\Menu\26.jpg" />
+    <Resource Include="PIctures\Menu\27.jpg" />
+    <Resource Include="PIctures\Menu\28.jpg" />
+    <Resource Include="PIctures\Menu\29.jpg" />
+    <Resource Include="PIctures\Menu\30.jpg" />
+    <Resource Include="PIctures\Menu\31.jpg" />
+    <Resource Include="PIctures\Menu\32.jpg" />
+    <Resource Include="PIctures\Menu\33.jpg" />
+    <Resource Include="PIctures\Menu\34.jpg" />
+    <Resource Include="PIctures\Menu\35.jpg" />
+    <Resource Include="PIctures\Menu\36.jpg" />
+    <Resource Include="PIctures\Menu\37.JPG" />
+    <Resource Include="PIctures\Menu\38.jpg" />
+    <Resource Include="PIctures\Menu\39.jpg" />
+    <Resource Include="PIctures\Menu\40.jpg" />
+    <Resource Include="PIctures\Menu\41.JPG" />
+    <Resource Include="PIctures\Menu\42.jpg" />
+    <Resource Include="PIctures\Menu\43.jpg" />
+    <Resource Include="PIctures\Menu\44.jpg" />
+    <Resource Include="PIctures\Menu\45.jpg" />
+    <Resource Include="PIctures\Menu\46.jpg" />
+    <Resource Include="PIctures\Menu\47.jpg" />
+    <Resource Include="PIctures\Menu\48.jpg" />
+    <Resource Include="PIctures\Menu\5.jpg" />
+    <Resource Include="PIctures\Menu\50.jpg" />
+    <Resource Include="PIctures\Menu\51.jpg" />
+    <Resource Include="PIctures\Menu\52.jpg" />
+    <Resource Include="PIctures\Menu\53.jpg" />
+    <Resource Include="PIctures\Menu\54.jpg" />
+    <Resource Include="PIctures\Menu\55.jpg" />
+    <Resource Include="PIctures\Menu\56.jpg" />
+    <Resource Include="PIctures\Menu\57.jpg" />
+    <Resource Include="PIctures\Menu\58.jpg" />
+    <Resource Include="PIctures\Menu\59.jpg" />
+    <Resource Include="PIctures\Menu\6.jpg" />
+    <Resource Include="PIctures\Menu\60.jpg" />
+    <Resource Include="PIctures\Menu\61.JPG" />
+    <Resource Include="PIctures\Menu\62.jpg" />
+    <Resource Include="PIctures\Menu\63.jpg" />
+    <Resource Include="PIctures\Menu\64.jpg" />
+    <Resource Include="PIctures\Menu\65.jpg" />
+    <Resource Include="PIctures\Menu\66.jpg" />
+    <Resource Include="PIctures\Menu\67.jpg" />
+    <Resource Include="PIctures\Menu\68.jpg" />
+    <Resource Include="PIctures\Menu\69.jpg" />
+    <Resource Include="PIctures\Menu\7.jpg" />
+    <Resource Include="PIctures\Menu\70.jpg" />
+    <Resource Include="PIctures\Menu\71.jpg" />
+    <Resource Include="PIctures\Menu\72.jpg" />
+    <Resource Include="PIctures\Menu\73.jpg" />
+    <Resource Include="PIctures\Menu\74.jpg" />
+    <Resource Include="PIctures\Menu\75.jpg" />
+    <Resource Include="PIctures\Menu\76.jpg" />
+    <Resource Include="PIctures\Menu\77.jpg" />
+    <Resource Include="PIctures\Menu\78.jpg" />
+    <Resource Include="PIctures\Menu\79.jpg" />
+    <Resource Include="PIctures\Menu\8.jpg" />
+    <Resource Include="PIctures\Menu\80.jpg" />
+    <Resource Include="PIctures\Menu\81.jpg" />
+    <Resource Include="PIctures\Menu\82.jpg" />
+    <Resource Include="PIctures\Menu\83.jpg" />
+    <Resource Include="PIctures\Menu\84.jpg" />
+    <Resource Include="PIctures\Menu\85.jpg" />
+    <Resource Include="PIctures\Menu\86.jpg" />
+    <Resource Include="PIctures\Menu\87.jpg" />
+    <Resource Include="PIctures\Menu\88.jpg" />
+    <Resource Include="PIctures\Menu\89.jpg" />
+    <Resource Include="PIctures\Menu\9.jpg" />
+    <Resource Include="PIctures\Menu\90.jpg" />
+    <Resource Include="PIctures\Menu\91.jpg" />
+    <Resource Include="PIctures\Menu\92.jpg" />
+    <Resource Include="PIctures\Menu\93.jpg" />
+    <Resource Include="PIctures\Menu\94.jpg" />
+    <Resource Include="PIctures\Menu\95.jpg" />
+    <Resource Include="PIctures\Menu\96.jpg" />
+    <Resource Include="PIctures\Menu\97.jpg" />
+    <Resource Include="PIctures\Menu\98.jpg" />
+    <Resource Include="PIctures\Menu\99.jpg" />
+    <Resource Include="PIctures\Menu\d1.jpg" />
+    <Resource Include="PIctures\Menu\d2.jpg" />
+    <Resource Include="PIctures\Menu\d3.jpg" />
+    <Resource Include="PIctures\Menu\d4.jpg" />
+    <Resource Include="PIctures\Menu\d5.jpg" />
+    <Resource Include="PIctures\Menu\d6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\closeMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PIctures\ScreenElement\addClicked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
