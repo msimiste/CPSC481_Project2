@@ -68,16 +68,7 @@
             <Grid Grid.Column="1">
                 <Button x:Name="btnImage" Margin="20" BorderThickness="2" BorderBrush="Black" Click="img_click">
                     <Image x:Name="itemImg" Source="Pictures/ScreenElement/add.png" Stretch="UniformToFill"/>                   
-                </Button>
-                <!--<local:HelpBalloon x:Name="helpLargerImage" Margin="0,20,0,0" 
-                                      Caption="Press this button to see a larger image of this item" 
-                                      BalloonType="{Binding BalloonType}" 
-                                      AutoWidth="{Binding AutoWidth}"
-                                      MaxHeight="{Binding MaxHeight}"
-                                      MaxWidth="{Binding MaxWidth}"
-                                      Title="{Binding BalloonTitle}"
-                    
-                  ShowCloseButton="True" Visibility="Hidden" />-->
+                </Button>               
                 <Image Source="Pictures/ScreenElement/zoom3.png" Margin="25" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" IsHitTestVisible="False"/>
             </Grid>
             <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch">

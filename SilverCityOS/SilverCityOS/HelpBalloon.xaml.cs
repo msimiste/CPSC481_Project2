@@ -243,17 +243,7 @@ namespace SilverCityOS
         private void BalloonClosed(object sender, EventArgs e)
         {
             this.balloon = null;
-        }
-
-        //public Balloon getBalloon() {
-        //    return this.balloon;
-        //}
-
-        //public void showBalloon() {
-        //    balloon = new Balloon(this, this.Caption, this.BalloonType, this.MaxHeight, this.MaxWidth, this.AutoWidth, true, this.ShowCloseButton, this.Title);
-        //    //balloon.Closed += this.BalloonClosed;
-        //    balloon.Show();
-        //}
+        }   
 
         #endregion
     }
