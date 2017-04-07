@@ -83,7 +83,7 @@ namespace SilverCityOS
         private void btnSpecialNote_Click(object sender, RoutedEventArgs e)
         {
             
-            Prompt prompt = new Prompt(this, "Waiter will be here shortly to address your concern", (int)type.normal);
+            Prompt prompt = new Prompt(this, "Your server will be here shortly to address your concern", (int)type.normal);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             System.Console.WriteLine(hi);
@@ -94,7 +94,7 @@ namespace SilverCityOS
         private void btnDineIn_Click(object sender, RoutedEventArgs e)
         {
 
-            Prompt prompt = new Prompt(this, "Order as DINE-IN?", (int)type.dineIn);
+            Prompt prompt = new Prompt(this, "Pressing OK will place your order as DINE-IN", (int)type.dineIn);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);
@@ -114,7 +114,7 @@ namespace SilverCityOS
 
         private void btnTakeOut_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt(this, "Order as Takeout?", (int)type.takeOut);
+            Prompt prompt = new Prompt(this, "Pressing OK will place your order as TAKE-OUT. ", (int)type.takeOut);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);
@@ -146,7 +146,7 @@ namespace SilverCityOS
 
         private void btnPayBill_Click(object sender, RoutedEventArgs e)
         {
-            Prompt prompt = new Prompt(this, "Call Bill and Reset?", (int)type.payBill);
+            Prompt prompt = new Prompt(this, "Note: Pressing OK with generate your bill and reset the System", (int)type.payBill);
             mainGrid.Children.Add(cover);
             bool? hi = prompt.ShowDialog();
             mainGrid.Children.Remove(cover);

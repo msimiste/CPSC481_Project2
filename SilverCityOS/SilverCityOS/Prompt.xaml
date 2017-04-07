@@ -67,7 +67,7 @@
                     </Grid.ColumnDefinitions>
                     <Image x:Name="modePic" Source="Pictures/ScreenElement/Takeout2.png"/>
                     <StackPanel x:Name="rightStack" Grid.Column="2">
-                        <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontWeight="Bold" Style="{StaticResource showbutton}" Click="Button_Click">Show Bill</Button>
+                        <Button x:Name="showBill" Height="80" Width="250" Margin="0 30 0 0" FontWeight="Bold" Style="{StaticResource showbutton}" Click="Button_Click">View Bill</Button>
                         <ScrollViewer x:Name="itemListScroll" Height="275" VerticalScrollBarVisibility="Auto" PanningMode="Both">
                             <StackPanel x:Name="itemList">
                             </StackPanel>
